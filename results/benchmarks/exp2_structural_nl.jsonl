@@ -1,0 +1,480 @@
+{"task": "paws-x", "group": "base", "frac": 0.01, "metric": "acc", "score": 0.5055, "seed": 0}
+{"task": "paws-x", "group": "base", "frac": 0.05, "metric": "acc", "score": 0.6115, "seed": 0}
+{"task": "paws-x", "group": "base", "frac": 0.1, "metric": "acc", "score": 0.772, "seed": 0}
+{"task": "paws-x", "group": "base", "frac": 1.0, "metric": "acc", "score": 0.9175, "seed": 0}
+{"task": "paws-x", "group": "text", "frac": 0.01, "metric": "acc", "score": 0.5115, "seed": 0}
+{"task": "paws-x", "group": "text", "frac": 0.05, "metric": "acc", "score": 0.717, "seed": 0}
+{"task": "paws-x", "group": "text", "frac": 0.1, "metric": "acc", "score": 0.8105, "seed": 0}
+{"task": "paws-x", "group": "text", "frac": 1.0, "metric": "acc", "score": 0.9145, "seed": 0}
+{"task": "paws-x", "group": "protein", "frac": 0.01, "metric": "acc", "score": 0.515, "seed": 0}
+{"task": "paws-x", "group": "protein", "frac": 0.05, "metric": "acc", "score": 0.692, "seed": 0}
+{"task": "paws-x", "group": "protein", "frac": 0.1, "metric": "acc", "score": 0.793, "seed": 0}
+{"task": "paws-x", "group": "protein", "frac": 1.0, "metric": "acc", "score": 0.9015, "seed": 0}
+{"task": "paws-x", "group": "shuffled", "frac": 0.01, "metric": "acc", "score": 0.486, "seed": 0}
+{"task": "paws-x", "group": "shuffled", "frac": 0.05, "metric": "acc", "score": 0.6275, "seed": 0}
+{"task": "paws-x", "group": "shuffled", "frac": 0.1, "metric": "acc", "score": 0.74, "seed": 0}
+{"task": "paws-x", "group": "shuffled", "frac": 1.0, "metric": "acc", "score": 0.908, "seed": 0}
+{"task": "paws-x", "group": "randomaa", "frac": 0.01, "metric": "acc", "score": 0.5545, "seed": 0}
+{"task": "paws-x", "group": "randomaa", "frac": 0.05, "metric": "acc", "score": 0.555, "seed": 0}
+{"task": "paws-x", "group": "randomaa", "frac": 0.1, "metric": "acc", "score": 0.618, "seed": 0}
+{"task": "paws-x", "group": "randomaa", "frac": 1.0, "metric": "acc", "score": 0.909, "seed": 0}
+{"task": "cola", "group": "base", "frac": 0.01, "metric": "mcc", "score": 0.005, "seed": 0}
+{"task": "cola", "group": "base", "frac": 0.05, "metric": "mcc", "score": 0.0041, "seed": 0}
+{"task": "cola", "group": "base", "frac": 0.1, "metric": "mcc", "score": 0.0615, "seed": 0}
+{"task": "cola", "group": "base", "frac": 1.0, "metric": "mcc", "score": 0.392, "seed": 0}
+{"task": "cola", "group": "text", "frac": 0.01, "metric": "mcc", "score": 0.0, "seed": 0}
+{"task": "cola", "group": "text", "frac": 0.05, "metric": "mcc", "score": 0.0181, "seed": 0}
+{"task": "cola", "group": "text", "frac": 0.1, "metric": "mcc", "score": 0.0368, "seed": 0}
+{"task": "cola", "group": "text", "frac": 1.0, "metric": "mcc", "score": 0.4496, "seed": 0}
+{"task": "cola", "group": "protein", "frac": 0.01, "metric": "mcc", "score": -0.0467, "seed": 0}
+{"task": "cola", "group": "protein", "frac": 0.05, "metric": "mcc", "score": -0.0207, "seed": 0}
+{"task": "cola", "group": "protein", "frac": 0.1, "metric": "mcc", "score": 0.0029, "seed": 0}
+{"task": "cola", "group": "protein", "frac": 1.0, "metric": "mcc", "score": 0.3673, "seed": 0}
+{"task": "cola", "group": "shuffled", "frac": 0.01, "metric": "mcc", "score": 0.0126, "seed": 0}
+{"task": "cola", "group": "shuffled", "frac": 0.05, "metric": "mcc", "score": -0.0079, "seed": 0}
+{"task": "cola", "group": "shuffled", "frac": 0.1, "metric": "mcc", "score": -0.0163, "seed": 0}
+{"task": "cola", "group": "shuffled", "frac": 1.0, "metric": "mcc", "score": 0.3707, "seed": 0}
+{"task": "cola", "group": "randomaa", "frac": 0.01, "metric": "mcc", "score": -0.0112, "seed": 0}
+{"task": "cola", "group": "randomaa", "frac": 0.05, "metric": "mcc", "score": -0.0293, "seed": 0}
+{"task": "cola", "group": "randomaa", "frac": 0.1, "metric": "mcc", "score": -0.0293, "seed": 0}
+{"task": "cola", "group": "randomaa", "frac": 1.0, "metric": "mcc", "score": 0.3291, "seed": 0}
+{"task": "rte", "group": "base", "frac": 0.01, "metric": "acc", "score": 0.4765, "seed": 0}
+{"task": "rte", "group": "base", "frac": 0.05, "metric": "acc", "score": 0.5126, "seed": 0}
+{"task": "rte", "group": "base", "frac": 0.1, "metric": "acc", "score": 0.5054, "seed": 0}
+{"task": "rte", "group": "base", "frac": 1.0, "metric": "acc", "score": 0.6534, "seed": 0}
+{"task": "rte", "group": "text", "frac": 0.01, "metric": "acc", "score": 0.5415, "seed": 0}
+{"task": "rte", "group": "text", "frac": 0.05, "metric": "acc", "score": 0.5018, "seed": 0}
+{"task": "rte", "group": "text", "frac": 0.1, "metric": "acc", "score": 0.5632, "seed": 0}
+{"task": "rte", "group": "text", "frac": 1.0, "metric": "acc", "score": 0.6715, "seed": 0}
+{"task": "rte", "group": "protein", "frac": 0.01, "metric": "acc", "score": 0.5451, "seed": 0}
+{"task": "rte", "group": "protein", "frac": 0.05, "metric": "acc", "score": 0.5126, "seed": 0}
+{"task": "rte", "group": "protein", "frac": 0.1, "metric": "acc", "score": 0.5596, "seed": 0}
+{"task": "rte", "group": "protein", "frac": 1.0, "metric": "acc", "score": 0.6679, "seed": 0}
+{"task": "rte", "group": "shuffled", "frac": 0.01, "metric": "acc", "score": 0.5415, "seed": 0}
+{"task": "rte", "group": "shuffled", "frac": 0.05, "metric": "acc", "score": 0.4838, "seed": 0}
+{"task": "rte", "group": "shuffled", "frac": 0.1, "metric": "acc", "score": 0.5271, "seed": 0}
+{"task": "rte", "group": "shuffled", "frac": 1.0, "metric": "acc", "score": 0.6426, "seed": 0}
+{"task": "rte", "group": "randomaa", "frac": 0.01, "metric": "acc", "score": 0.5199, "seed": 0}
+{"task": "rte", "group": "randomaa", "frac": 0.05, "metric": "acc", "score": 0.4765, "seed": 0}
+{"task": "rte", "group": "randomaa", "frac": 0.1, "metric": "acc", "score": 0.5271, "seed": 0}
+{"task": "rte", "group": "randomaa", "frac": 1.0, "metric": "acc", "score": 0.6715, "seed": 0}
+{"task": "paws-x", "group": "base", "frac": 0.01, "metric": "acc", "score": 0.502, "seed": 1}
+{"task": "paws-x", "group": "base", "frac": 0.05, "metric": "acc", "score": 0.62, "seed": 1}
+{"task": "paws-x", "group": "base", "frac": 0.1, "metric": "acc", "score": 0.776, "seed": 1}
+{"task": "paws-x", "group": "base", "frac": 1.0, "metric": "acc", "score": 0.9055, "seed": 1}
+{"task": "paws-x", "group": "text", "frac": 0.01, "metric": "acc", "score": 0.5455, "seed": 1}
+{"task": "paws-x", "group": "text", "frac": 0.05, "metric": "acc", "score": 0.6725, "seed": 1}
+{"task": "paws-x", "group": "text", "frac": 0.1, "metric": "acc", "score": 0.7855, "seed": 1}
+{"task": "paws-x", "group": "text", "frac": 1.0, "metric": "acc", "score": 0.9045, "seed": 1}
+{"task": "paws-x", "group": "protein", "frac": 0.01, "metric": "acc", "score": 0.514, "seed": 1}
+{"task": "paws-x", "group": "protein", "frac": 0.05, "metric": "acc", "score": 0.5595, "seed": 1}
+{"task": "paws-x", "group": "protein", "frac": 0.1, "metric": "acc", "score": 0.779, "seed": 1}
+{"task": "paws-x", "group": "protein", "frac": 1.0, "metric": "acc", "score": 0.906, "seed": 1}
+{"task": "paws-x", "group": "shuffled", "frac": 0.01, "metric": "acc", "score": 0.503, "seed": 1}
+{"task": "paws-x", "group": "shuffled", "frac": 0.05, "metric": "acc", "score": 0.499, "seed": 1}
+{"task": "paws-x", "group": "shuffled", "frac": 0.1, "metric": "acc", "score": 0.6415, "seed": 1}
+{"task": "paws-x", "group": "shuffled", "frac": 1.0, "metric": "acc", "score": 0.895, "seed": 1}
+{"task": "paws-x", "group": "randomaa", "frac": 0.01, "metric": "acc", "score": 0.487, "seed": 1}
+{"task": "paws-x", "group": "randomaa", "frac": 0.05, "metric": "acc", "score": 0.499, "seed": 1}
+{"task": "paws-x", "group": "randomaa", "frac": 0.1, "metric": "acc", "score": 0.5835, "seed": 1}
+{"task": "paws-x", "group": "randomaa", "frac": 1.0, "metric": "acc", "score": 0.899, "seed": 1}
+{"task": "cola", "group": "base", "frac": 0.01, "metric": "mcc", "score": 0.0319, "seed": 1}
+{"task": "cola", "group": "base", "frac": 0.05, "metric": "mcc", "score": 0.077, "seed": 1}
+{"task": "cola", "group": "base", "frac": 0.1, "metric": "mcc", "score": 0.0643, "seed": 1}
+{"task": "cola", "group": "base", "frac": 1.0, "metric": "mcc", "score": 0.24, "seed": 1}
+{"task": "cola", "group": "text", "frac": 0.01, "metric": "mcc", "score": 0.0076, "seed": 1}
+{"task": "cola", "group": "text", "frac": 0.05, "metric": "mcc", "score": -0.0023, "seed": 1}
+{"task": "cola", "group": "text", "frac": 0.1, "metric": "mcc", "score": 0.1287, "seed": 1}
+{"task": "cola", "group": "text", "frac": 1.0, "metric": "mcc", "score": 0.3778, "seed": 1}
+{"task": "cola", "group": "protein", "frac": 0.01, "metric": "mcc", "score": 0.0138, "seed": 1}
+{"task": "cola", "group": "protein", "frac": 0.05, "metric": "mcc", "score": 0.0409, "seed": 1}
+{"task": "cola", "group": "protein", "frac": 0.1, "metric": "mcc", "score": -0.0205, "seed": 1}
+{"task": "cola", "group": "protein", "frac": 1.0, "metric": "mcc", "score": 0.1972, "seed": 1}
+{"task": "cola", "group": "shuffled", "frac": 0.01, "metric": "mcc", "score": 0.0196, "seed": 1}
+{"task": "cola", "group": "shuffled", "frac": 0.05, "metric": "mcc", "score": 0.001, "seed": 1}
+{"task": "cola", "group": "shuffled", "frac": 0.1, "metric": "mcc", "score": -0.0205, "seed": 1}
+{"task": "cola", "group": "shuffled", "frac": 1.0, "metric": "mcc", "score": 0.1474, "seed": 1}
+{"task": "cola", "group": "randomaa", "frac": 0.01, "metric": "mcc", "score": -0.0114, "seed": 1}
+{"task": "cola", "group": "randomaa", "frac": 0.05, "metric": "mcc", "score": -0.008, "seed": 1}
+{"task": "cola", "group": "randomaa", "frac": 0.1, "metric": "mcc", "score": -0.0588, "seed": 1}
+{"task": "cola", "group": "randomaa", "frac": 1.0, "metric": "mcc", "score": 0.1024, "seed": 1}
+{"task": "rte", "group": "base", "frac": 0.01, "metric": "acc", "score": 0.574, "seed": 1}
+{"task": "rte", "group": "base", "frac": 0.05, "metric": "acc", "score": 0.5848, "seed": 1}
+{"task": "rte", "group": "base", "frac": 0.1, "metric": "acc", "score": 0.5596, "seed": 1}
+{"task": "rte", "group": "base", "frac": 1.0, "metric": "acc", "score": 0.6606, "seed": 1}
+{"task": "rte", "group": "text", "frac": 0.01, "metric": "acc", "score": 0.5126, "seed": 1}
+{"task": "rte", "group": "text", "frac": 0.05, "metric": "acc", "score": 0.574, "seed": 1}
+{"task": "rte", "group": "text", "frac": 0.1, "metric": "acc", "score": 0.5884, "seed": 1}
+{"task": "rte", "group": "text", "frac": 1.0, "metric": "acc", "score": 0.6606, "seed": 1}
+{"task": "rte", "group": "protein", "frac": 0.01, "metric": "acc", "score": 0.556, "seed": 1}
+{"task": "rte", "group": "protein", "frac": 0.05, "metric": "acc", "score": 0.5704, "seed": 1}
+{"task": "rte", "group": "protein", "frac": 0.1, "metric": "acc", "score": 0.5993, "seed": 1}
+{"task": "rte", "group": "protein", "frac": 1.0, "metric": "acc", "score": 0.6715, "seed": 1}
+{"task": "rte", "group": "shuffled", "frac": 0.01, "metric": "acc", "score": 0.5307, "seed": 1}
+{"task": "rte", "group": "shuffled", "frac": 0.05, "metric": "acc", "score": 0.5415, "seed": 1}
+{"task": "rte", "group": "shuffled", "frac": 0.1, "metric": "acc", "score": 0.5271, "seed": 1}
+{"task": "rte", "group": "shuffled", "frac": 1.0, "metric": "acc", "score": 0.7004, "seed": 1}
+{"task": "rte", "group": "randomaa", "frac": 0.01, "metric": "acc", "score": 0.491, "seed": 1}
+{"task": "rte", "group": "randomaa", "frac": 0.05, "metric": "acc", "score": 0.5199, "seed": 1}
+{"task": "rte", "group": "randomaa", "frac": 0.1, "metric": "acc", "score": 0.4874, "seed": 1}
+{"task": "rte", "group": "randomaa", "frac": 1.0, "metric": "acc", "score": 0.6101, "seed": 1}
+{"task": "paws-x", "group": "base", "frac": 0.01, "metric": "acc", "score": 0.54, "seed": 2}
+{"task": "paws-x", "group": "base", "frac": 0.05, "metric": "acc", "score": 0.581, "seed": 2}
+{"task": "paws-x", "group": "base", "frac": 0.1, "metric": "acc", "score": 0.7825, "seed": 2}
+{"task": "paws-x", "group": "base", "frac": 1.0, "metric": "acc", "score": 0.905, "seed": 2}
+{"task": "paws-x", "group": "text", "frac": 0.01, "metric": "acc", "score": 0.5015, "seed": 2}
+{"task": "paws-x", "group": "text", "frac": 0.05, "metric": "acc", "score": 0.705, "seed": 2}
+{"task": "paws-x", "group": "text", "frac": 0.1, "metric": "acc", "score": 0.809, "seed": 2}
+{"task": "paws-x", "group": "text", "frac": 1.0, "metric": "acc", "score": 0.9105, "seed": 2}
+{"task": "paws-x", "group": "protein", "frac": 0.01, "metric": "acc", "score": 0.5315, "seed": 2}
+{"task": "paws-x", "group": "protein", "frac": 0.05, "metric": "acc", "score": 0.6845, "seed": 2}
+{"task": "paws-x", "group": "protein", "frac": 0.1, "metric": "acc", "score": 0.796, "seed": 2}
+{"task": "paws-x", "group": "protein", "frac": 1.0, "metric": "acc", "score": 0.898, "seed": 2}
+{"task": "paws-x", "group": "shuffled", "frac": 0.01, "metric": "acc", "score": 0.5365, "seed": 2}
+{"task": "paws-x", "group": "shuffled", "frac": 0.05, "metric": "acc", "score": 0.5495, "seed": 2}
+{"task": "paws-x", "group": "shuffled", "frac": 0.1, "metric": "acc", "score": 0.645, "seed": 2}
+{"task": "paws-x", "group": "shuffled", "frac": 1.0, "metric": "acc", "score": 0.896, "seed": 2}
+{"task": "paws-x", "group": "randomaa", "frac": 0.01, "metric": "acc", "score": 0.5585, "seed": 2}
+{"task": "paws-x", "group": "randomaa", "frac": 0.05, "metric": "acc", "score": 0.5615, "seed": 2}
+{"task": "paws-x", "group": "randomaa", "frac": 0.1, "metric": "acc", "score": 0.594, "seed": 2}
+{"task": "paws-x", "group": "randomaa", "frac": 1.0, "metric": "acc", "score": 0.905, "seed": 2}
+{"task": "cola", "group": "base", "frac": 0.01, "metric": "mcc", "score": 0.0711, "seed": 2}
+{"task": "cola", "group": "base", "frac": 0.05, "metric": "mcc", "score": 0.0407, "seed": 2}
+{"task": "cola", "group": "base", "frac": 0.1, "metric": "mcc", "score": 0.1505, "seed": 2}
+{"task": "cola", "group": "base", "frac": 1.0, "metric": "mcc", "score": 0.3858, "seed": 2}
+{"task": "cola", "group": "text", "frac": 0.01, "metric": "mcc", "score": 0.0501, "seed": 2}
+{"task": "cola", "group": "text", "frac": 0.05, "metric": "mcc", "score": 0.1593, "seed": 2}
+{"task": "cola", "group": "text", "frac": 0.1, "metric": "mcc", "score": 0.2617, "seed": 2}
+{"task": "cola", "group": "text", "frac": 1.0, "metric": "mcc", "score": 0.4499, "seed": 2}
+{"task": "cola", "group": "protein", "frac": 0.01, "metric": "mcc", "score": 0.0776, "seed": 2}
+{"task": "cola", "group": "protein", "frac": 0.05, "metric": "mcc", "score": 0.0522, "seed": 2}
+{"task": "cola", "group": "protein", "frac": 0.1, "metric": "mcc", "score": 0.0666, "seed": 2}
+{"task": "cola", "group": "protein", "frac": 1.0, "metric": "mcc", "score": 0.4126, "seed": 2}
+{"task": "cola", "group": "shuffled", "frac": 0.01, "metric": "mcc", "score": 0.0757, "seed": 2}
+{"task": "cola", "group": "shuffled", "frac": 0.05, "metric": "mcc", "score": 0.0694, "seed": 2}
+{"task": "cola", "group": "shuffled", "frac": 0.1, "metric": "mcc", "score": 0.0463, "seed": 2}
+{"task": "cola", "group": "shuffled", "frac": 1.0, "metric": "mcc", "score": 0.3482, "seed": 2}
+{"task": "cola", "group": "randomaa", "frac": 0.01, "metric": "mcc", "score": -0.005, "seed": 2}
+{"task": "cola", "group": "randomaa", "frac": 0.05, "metric": "mcc", "score": -0.016, "seed": 2}
+{"task": "cola", "group": "randomaa", "frac": 0.1, "metric": "mcc", "score": -0.0259, "seed": 2}
+{"task": "cola", "group": "randomaa", "frac": 1.0, "metric": "mcc", "score": 0.0126, "seed": 2}
+{"task": "rte", "group": "base", "frac": 0.01, "metric": "acc", "score": 0.5379, "seed": 2}
+{"task": "rte", "group": "base", "frac": 0.05, "metric": "acc", "score": 0.5343, "seed": 2}
+{"task": "rte", "group": "base", "frac": 0.1, "metric": "acc", "score": 0.5884, "seed": 2}
+{"task": "rte", "group": "base", "frac": 1.0, "metric": "acc", "score": 0.6715, "seed": 2}
+{"task": "rte", "group": "text", "frac": 0.01, "metric": "acc", "score": 0.5199, "seed": 2}
+{"task": "rte", "group": "text", "frac": 0.05, "metric": "acc", "score": 0.5343, "seed": 2}
+{"task": "rte", "group": "text", "frac": 0.1, "metric": "acc", "score": 0.5162, "seed": 2}
+{"task": "rte", "group": "text", "frac": 1.0, "metric": "acc", "score": 0.6679, "seed": 2}
+{"task": "rte", "group": "protein", "frac": 0.01, "metric": "acc", "score": 0.4838, "seed": 2}
+{"task": "rte", "group": "protein", "frac": 0.05, "metric": "acc", "score": 0.4729, "seed": 2}
+{"task": "rte", "group": "protein", "frac": 0.1, "metric": "acc", "score": 0.5199, "seed": 2}
+{"task": "rte", "group": "protein", "frac": 1.0, "metric": "acc", "score": 0.6643, "seed": 2}
+{"task": "rte", "group": "shuffled", "frac": 0.01, "metric": "acc", "score": 0.5054, "seed": 2}
+{"task": "rte", "group": "shuffled", "frac": 0.05, "metric": "acc", "score": 0.4982, "seed": 2}
+{"task": "rte", "group": "shuffled", "frac": 0.1, "metric": "acc", "score": 0.4801, "seed": 2}
+{"task": "rte", "group": "shuffled", "frac": 1.0, "metric": "acc", "score": 0.6498, "seed": 2}
+{"task": "rte", "group": "randomaa", "frac": 0.01, "metric": "acc", "score": 0.5271, "seed": 2}
+{"task": "rte", "group": "randomaa", "frac": 0.05, "metric": "acc", "score": 0.5054, "seed": 2}
+{"task": "rte", "group": "randomaa", "frac": 0.1, "metric": "acc", "score": 0.5271, "seed": 2}
+{"task": "rte", "group": "randomaa", "frac": 1.0, "metric": "acc", "score": 0.6354, "seed": 2}
+{"task": "paws-x", "group": "base", "frac": 0.01, "metric": "acc", "score": 0.547, "seed": 0, "base": "gpt2-medium"}
+{"task": "paws-x", "group": "base", "frac": 0.05, "metric": "acc", "score": 0.833, "seed": 0, "base": "gpt2-medium"}
+{"task": "paws-x", "group": "base", "frac": 0.1, "metric": "acc", "score": 0.8725, "seed": 0, "base": "gpt2-medium"}
+{"task": "paws-x", "group": "base", "frac": 1.0, "metric": "acc", "score": 0.928, "seed": 0, "base": "gpt2-medium"}
+{"task": "paws-x", "group": "text", "frac": 0.01, "metric": "acc", "score": 0.636, "seed": 0, "base": "gpt2-medium"}
+{"task": "paws-x", "group": "text", "frac": 0.05, "metric": "acc", "score": 0.8305, "seed": 0, "base": "gpt2-medium"}
+{"task": "paws-x", "group": "text", "frac": 0.1, "metric": "acc", "score": 0.875, "seed": 0, "base": "gpt2-medium"}
+{"task": "paws-x", "group": "text", "frac": 1.0, "metric": "acc", "score": 0.935, "seed": 0, "base": "gpt2-medium"}
+{"task": "paws-x", "group": "protein", "frac": 0.01, "metric": "acc", "score": 0.593, "seed": 0, "base": "gpt2-medium"}
+{"task": "paws-x", "group": "protein", "frac": 0.05, "metric": "acc", "score": 0.8265, "seed": 0, "base": "gpt2-medium"}
+{"task": "paws-x", "group": "protein", "frac": 0.1, "metric": "acc", "score": 0.8815, "seed": 0, "base": "gpt2-medium"}
+{"task": "paws-x", "group": "protein", "frac": 1.0, "metric": "acc", "score": 0.934, "seed": 0, "base": "gpt2-medium"}
+{"task": "paws-x", "group": "shuffled", "frac": 0.01, "metric": "acc", "score": 0.522, "seed": 0, "base": "gpt2-medium"}
+{"task": "paws-x", "group": "shuffled", "frac": 0.05, "metric": "acc", "score": 0.8375, "seed": 0, "base": "gpt2-medium"}
+{"task": "paws-x", "group": "shuffled", "frac": 0.1, "metric": "acc", "score": 0.8735, "seed": 0, "base": "gpt2-medium"}
+{"task": "paws-x", "group": "shuffled", "frac": 1.0, "metric": "acc", "score": 0.9265, "seed": 0, "base": "gpt2-medium"}
+{"task": "paws-x", "group": "randomaa", "frac": 0.01, "metric": "acc", "score": 0.49, "seed": 0, "base": "gpt2-medium"}
+{"task": "paws-x", "group": "randomaa", "frac": 0.05, "metric": "acc", "score": 0.4575, "seed": 0, "base": "gpt2-medium"}
+{"task": "paws-x", "group": "randomaa", "frac": 0.1, "metric": "acc", "score": 0.829, "seed": 0, "base": "gpt2-medium"}
+{"task": "paws-x", "group": "randomaa", "frac": 1.0, "metric": "acc", "score": 0.9275, "seed": 0, "base": "gpt2-medium"}
+{"task": "cola", "group": "base", "frac": 0.01, "metric": "mcc", "score": 0.0615, "seed": 0, "base": "gpt2-medium"}
+{"task": "cola", "group": "base", "frac": 0.05, "metric": "mcc", "score": 0.154, "seed": 0, "base": "gpt2-medium"}
+{"task": "cola", "group": "base", "frac": 0.1, "metric": "mcc", "score": 0.2442, "seed": 0, "base": "gpt2-medium"}
+{"task": "cola", "group": "base", "frac": 1.0, "metric": "mcc", "score": 0.5019, "seed": 0, "base": "gpt2-medium"}
+{"task": "cola", "group": "text", "frac": 0.01, "metric": "mcc", "score": 0.0137, "seed": 0, "base": "gpt2-medium"}
+{"task": "cola", "group": "text", "frac": 0.05, "metric": "mcc", "score": 0.2486, "seed": 0, "base": "gpt2-medium"}
+{"task": "cola", "group": "text", "frac": 0.1, "metric": "mcc", "score": 0.3348, "seed": 0, "base": "gpt2-medium"}
+{"task": "cola", "group": "text", "frac": 1.0, "metric": "mcc", "score": 0.4952, "seed": 0, "base": "gpt2-medium"}
+{"task": "cola", "group": "protein", "frac": 0.01, "metric": "mcc", "score": 0.0605, "seed": 0, "base": "gpt2-medium"}
+{"task": "cola", "group": "protein", "frac": 0.05, "metric": "mcc", "score": 0.1702, "seed": 0, "base": "gpt2-medium"}
+{"task": "cola", "group": "protein", "frac": 0.1, "metric": "mcc", "score": 0.3005, "seed": 0, "base": "gpt2-medium"}
+{"task": "cola", "group": "protein", "frac": 1.0, "metric": "mcc", "score": 0.475, "seed": 0, "base": "gpt2-medium"}
+{"task": "cola", "group": "shuffled", "frac": 0.01, "metric": "mcc", "score": 0.066, "seed": 0, "base": "gpt2-medium"}
+{"task": "cola", "group": "shuffled", "frac": 0.05, "metric": "mcc", "score": 0.1186, "seed": 0, "base": "gpt2-medium"}
+{"task": "cola", "group": "shuffled", "frac": 0.1, "metric": "mcc", "score": 0.2758, "seed": 0, "base": "gpt2-medium"}
+{"task": "cola", "group": "shuffled", "frac": 1.0, "metric": "mcc", "score": 0.4886, "seed": 0, "base": "gpt2-medium"}
+{"task": "cola", "group": "randomaa", "frac": 0.01, "metric": "mcc", "score": -0.0192, "seed": 0, "base": "gpt2-medium"}
+{"task": "cola", "group": "randomaa", "frac": 0.05, "metric": "mcc", "score": 0.0615, "seed": 0, "base": "gpt2-medium"}
+{"task": "cola", "group": "randomaa", "frac": 0.1, "metric": "mcc", "score": 0.1189, "seed": 0, "base": "gpt2-medium"}
+{"task": "cola", "group": "randomaa", "frac": 1.0, "metric": "mcc", "score": 0.4413, "seed": 0, "base": "gpt2-medium"}
+{"task": "rte", "group": "base", "frac": 0.01, "metric": "acc", "score": 0.5415, "seed": 0, "base": "gpt2-medium"}
+{"task": "rte", "group": "base", "frac": 0.05, "metric": "acc", "score": 0.5632, "seed": 0, "base": "gpt2-medium"}
+{"task": "rte", "group": "base", "frac": 0.1, "metric": "acc", "score": 0.5957, "seed": 0, "base": "gpt2-medium"}
+{"task": "rte", "group": "base", "frac": 1.0, "metric": "acc", "score": 0.6715, "seed": 0, "base": "gpt2-medium"}
+{"task": "rte", "group": "text", "frac": 0.01, "metric": "acc", "score": 0.5235, "seed": 0, "base": "gpt2-medium"}
+{"task": "rte", "group": "text", "frac": 0.05, "metric": "acc", "score": 0.5632, "seed": 0, "base": "gpt2-medium"}
+{"task": "rte", "group": "text", "frac": 0.1, "metric": "acc", "score": 0.5812, "seed": 0, "base": "gpt2-medium"}
+{"task": "rte", "group": "text", "frac": 1.0, "metric": "acc", "score": 0.7004, "seed": 0, "base": "gpt2-medium"}
+{"task": "rte", "group": "protein", "frac": 0.01, "metric": "acc", "score": 0.5307, "seed": 0, "base": "gpt2-medium"}
+{"task": "rte", "group": "protein", "frac": 0.05, "metric": "acc", "score": 0.5451, "seed": 0, "base": "gpt2-medium"}
+{"task": "rte", "group": "protein", "frac": 0.1, "metric": "acc", "score": 0.556, "seed": 0, "base": "gpt2-medium"}
+{"task": "rte", "group": "protein", "frac": 1.0, "metric": "acc", "score": 0.6895, "seed": 0, "base": "gpt2-medium"}
+{"task": "rte", "group": "shuffled", "frac": 0.01, "metric": "acc", "score": 0.5235, "seed": 0, "base": "gpt2-medium"}
+{"task": "rte", "group": "shuffled", "frac": 0.05, "metric": "acc", "score": 0.556, "seed": 0, "base": "gpt2-medium"}
+{"task": "rte", "group": "shuffled", "frac": 0.1, "metric": "acc", "score": 0.5776, "seed": 0, "base": "gpt2-medium"}
+{"task": "rte", "group": "shuffled", "frac": 1.0, "metric": "acc", "score": 0.6895, "seed": 0, "base": "gpt2-medium"}
+{"task": "rte", "group": "randomaa", "frac": 0.01, "metric": "acc", "score": 0.5307, "seed": 0, "base": "gpt2-medium"}
+{"task": "rte", "group": "randomaa", "frac": 0.05, "metric": "acc", "score": 0.4693, "seed": 0, "base": "gpt2-medium"}
+{"task": "rte", "group": "randomaa", "frac": 0.1, "metric": "acc", "score": 0.556, "seed": 0, "base": "gpt2-medium"}
+{"task": "rte", "group": "randomaa", "frac": 1.0, "metric": "acc", "score": 0.6462, "seed": 0, "base": "gpt2-medium"}
+{"task": "paws-x", "group": "base", "frac": 0.01, "metric": "acc", "score": 0.563, "seed": 1, "base": "gpt2-medium"}
+{"task": "paws-x", "group": "base", "frac": 0.05, "metric": "acc", "score": 0.834, "seed": 1, "base": "gpt2-medium"}
+{"task": "paws-x", "group": "base", "frac": 0.1, "metric": "acc", "score": 0.8875, "seed": 1, "base": "gpt2-medium"}
+{"task": "paws-x", "group": "base", "frac": 1.0, "metric": "acc", "score": 0.9305, "seed": 1, "base": "gpt2-medium"}
+{"task": "paws-x", "group": "text", "frac": 0.01, "metric": "acc", "score": 0.6085, "seed": 1, "base": "gpt2-medium"}
+{"task": "paws-x", "group": "text", "frac": 0.05, "metric": "acc", "score": 0.85, "seed": 1, "base": "gpt2-medium"}
+{"task": "paws-x", "group": "text", "frac": 0.1, "metric": "acc", "score": 0.884, "seed": 1, "base": "gpt2-medium"}
+{"task": "paws-x", "group": "text", "frac": 1.0, "metric": "acc", "score": 0.9315, "seed": 1, "base": "gpt2-medium"}
+{"task": "paws-x", "group": "protein", "frac": 0.01, "metric": "acc", "score": 0.5905, "seed": 1, "base": "gpt2-medium"}
+{"task": "paws-x", "group": "protein", "frac": 0.05, "metric": "acc", "score": 0.844, "seed": 1, "base": "gpt2-medium"}
+{"task": "paws-x", "group": "protein", "frac": 0.1, "metric": "acc", "score": 0.888, "seed": 1, "base": "gpt2-medium"}
+{"task": "paws-x", "group": "protein", "frac": 1.0, "metric": "acc", "score": 0.9275, "seed": 1, "base": "gpt2-medium"}
+{"task": "paws-x", "group": "shuffled", "frac": 0.01, "metric": "acc", "score": 0.5315, "seed": 1, "base": "gpt2-medium"}
+{"task": "paws-x", "group": "shuffled", "frac": 0.05, "metric": "acc", "score": 0.827, "seed": 1, "base": "gpt2-medium"}
+{"task": "paws-x", "group": "shuffled", "frac": 0.1, "metric": "acc", "score": 0.8915, "seed": 1, "base": "gpt2-medium"}
+{"task": "paws-x", "group": "shuffled", "frac": 1.0, "metric": "acc", "score": 0.93, "seed": 1, "base": "gpt2-medium"}
+{"task": "paws-x", "group": "randomaa", "frac": 0.01, "metric": "acc", "score": 0.538, "seed": 1, "base": "gpt2-medium"}
+{"task": "paws-x", "group": "randomaa", "frac": 0.05, "metric": "acc", "score": 0.7645, "seed": 1, "base": "gpt2-medium"}
+{"task": "paws-x", "group": "randomaa", "frac": 0.1, "metric": "acc", "score": 0.8625, "seed": 1, "base": "gpt2-medium"}
+{"task": "paws-x", "group": "randomaa", "frac": 1.0, "metric": "acc", "score": 0.928, "seed": 1, "base": "gpt2-medium"}
+{"task": "cola", "group": "base", "frac": 0.01, "metric": "mcc", "score": 0.1256, "seed": 1, "base": "gpt2-medium"}
+{"task": "cola", "group": "base", "frac": 0.05, "metric": "mcc", "score": 0.2515, "seed": 1, "base": "gpt2-medium"}
+{"task": "cola", "group": "base", "frac": 0.1, "metric": "mcc", "score": 0.3017, "seed": 1, "base": "gpt2-medium"}
+{"task": "cola", "group": "base", "frac": 1.0, "metric": "mcc", "score": 0.522, "seed": 1, "base": "gpt2-medium"}
+{"task": "cola", "group": "text", "frac": 0.01, "metric": "mcc", "score": 0.052, "seed": 1, "base": "gpt2-medium"}
+{"task": "cola", "group": "text", "frac": 0.05, "metric": "mcc", "score": 0.3109, "seed": 1, "base": "gpt2-medium"}
+{"task": "cola", "group": "text", "frac": 0.1, "metric": "mcc", "score": 0.3037, "seed": 1, "base": "gpt2-medium"}
+{"task": "cola", "group": "text", "frac": 1.0, "metric": "mcc", "score": 0.542, "seed": 1, "base": "gpt2-medium"}
+{"task": "cola", "group": "protein", "frac": 0.01, "metric": "mcc", "score": 0.0496, "seed": 1, "base": "gpt2-medium"}
+{"task": "cola", "group": "protein", "frac": 0.05, "metric": "mcc", "score": 0.1827, "seed": 1, "base": "gpt2-medium"}
+{"task": "cola", "group": "protein", "frac": 0.1, "metric": "mcc", "score": 0.2958, "seed": 1, "base": "gpt2-medium"}
+{"task": "cola", "group": "protein", "frac": 1.0, "metric": "mcc", "score": 0.5179, "seed": 1, "base": "gpt2-medium"}
+{"task": "cola", "group": "shuffled", "frac": 0.01, "metric": "mcc", "score": 0.0333, "seed": 1, "base": "gpt2-medium"}
+{"task": "cola", "group": "shuffled", "frac": 0.05, "metric": "mcc", "score": 0.15, "seed": 1, "base": "gpt2-medium"}
+{"task": "cola", "group": "shuffled", "frac": 0.1, "metric": "mcc", "score": 0.2419, "seed": 1, "base": "gpt2-medium"}
+{"task": "cola", "group": "shuffled", "frac": 1.0, "metric": "mcc", "score": 0.5239, "seed": 1, "base": "gpt2-medium"}
+{"task": "cola", "group": "randomaa", "frac": 0.01, "metric": "mcc", "score": 0.0442, "seed": 1, "base": "gpt2-medium"}
+{"task": "cola", "group": "randomaa", "frac": 0.05, "metric": "mcc", "score": 0.1318, "seed": 1, "base": "gpt2-medium"}
+{"task": "cola", "group": "randomaa", "frac": 0.1, "metric": "mcc", "score": 0.2898, "seed": 1, "base": "gpt2-medium"}
+{"task": "cola", "group": "randomaa", "frac": 1.0, "metric": "mcc", "score": 0.4969, "seed": 1, "base": "gpt2-medium"}
+{"task": "rte", "group": "base", "frac": 0.01, "metric": "acc", "score": 0.4982, "seed": 1, "base": "gpt2-medium"}
+{"task": "rte", "group": "base", "frac": 0.05, "metric": "acc", "score": 0.5018, "seed": 1, "base": "gpt2-medium"}
+{"task": "rte", "group": "base", "frac": 0.1, "metric": "acc", "score": 0.5487, "seed": 1, "base": "gpt2-medium"}
+{"task": "rte", "group": "base", "frac": 1.0, "metric": "acc", "score": 0.7004, "seed": 1, "base": "gpt2-medium"}
+{"task": "rte", "group": "text", "frac": 0.01, "metric": "acc", "score": 0.5307, "seed": 1, "base": "gpt2-medium"}
+{"task": "rte", "group": "text", "frac": 0.05, "metric": "acc", "score": 0.5812, "seed": 1, "base": "gpt2-medium"}
+{"task": "rte", "group": "text", "frac": 0.1, "metric": "acc", "score": 0.5884, "seed": 1, "base": "gpt2-medium"}
+{"task": "rte", "group": "text", "frac": 1.0, "metric": "acc", "score": 0.704, "seed": 1, "base": "gpt2-medium"}
+{"task": "rte", "group": "protein", "frac": 0.01, "metric": "acc", "score": 0.491, "seed": 1, "base": "gpt2-medium"}
+{"task": "rte", "group": "protein", "frac": 0.05, "metric": "acc", "score": 0.5632, "seed": 1, "base": "gpt2-medium"}
+{"task": "rte", "group": "protein", "frac": 0.1, "metric": "acc", "score": 0.556, "seed": 1, "base": "gpt2-medium"}
+{"task": "rte", "group": "protein", "frac": 1.0, "metric": "acc", "score": 0.6859, "seed": 1, "base": "gpt2-medium"}
+{"task": "rte", "group": "shuffled", "frac": 0.01, "metric": "acc", "score": 0.4657, "seed": 1, "base": "gpt2-medium"}
+{"task": "rte", "group": "shuffled", "frac": 0.05, "metric": "acc", "score": 0.4946, "seed": 1, "base": "gpt2-medium"}
+{"task": "rte", "group": "shuffled", "frac": 0.1, "metric": "acc", "score": 0.6137, "seed": 1, "base": "gpt2-medium"}
+{"task": "rte", "group": "shuffled", "frac": 1.0, "metric": "acc", "score": 0.6931, "seed": 1, "base": "gpt2-medium"}
+{"task": "rte", "group": "randomaa", "frac": 0.01, "metric": "acc", "score": 0.5018, "seed": 1, "base": "gpt2-medium"}
+{"task": "rte", "group": "randomaa", "frac": 0.05, "metric": "acc", "score": 0.5921, "seed": 1, "base": "gpt2-medium"}
+{"task": "rte", "group": "randomaa", "frac": 0.1, "metric": "acc", "score": 0.5921, "seed": 1, "base": "gpt2-medium"}
+{"task": "rte", "group": "randomaa", "frac": 1.0, "metric": "acc", "score": 0.6895, "seed": 1, "base": "gpt2-medium"}
+{"task": "paws-x", "group": "base", "frac": 0.01, "metric": "acc", "score": 0.568, "seed": 2, "base": "gpt2-medium"}
+{"task": "paws-x", "group": "base", "frac": 0.05, "metric": "acc", "score": 0.812, "seed": 2, "base": "gpt2-medium"}
+{"task": "paws-x", "group": "base", "frac": 0.1, "metric": "acc", "score": 0.875, "seed": 2, "base": "gpt2-medium"}
+{"task": "paws-x", "group": "base", "frac": 1.0, "metric": "acc", "score": 0.9315, "seed": 2, "base": "gpt2-medium"}
+{"task": "paws-x", "group": "text", "frac": 0.01, "metric": "acc", "score": 0.674, "seed": 2, "base": "gpt2-medium"}
+{"task": "paws-x", "group": "text", "frac": 0.05, "metric": "acc", "score": 0.837, "seed": 2, "base": "gpt2-medium"}
+{"task": "paws-x", "group": "text", "frac": 0.1, "metric": "acc", "score": 0.8785, "seed": 2, "base": "gpt2-medium"}
+{"task": "paws-x", "group": "text", "frac": 1.0, "metric": "acc", "score": 0.9285, "seed": 2, "base": "gpt2-medium"}
+{"task": "paws-x", "group": "protein", "frac": 0.01, "metric": "acc", "score": 0.6555, "seed": 2, "base": "gpt2-medium"}
+{"task": "paws-x", "group": "protein", "frac": 0.05, "metric": "acc", "score": 0.8245, "seed": 2, "base": "gpt2-medium"}
+{"task": "paws-x", "group": "protein", "frac": 0.1, "metric": "acc", "score": 0.8835, "seed": 2, "base": "gpt2-medium"}
+{"task": "paws-x", "group": "protein", "frac": 1.0, "metric": "acc", "score": 0.927, "seed": 2, "base": "gpt2-medium"}
+{"task": "paws-x", "group": "shuffled", "frac": 0.01, "metric": "acc", "score": 0.5805, "seed": 2, "base": "gpt2-medium"}
+{"task": "paws-x", "group": "shuffled", "frac": 0.05, "metric": "acc", "score": 0.8275, "seed": 2, "base": "gpt2-medium"}
+{"task": "paws-x", "group": "shuffled", "frac": 0.1, "metric": "acc", "score": 0.8855, "seed": 2, "base": "gpt2-medium"}
+{"task": "paws-x", "group": "shuffled", "frac": 1.0, "metric": "acc", "score": 0.9325, "seed": 2, "base": "gpt2-medium"}
+{"task": "paws-x", "group": "randomaa", "frac": 0.01, "metric": "acc", "score": 0.569, "seed": 2, "base": "gpt2-medium"}
+{"task": "paws-x", "group": "randomaa", "frac": 0.05, "metric": "acc", "score": 0.815, "seed": 2, "base": "gpt2-medium"}
+{"task": "paws-x", "group": "randomaa", "frac": 0.1, "metric": "acc", "score": 0.8765, "seed": 2, "base": "gpt2-medium"}
+{"task": "paws-x", "group": "randomaa", "frac": 1.0, "metric": "acc", "score": 0.929, "seed": 2, "base": "gpt2-medium"}
+{"task": "cola", "group": "base", "frac": 0.01, "metric": "mcc", "score": 0.0382, "seed": 2, "base": "gpt2-medium"}
+{"task": "cola", "group": "base", "frac": 0.05, "metric": "mcc", "score": 0.2603, "seed": 2, "base": "gpt2-medium"}
+{"task": "cola", "group": "base", "frac": 0.1, "metric": "mcc", "score": 0.3574, "seed": 2, "base": "gpt2-medium"}
+{"task": "cola", "group": "base", "frac": 1.0, "metric": "mcc", "score": 0.5154, "seed": 2, "base": "gpt2-medium"}
+{"task": "cola", "group": "text", "frac": 0.01, "metric": "mcc", "score": 0.1022, "seed": 2, "base": "gpt2-medium"}
+{"task": "cola", "group": "text", "frac": 0.05, "metric": "mcc", "score": 0.3087, "seed": 2, "base": "gpt2-medium"}
+{"task": "cola", "group": "text", "frac": 0.1, "metric": "mcc", "score": 0.4079, "seed": 2, "base": "gpt2-medium"}
+{"task": "cola", "group": "text", "frac": 1.0, "metric": "mcc", "score": 0.5182, "seed": 2, "base": "gpt2-medium"}
+{"task": "cola", "group": "protein", "frac": 0.01, "metric": "mcc", "score": 0.0522, "seed": 2, "base": "gpt2-medium"}
+{"task": "cola", "group": "protein", "frac": 0.05, "metric": "mcc", "score": 0.2302, "seed": 2, "base": "gpt2-medium"}
+{"task": "cola", "group": "protein", "frac": 0.1, "metric": "mcc", "score": 0.3644, "seed": 2, "base": "gpt2-medium"}
+{"task": "cola", "group": "protein", "frac": 1.0, "metric": "mcc", "score": 0.526, "seed": 2, "base": "gpt2-medium"}
+{"task": "cola", "group": "shuffled", "frac": 0.01, "metric": "mcc", "score": 0.0, "seed": 2, "base": "gpt2-medium"}
+{"task": "cola", "group": "shuffled", "frac": 0.05, "metric": "mcc", "score": 0.2924, "seed": 2, "base": "gpt2-medium"}
+{"task": "cola", "group": "shuffled", "frac": 0.1, "metric": "mcc", "score": 0.3287, "seed": 2, "base": "gpt2-medium"}
+{"task": "cola", "group": "shuffled", "frac": 1.0, "metric": "mcc", "score": 0.5046, "seed": 2, "base": "gpt2-medium"}
+{"task": "cola", "group": "randomaa", "frac": 0.01, "metric": "mcc", "score": 0.0464, "seed": 2, "base": "gpt2-medium"}
+{"task": "cola", "group": "randomaa", "frac": 0.05, "metric": "mcc", "score": 0.0451, "seed": 2, "base": "gpt2-medium"}
+{"task": "cola", "group": "randomaa", "frac": 0.1, "metric": "mcc", "score": 0.3379, "seed": 2, "base": "gpt2-medium"}
+{"task": "cola", "group": "randomaa", "frac": 1.0, "metric": "mcc", "score": 0.5391, "seed": 2, "base": "gpt2-medium"}
+{"task": "rte", "group": "base", "frac": 0.01, "metric": "acc", "score": 0.4874, "seed": 2, "base": "gpt2-medium"}
+{"task": "rte", "group": "base", "frac": 0.05, "metric": "acc", "score": 0.4693, "seed": 2, "base": "gpt2-medium"}
+{"task": "rte", "group": "base", "frac": 0.1, "metric": "acc", "score": 0.5271, "seed": 2, "base": "gpt2-medium"}
+{"task": "rte", "group": "base", "frac": 1.0, "metric": "acc", "score": 0.6715, "seed": 2, "base": "gpt2-medium"}
+{"task": "rte", "group": "text", "frac": 0.01, "metric": "acc", "score": 0.4765, "seed": 2, "base": "gpt2-medium"}
+{"task": "rte", "group": "text", "frac": 0.05, "metric": "acc", "score": 0.4585, "seed": 2, "base": "gpt2-medium"}
+{"task": "rte", "group": "text", "frac": 0.1, "metric": "acc", "score": 0.5199, "seed": 2, "base": "gpt2-medium"}
+{"task": "rte", "group": "text", "frac": 1.0, "metric": "acc", "score": 0.6823, "seed": 2, "base": "gpt2-medium"}
+{"task": "rte", "group": "protein", "frac": 0.01, "metric": "acc", "score": 0.5018, "seed": 2, "base": "gpt2-medium"}
+{"task": "rte", "group": "protein", "frac": 0.05, "metric": "acc", "score": 0.5054, "seed": 2, "base": "gpt2-medium"}
+{"task": "rte", "group": "protein", "frac": 0.1, "metric": "acc", "score": 0.5379, "seed": 2, "base": "gpt2-medium"}
+{"task": "rte", "group": "protein", "frac": 1.0, "metric": "acc", "score": 0.6968, "seed": 2, "base": "gpt2-medium"}
+{"task": "rte", "group": "shuffled", "frac": 0.01, "metric": "acc", "score": 0.5018, "seed": 2, "base": "gpt2-medium"}
+{"task": "rte", "group": "shuffled", "frac": 0.05, "metric": "acc", "score": 0.5343, "seed": 2, "base": "gpt2-medium"}
+{"task": "rte", "group": "shuffled", "frac": 0.1, "metric": "acc", "score": 0.5487, "seed": 2, "base": "gpt2-medium"}
+{"task": "rte", "group": "shuffled", "frac": 1.0, "metric": "acc", "score": 0.6931, "seed": 2, "base": "gpt2-medium"}
+{"task": "rte", "group": "randomaa", "frac": 0.01, "metric": "acc", "score": 0.4657, "seed": 2, "base": "gpt2-medium"}
+{"task": "rte", "group": "randomaa", "frac": 0.05, "metric": "acc", "score": 0.4874, "seed": 2, "base": "gpt2-medium"}
+{"task": "rte", "group": "randomaa", "frac": 0.1, "metric": "acc", "score": 0.4549, "seed": 2, "base": "gpt2-medium"}
+{"task": "rte", "group": "randomaa", "frac": 1.0, "metric": "acc", "score": 0.6859, "seed": 2, "base": "gpt2-medium"}
+{"task": "dyck_L40_t3", "group": "base", "frac": 0.1, "metric": "acc", "score": 0.5275, "seed": 0, "base": "gpt2"}
+{"task": "dyck_L40_t3", "group": "base", "frac": 1.0, "metric": "acc", "score": 0.7335, "seed": 0, "base": "gpt2"}
+{"task": "dyck_L40_t3", "group": "text", "frac": 0.1, "metric": "acc", "score": 0.5265, "seed": 0, "base": "gpt2"}
+{"task": "dyck_L40_t3", "group": "text", "frac": 1.0, "metric": "acc", "score": 0.779, "seed": 0, "base": "gpt2"}
+{"task": "dyck_L40_t3", "group": "protein", "frac": 0.1, "metric": "acc", "score": 0.494, "seed": 0, "base": "gpt2"}
+{"task": "dyck_L40_t3", "group": "protein", "frac": 1.0, "metric": "acc", "score": 0.6585, "seed": 0, "base": "gpt2"}
+{"task": "dyck_L40_t3", "group": "shuffled", "frac": 0.1, "metric": "acc", "score": 0.5245, "seed": 0, "base": "gpt2"}
+{"task": "dyck_L40_t3", "group": "shuffled", "frac": 1.0, "metric": "acc", "score": 0.735, "seed": 0, "base": "gpt2"}
+{"task": "dyck_L40_t3", "group": "randomaa", "frac": 0.1, "metric": "acc", "score": 0.503, "seed": 0, "base": "gpt2"}
+{"task": "dyck_L40_t3", "group": "randomaa", "frac": 1.0, "metric": "acc", "score": 0.5965, "seed": 0, "base": "gpt2"}
+{"task": "dyck_L60_t3", "group": "base", "frac": 0.1, "metric": "acc", "score": 0.5145, "seed": 0, "base": "gpt2"}
+{"task": "dyck_L60_t3", "group": "base", "frac": 1.0, "metric": "acc", "score": 0.555, "seed": 0, "base": "gpt2"}
+{"task": "dyck_L60_t3", "group": "text", "frac": 0.1, "metric": "acc", "score": 0.499, "seed": 0, "base": "gpt2"}
+{"task": "dyck_L60_t3", "group": "text", "frac": 1.0, "metric": "acc", "score": 0.6165, "seed": 0, "base": "gpt2"}
+{"task": "dyck_L60_t3", "group": "protein", "frac": 0.1, "metric": "acc", "score": 0.5035, "seed": 0, "base": "gpt2"}
+{"task": "dyck_L60_t3", "group": "protein", "frac": 1.0, "metric": "acc", "score": 0.543, "seed": 0, "base": "gpt2"}
+{"task": "dyck_L60_t3", "group": "shuffled", "frac": 0.1, "metric": "acc", "score": 0.5105, "seed": 0, "base": "gpt2"}
+{"task": "dyck_L60_t3", "group": "shuffled", "frac": 1.0, "metric": "acc", "score": 0.546, "seed": 0, "base": "gpt2"}
+{"task": "dyck_L60_t3", "group": "randomaa", "frac": 0.1, "metric": "acc", "score": 0.509, "seed": 0, "base": "gpt2"}
+{"task": "dyck_L60_t3", "group": "randomaa", "frac": 1.0, "metric": "acc", "score": 0.534, "seed": 0, "base": "gpt2"}
+{"task": "dyck_L40_t3", "group": "base", "frac": 0.1, "metric": "acc", "score": 0.538, "seed": 1, "base": "gpt2"}
+{"task": "dyck_L40_t3", "group": "base", "frac": 1.0, "metric": "acc", "score": 0.712, "seed": 1, "base": "gpt2"}
+{"task": "dyck_L40_t3", "group": "text", "frac": 0.1, "metric": "acc", "score": 0.544, "seed": 1, "base": "gpt2"}
+{"task": "dyck_L40_t3", "group": "text", "frac": 1.0, "metric": "acc", "score": 0.787, "seed": 1, "base": "gpt2"}
+{"task": "dyck_L40_t3", "group": "protein", "frac": 0.1, "metric": "acc", "score": 0.542, "seed": 1, "base": "gpt2"}
+{"task": "dyck_L40_t3", "group": "protein", "frac": 1.0, "metric": "acc", "score": 0.6145, "seed": 1, "base": "gpt2"}
+{"task": "dyck_L40_t3", "group": "shuffled", "frac": 0.1, "metric": "acc", "score": 0.5385, "seed": 1, "base": "gpt2"}
+{"task": "dyck_L40_t3", "group": "shuffled", "frac": 1.0, "metric": "acc", "score": 0.7255, "seed": 1, "base": "gpt2"}
+{"task": "dyck_L40_t3", "group": "randomaa", "frac": 0.1, "metric": "acc", "score": 0.5185, "seed": 1, "base": "gpt2"}
+{"task": "dyck_L40_t3", "group": "randomaa", "frac": 1.0, "metric": "acc", "score": 0.537, "seed": 1, "base": "gpt2"}
+{"task": "dyck_L60_t3", "group": "base", "frac": 0.1, "metric": "acc", "score": 0.4905, "seed": 1, "base": "gpt2"}
+{"task": "dyck_L60_t3", "group": "base", "frac": 1.0, "metric": "acc", "score": 0.55, "seed": 1, "base": "gpt2"}
+{"task": "dyck_L60_t3", "group": "text", "frac": 0.1, "metric": "acc", "score": 0.5055, "seed": 1, "base": "gpt2"}
+{"task": "dyck_L60_t3", "group": "text", "frac": 1.0, "metric": "acc", "score": 0.612, "seed": 1, "base": "gpt2"}
+{"task": "dyck_L60_t3", "group": "protein", "frac": 0.1, "metric": "acc", "score": 0.4835, "seed": 1, "base": "gpt2"}
+{"task": "dyck_L60_t3", "group": "protein", "frac": 1.0, "metric": "acc", "score": 0.5515, "seed": 1, "base": "gpt2"}
+{"task": "dyck_L60_t3", "group": "shuffled", "frac": 0.1, "metric": "acc", "score": 0.485, "seed": 1, "base": "gpt2"}
+{"task": "dyck_L60_t3", "group": "shuffled", "frac": 1.0, "metric": "acc", "score": 0.543, "seed": 1, "base": "gpt2"}
+{"task": "dyck_L60_t3", "group": "randomaa", "frac": 0.1, "metric": "acc", "score": 0.4795, "seed": 1, "base": "gpt2"}
+{"task": "dyck_L60_t3", "group": "randomaa", "frac": 1.0, "metric": "acc", "score": 0.5265, "seed": 1, "base": "gpt2"}
+{"task": "dyck_L40_t3", "group": "base", "frac": 0.1, "metric": "acc", "score": 0.509, "seed": 2, "base": "gpt2"}
+{"task": "dyck_L40_t3", "group": "base", "frac": 1.0, "metric": "acc", "score": 0.7205, "seed": 2, "base": "gpt2"}
+{"task": "dyck_L40_t3", "group": "text", "frac": 0.1, "metric": "acc", "score": 0.513, "seed": 2, "base": "gpt2"}
+{"task": "dyck_L40_t3", "group": "text", "frac": 1.0, "metric": "acc", "score": 0.7155, "seed": 2, "base": "gpt2"}
+{"task": "dyck_L40_t3", "group": "protein", "frac": 0.1, "metric": "acc", "score": 0.533, "seed": 2, "base": "gpt2"}
+{"task": "dyck_L40_t3", "group": "protein", "frac": 1.0, "metric": "acc", "score": 0.529, "seed": 2, "base": "gpt2"}
+{"task": "dyck_L40_t3", "group": "shuffled", "frac": 0.1, "metric": "acc", "score": 0.51, "seed": 2, "base": "gpt2"}
+{"task": "dyck_L40_t3", "group": "shuffled", "frac": 1.0, "metric": "acc", "score": 0.5955, "seed": 2, "base": "gpt2"}
+{"task": "dyck_L40_t3", "group": "randomaa", "frac": 0.1, "metric": "acc", "score": 0.538, "seed": 2, "base": "gpt2"}
+{"task": "dyck_L40_t3", "group": "randomaa", "frac": 1.0, "metric": "acc", "score": 0.6245, "seed": 2, "base": "gpt2"}
+{"task": "dyck_L60_t3", "group": "base", "frac": 0.1, "metric": "acc", "score": 0.515, "seed": 2, "base": "gpt2"}
+{"task": "dyck_L60_t3", "group": "base", "frac": 1.0, "metric": "acc", "score": 0.5325, "seed": 2, "base": "gpt2"}
+{"task": "dyck_L60_t3", "group": "text", "frac": 0.1, "metric": "acc", "score": 0.509, "seed": 2, "base": "gpt2"}
+{"task": "dyck_L60_t3", "group": "text", "frac": 1.0, "metric": "acc", "score": 0.565, "seed": 2, "base": "gpt2"}
+{"task": "dyck_L60_t3", "group": "protein", "frac": 0.1, "metric": "acc", "score": 0.499, "seed": 2, "base": "gpt2"}
+{"task": "dyck_L60_t3", "group": "protein", "frac": 1.0, "metric": "acc", "score": 0.553, "seed": 2, "base": "gpt2"}
+{"task": "dyck_L60_t3", "group": "shuffled", "frac": 0.1, "metric": "acc", "score": 0.4865, "seed": 2, "base": "gpt2"}
+{"task": "dyck_L60_t3", "group": "shuffled", "frac": 1.0, "metric": "acc", "score": 0.5345, "seed": 2, "base": "gpt2"}
+{"task": "dyck_L60_t3", "group": "randomaa", "frac": 0.1, "metric": "acc", "score": 0.504, "seed": 2, "base": "gpt2"}
+{"task": "dyck_L60_t3", "group": "randomaa", "frac": 1.0, "metric": "acc", "score": 0.5285, "seed": 2, "base": "gpt2"}
+{"task": "dyck_L40_t3", "group": "base", "frac": 0.1, "metric": "acc", "score": 0.561, "seed": 0, "base": "gpt2-medium"}
+{"task": "dyck_L40_t3", "group": "base", "frac": 1.0, "metric": "acc", "score": 0.7455, "seed": 0, "base": "gpt2-medium"}
+{"task": "dyck_L40_t3", "group": "text", "frac": 0.1, "metric": "acc", "score": 0.5335, "seed": 0, "base": "gpt2-medium"}
+{"task": "dyck_L40_t3", "group": "text", "frac": 1.0, "metric": "acc", "score": 0.795, "seed": 0, "base": "gpt2-medium"}
+{"task": "dyck_L40_t3", "group": "protein", "frac": 0.1, "metric": "acc", "score": 0.5295, "seed": 0, "base": "gpt2-medium"}
+{"task": "dyck_L40_t3", "group": "protein", "frac": 1.0, "metric": "acc", "score": 0.7775, "seed": 0, "base": "gpt2-medium"}
+{"task": "dyck_L40_t3", "group": "shuffled", "frac": 0.1, "metric": "acc", "score": 0.5245, "seed": 0, "base": "gpt2-medium"}
+{"task": "dyck_L40_t3", "group": "shuffled", "frac": 1.0, "metric": "acc", "score": 0.6535, "seed": 0, "base": "gpt2-medium"}
+{"task": "dyck_L40_t3", "group": "randomaa", "frac": 0.1, "metric": "acc", "score": 0.532, "seed": 0, "base": "gpt2-medium"}
+{"task": "dyck_L40_t3", "group": "randomaa", "frac": 1.0, "metric": "acc", "score": 0.532, "seed": 0, "base": "gpt2-medium"}
+{"task": "dyck_L60_t3", "group": "base", "frac": 0.1, "metric": "acc", "score": 0.498, "seed": 0, "base": "gpt2-medium"}
+{"task": "dyck_L60_t3", "group": "base", "frac": 1.0, "metric": "acc", "score": 0.578, "seed": 0, "base": "gpt2-medium"}
+{"task": "dyck_L60_t3", "group": "text", "frac": 0.1, "metric": "acc", "score": 0.493, "seed": 0, "base": "gpt2-medium"}
+{"task": "dyck_L60_t3", "group": "text", "frac": 1.0, "metric": "acc", "score": 0.6835, "seed": 0, "base": "gpt2-medium"}
+{"task": "dyck_L60_t3", "group": "protein", "frac": 0.1, "metric": "acc", "score": 0.486, "seed": 0, "base": "gpt2-medium"}
+{"task": "dyck_L60_t3", "group": "protein", "frac": 1.0, "metric": "acc", "score": 0.542, "seed": 0, "base": "gpt2-medium"}
+{"task": "dyck_L60_t3", "group": "shuffled", "frac": 0.1, "metric": "acc", "score": 0.505, "seed": 0, "base": "gpt2-medium"}
+{"task": "dyck_L60_t3", "group": "shuffled", "frac": 1.0, "metric": "acc", "score": 0.5525, "seed": 0, "base": "gpt2-medium"}
+{"task": "dyck_L60_t3", "group": "randomaa", "frac": 0.1, "metric": "acc", "score": 0.4725, "seed": 0, "base": "gpt2-medium"}
+{"task": "dyck_L60_t3", "group": "randomaa", "frac": 1.0, "metric": "acc", "score": 0.499, "seed": 0, "base": "gpt2-medium"}
+{"task": "dyck_L40_t3", "group": "base", "frac": 0.1, "metric": "acc", "score": 0.5655, "seed": 1, "base": "gpt2-medium"}
+{"task": "dyck_L40_t3", "group": "base", "frac": 1.0, "metric": "acc", "score": 0.512, "seed": 1, "base": "gpt2-medium"}
+{"task": "dyck_L40_t3", "group": "text", "frac": 0.1, "metric": "acc", "score": 0.541, "seed": 1, "base": "gpt2-medium"}
+{"task": "dyck_L40_t3", "group": "text", "frac": 1.0, "metric": "acc", "score": 0.7105, "seed": 1, "base": "gpt2-medium"}
+{"task": "dyck_L40_t3", "group": "protein", "frac": 0.1, "metric": "acc", "score": 0.545, "seed": 1, "base": "gpt2-medium"}
+{"task": "dyck_L40_t3", "group": "protein", "frac": 1.0, "metric": "acc", "score": 0.657, "seed": 1, "base": "gpt2-medium"}
+{"task": "dyck_L40_t3", "group": "shuffled", "frac": 0.1, "metric": "acc", "score": 0.545, "seed": 1, "base": "gpt2-medium"}
+{"task": "dyck_L40_t3", "group": "shuffled", "frac": 1.0, "metric": "acc", "score": 0.666, "seed": 1, "base": "gpt2-medium"}
+{"task": "dyck_L40_t3", "group": "randomaa", "frac": 0.1, "metric": "acc", "score": 0.5245, "seed": 1, "base": "gpt2-medium"}
+{"task": "dyck_L40_t3", "group": "randomaa", "frac": 1.0, "metric": "acc", "score": 0.586, "seed": 1, "base": "gpt2-medium"}
+{"task": "dyck_L60_t3", "group": "base", "frac": 0.1, "metric": "acc", "score": 0.5025, "seed": 1, "base": "gpt2-medium"}
+{"task": "dyck_L60_t3", "group": "base", "frac": 1.0, "metric": "acc", "score": 0.553, "seed": 1, "base": "gpt2-medium"}
+{"task": "dyck_L60_t3", "group": "text", "frac": 0.1, "metric": "acc", "score": 0.514, "seed": 1, "base": "gpt2-medium"}
+{"task": "dyck_L60_t3", "group": "text", "frac": 1.0, "metric": "acc", "score": 0.5365, "seed": 1, "base": "gpt2-medium"}
+{"task": "dyck_L60_t3", "group": "protein", "frac": 0.1, "metric": "acc", "score": 0.4955, "seed": 1, "base": "gpt2-medium"}
+{"task": "dyck_L60_t3", "group": "protein", "frac": 1.0, "metric": "acc", "score": 0.5215, "seed": 1, "base": "gpt2-medium"}
+{"task": "dyck_L60_t3", "group": "shuffled", "frac": 0.1, "metric": "acc", "score": 0.4865, "seed": 1, "base": "gpt2-medium"}
+{"task": "dyck_L60_t3", "group": "shuffled", "frac": 1.0, "metric": "acc", "score": 0.5255, "seed": 1, "base": "gpt2-medium"}
+{"task": "dyck_L60_t3", "group": "randomaa", "frac": 0.1, "metric": "acc", "score": 0.504, "seed": 1, "base": "gpt2-medium"}
+{"task": "dyck_L60_t3", "group": "randomaa", "frac": 1.0, "metric": "acc", "score": 0.5155, "seed": 1, "base": "gpt2-medium"}
+{"task": "dyck_L40_t3", "group": "base", "frac": 0.1, "metric": "acc", "score": 0.538, "seed": 2, "base": "gpt2-medium"}
+{"task": "dyck_L40_t3", "group": "base", "frac": 1.0, "metric": "acc", "score": 0.7995, "seed": 2, "base": "gpt2-medium"}
+{"task": "dyck_L40_t3", "group": "text", "frac": 0.1, "metric": "acc", "score": 0.56, "seed": 2, "base": "gpt2-medium"}
+{"task": "dyck_L40_t3", "group": "text", "frac": 1.0, "metric": "acc", "score": 0.7725, "seed": 2, "base": "gpt2-medium"}
+{"task": "dyck_L40_t3", "group": "protein", "frac": 0.1, "metric": "acc", "score": 0.528, "seed": 2, "base": "gpt2-medium"}
+{"task": "dyck_L40_t3", "group": "protein", "frac": 1.0, "metric": "acc", "score": 0.6325, "seed": 2, "base": "gpt2-medium"}
+{"task": "dyck_L40_t3", "group": "shuffled", "frac": 0.1, "metric": "acc", "score": 0.524, "seed": 2, "base": "gpt2-medium"}
+{"task": "dyck_L40_t3", "group": "shuffled", "frac": 1.0, "metric": "acc", "score": 0.7245, "seed": 2, "base": "gpt2-medium"}
+{"task": "dyck_L40_t3", "group": "randomaa", "frac": 0.1, "metric": "acc", "score": 0.4935, "seed": 2, "base": "gpt2-medium"}
+{"task": "dyck_L40_t3", "group": "randomaa", "frac": 1.0, "metric": "acc", "score": 0.5225, "seed": 2, "base": "gpt2-medium"}
+{"task": "dyck_L60_t3", "group": "base", "frac": 0.1, "metric": "acc", "score": 0.4975, "seed": 2, "base": "gpt2-medium"}
+{"task": "dyck_L60_t3", "group": "base", "frac": 1.0, "metric": "acc", "score": 0.5635, "seed": 2, "base": "gpt2-medium"}
+{"task": "dyck_L60_t3", "group": "text", "frac": 0.1, "metric": "acc", "score": 0.5105, "seed": 2, "base": "gpt2-medium"}
+{"task": "dyck_L60_t3", "group": "text", "frac": 1.0, "metric": "acc", "score": 0.686, "seed": 2, "base": "gpt2-medium"}
+{"task": "dyck_L60_t3", "group": "protein", "frac": 0.1, "metric": "acc", "score": 0.5055, "seed": 2, "base": "gpt2-medium"}
+{"task": "dyck_L60_t3", "group": "protein", "frac": 1.0, "metric": "acc", "score": 0.5285, "seed": 2, "base": "gpt2-medium"}
+{"task": "dyck_L60_t3", "group": "shuffled", "frac": 0.1, "metric": "acc", "score": 0.5025, "seed": 2, "base": "gpt2-medium"}
+{"task": "dyck_L60_t3", "group": "shuffled", "frac": 1.0, "metric": "acc", "score": 0.528, "seed": 2, "base": "gpt2-medium"}
+{"task": "dyck_L60_t3", "group": "randomaa", "frac": 0.1, "metric": "acc", "score": 0.486, "seed": 2, "base": "gpt2-medium"}
+{"task": "dyck_L60_t3", "group": "randomaa", "frac": 1.0, "metric": "acc", "score": 0.5275, "seed": 2, "base": "gpt2-medium"}

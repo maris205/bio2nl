@@ -1,0 +1,33 @@
+# Model checkpoints (large — not in git)
+tier1_gpt2/cpt_ckpts/
+**/_tmp*/
+**/_tmp*
+
+# Large data (hosted on HuggingFace: dnagpt/bio2nl)
+data/cpt_corpus/*.txt
+data/cpt_corpus/*.fasta
+data/cpt_corpus/*.fasta.gz
+
+# Paper build artifacts
+paper/*.aux
+paper/*.bbl
+paper/*.blg
+paper/*.out
+paper/*.log
+paper/*.synctex.gz
+paper/c1.log
+paper/c2.log
+paper/c3.log
+paper/b.log
+paper/compile.log
+
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Run logs (verbose progress-bar output; not results)
+results/logs/
+
+# Misc
+*.DS_Store

@@ -1,0 +1,78 @@
+{
+  "config": {
+    "epochs": 4,
+    "seed": 56,
+    "max_length": 256,
+    "bs": 32,
+    "lr": 1e-05
+  },
+  "model": "gpt2",
+  "baseline_untrained_pawsx": {
+    "tag": "baseline_untrained->pawsx_test",
+    "accuracy": 0.533,
+    "f1": 0.2669,
+    "label_flipped": true,
+    "confusion_matrix": [
+      [
+        896,
+        197
+      ],
+      [
+        737,
+        170
+      ]
+    ],
+    "n": 2000
+  },
+  "bio_indomain_protein_val": {
+    "tag": "bio_trained->protein_val",
+    "accuracy": 0.9925,
+    "f1": 0.9926,
+    "label_flipped": false,
+    "confusion_matrix": [
+      [
+        977,
+        2
+      ],
+      [
+        13,
+        1008
+      ]
+    ],
+    "n": 2000
+  },
+  "transfer_pawsx_test": {
+    "tag": "bio_trained->pawsx_test",
+    "accuracy": 0.5205,
+    "f1": 0.1988,
+    "label_flipped": false,
+    "confusion_matrix": [
+      [
+        922,
+        171
+      ],
+      [
+        788,
+        119
+      ]
+    ],
+    "n": 2000
+  },
+  "transfer_pawsx_val": {
+    "tag": "bio_trained->pawsx_val",
+    "accuracy": 0.55,
+    "f1": 0.2255,
+    "label_flipped": false,
+    "confusion_matrix": [
+      [
+        969,
+        168
+      ],
+      [
+        732,
+        131
+      ]
+    ],
+    "n": 2000
+  }
+}

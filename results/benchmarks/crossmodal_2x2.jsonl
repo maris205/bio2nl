@@ -1,0 +1,9 @@
+{"task": "protein_homology", "model": "esm2_8M", "hf": "facebook/esm2_t6_8M_UR50D", "seed": 0, "acc": 0.999, "f1": 0.999, "unk_frac": 0.0}
+{"task": "protein_homology", "model": "esm2_8M", "hf": "facebook/esm2_t6_8M_UR50D", "seed": 1, "acc": 0.999, "f1": 0.999, "unk_frac": 0.0}
+{"task": "protein_homology", "model": "esm2_8M", "hf": "facebook/esm2_t6_8M_UR50D", "seed": 2, "acc": 0.999, "f1": 0.999, "unk_frac": 0.0}
+{"task": "protein_homology", "model": "bert_small", "hf": "google/bert_uncased_L-4_H-256_A-4", "seed": 0, "acc": 0.659, "f1": 0.4833, "unk_frac": 0.0756}
+{"task": "protein_homology", "model": "bert_small", "hf": "google/bert_uncased_L-4_H-256_A-4", "seed": 1, "acc": 0.6585, "f1": 0.4837, "unk_frac": 0.0724}
+{"task": "protein_homology", "model": "bert_small", "hf": "google/bert_uncased_L-4_H-256_A-4", "seed": 2, "acc": 0.651, "f1": 0.4639, "unk_frac": 0.073}
+{"task": "protein_homology", "model": "bert_tiny", "hf": "prajjwal1/bert-tiny", "seed": 0, "acc": 0.631, "f1": 0.4675, "unk_frac": 0.0756}
+{"task": "protein_homology", "model": "bert_tiny", "hf": "prajjwal1/bert-tiny", "seed": 1, "acc": 0.6345, "f1": 0.4714, "unk_frac": 0.0724}
+{"task": "protein_homology", "model": "bert_tiny", "hf": "prajjwal1/bert-tiny", "seed": 2, "acc": 0.6415, "f1": 0.4564, "unk_frac": 0.073}

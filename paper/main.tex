@@ -1,0 +1,419 @@
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{mathtools}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{authblk}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xcolor}
+\usepackage{caption}
+\captionsetup{font=small}
+
+\title{\textbf{Asymmetric Structural Transfer Between Natural Language\\ and Biological Foundation Models}}
+\author[1]{Liang Wang}
+\affil[1]{School of Artificial Intelligence and Automation, Huazhong University of Science and Technology, Wuhan 430070, P.R. China}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+\noindent
+Cross-domain transfer is a defining property of foundation models, yet whether such transfer
+is \emph{symmetric} across domains remains unknown. Prior work has reported a striking
+transfer from natural language to biological sequences: language models fine-tuned only on
+English structural tasks acquire zero-shot protein-homology discrimination. Here we ask the
+converse and general question---\emph{is structural transfer between language and biology
+directional?}---and answer it systematically. We first reproduce forward transfer
+(language\,$\rightarrow$\,biology) under controlled conditions, then evaluate the reverse
+direction (biology\,$\rightarrow$\,language) across fine-tuning, iso-token continued
+pretraining, model scaling, multiple biological foundation-model families (ESM-2, ProtBERT),
+and adversarial synthetic structure tasks. Reverse transfer is consistently weak: it does not
+exceed matched-token controls, does not scale, and does not generalize. In an
+architecture-matched $2{\times}2$ analysis on models with \emph{known} training data---which
+eliminates the pretraining-contamination confound that clouds large-model studies---a language
+model retains far more competence when moved to biology (off-domain drop $0.08$) than a
+biological model retains when moved to language (drop $0.36$). Scaling widens rather than
+closes this gap: language$\rightarrow$biology transfer strengthens with size while
+biology$\rightarrow$language transfer decays toward chance, a pattern shared by two independent
+protein-model families. Our findings establish that shared structural regularities between
+natural language and biological sequences do \emph{not} imply symmetric representational
+transfer, revealing an intrinsic directionality in cross-domain foundation-model learning.
+\end{abstract}
+
+\section{Introduction}
+The emergence of foundation models has made \emph{cross-domain transfer}---the reuse of
+representations learned in one domain to solve tasks in another---one of their most consequential
+and least understood properties. A particularly surprising instance has been reported between
+human language and the ``language of life'': models optimized purely on natural-language
+structure acquire, without biological pretraining, a latent ability to discriminate homologous
+biological sequences \cite{searls2002,vig2021,ofer2025}. This observation invites a bold
+interpretation---that abstract linguistic structure constitutes a universal cognitive prior for
+decoding biology.
+
+Such a claim, however, raises an immediate and rarely examined question. If natural language and
+biological sequences truly share a common structural substrate, then transfer between them should
+be a property of that shared substrate---and one would expect it to operate in \emph{both}
+directions. Yet essentially all evidence to date concerns a single direction
+(language\,$\rightarrow$\,biology), and much of it relies on large proprietary models whose
+training corpora may already contain biological data, confounding genuine structural transfer with
+memorization \cite{lin2023,elnaggar2021}. Whether the reverse transfer exists, and whether
+cross-domain structural transfer is symmetric at all, is unknown.
+
+Here we treat directionality itself as the object of study. We ask: \emph{is structural transfer
+between natural language and biological sequences symmetric, and if not, what governs its
+direction?} We answer through a systematic bidirectional analysis. (i) We reproduce forward
+transfer under controlled, multi-seed conditions on models with known training data (Part~I). (ii) We evaluate reverse
+transfer (biology\,$\rightarrow$\,language) exhaustively---classification fine-tuning across 100
+seeds, iso-token continued-pretraining ablations with shuffled and random controls, model
+scaling, two biological foundation-model families, and an adversarial nested-structure task
+(Part~II). (iii) We quantify the asymmetry directly on architecture-matched models whose training
+data is fully known, eliminating the contamination confound (Part~III). (iv) We probe its
+mechanistic origin (Part~IV).
+
+Our central finding is that transfer is \emph{bidirectional but strongly and universally
+asymmetric} (Fig.~\ref{fig:overview}). Language$\rightarrow$biology transfer is robust and
+strengthens with scale; biology$\rightarrow$language transfer is weak, does not exceed
+matched-token controls, and \emph{decays} toward chance as biological models grow---a pattern
+reproduced across ESM-2 and ProtBERT. Mechanistic analysis localizes the asymmetry not to static
+representational alignment or an induced attention circuit, but to learnability: biological
+discrimination emerges as a by-product of learning language structure, but not the converse. We
+conclude that shared structural
+regularity does not imply symmetric transfer, and that natural language functions as the more
+general structural prior. This directionality, rather than any single transfer result, is the
+contribution: it reframes ``can models cross domains?'' as ``why is crossing easier in one
+direction?''---a question about the nature of structure in foundation models.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.78\textwidth]{figures/fig1_directionality.pdf}
+\caption{\textbf{Structural transfer between natural language and biological sequences is
+directional.} Forward transfer (language\,$\rightarrow$\,biology) is robust and strengthens
+with model scale; reverse transfer (biology\,$\rightarrow$\,language) is weak, does not exceed
+matched-token controls, and decays with scale. The asymmetry is the central finding.}
+\label{fig:overview}
+\end{figure}
+
+\section{A unified protocol for measuring transfer in both directions}
+All experiments share one schema: a structural pair $(x_1, x_2)$ with a binary label indicating
+whether the pair is a structural match (paraphrase / homolog) or mismatch
+(adversarial non-paraphrase / non-homolog). Natural-language pairs are drawn from PAWS-X (English),
+which contrasts sentences with near-identical lexical content but different word order; biological
+pairs are protein-sequence pairs labelled homologous vs.\ non-homologous. A model trained on one
+domain is evaluated zero-shot on the other, so the two transfer directions are measured with
+identical code, identical model class, and identical metrics. Because a binary head may adopt
+either polarity, we report flip-best accuracy against the majority-class baseline and, throughout,
+audit raw accuracy and seed distributions rather than a single run (Methods). Crucially, the
+central comparisons use models whose training corpora are fully known (GPT-2, BERT, ESM-2,
+ProtBERT), so measured transfer cannot be attributed to biological data leaked during pretraining.
+
+\section{Part I: Forward transfer (language $\rightarrow$ biology)}
+Under this protocol we first confirm the forward effect. A GPT-2 classifier fine-tuned only on
+PAWS-X and evaluated zero-shot on protein-homology pairs transfers well above chance: in the
+bidirectional protocol (Table~\ref{tab:bidir}) forward transfer reaches
+$0.68 \pm 0.10$ flip-best accuracy across 15 seeds (protein majority $0.50$), reproducing prior
+reports of $\sim$$0.80$--$0.84$ and confirming that natural-language structural training instills a
+capability that carries into biological-sequence discrimination. This forward result is not the
+contribution of the present work---it is the first of two pieces of evidence whose
+\emph{comparison} is our subject. We therefore report it under controlled conditions (known
+training data, multiple seeds, explicit polarity handling) and turn to the reverse direction.
+
+\begin{table}[t]
+\centering
+\caption{\textbf{Bidirectional transfer under one protocol (GPT-2).} Forward transfer far exceeds
+its chance baseline; reverse transfer sits at the majority-class rate. Flip-best accuracy,
+multiple seeds.}
+\label{tab:bidir}
+\begin{tabular}{lccc}
+\toprule
+Direction & Train on & Zero-shot eval & Transfer (flip-best) \\
+\midrule
+Language\,$\rightarrow$\,Biology & PAWS-X & protein homology & $0.68 \pm 0.10$ \quad (chance $0.50$) \\
+Biology\,$\rightarrow$\,Language & protein homology & PAWS-X & $0.54 \pm 0.01$ \quad (chance $0.545$) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{Why we do not rely on large commercial models.} Forward transfer has also been reported
+to strengthen dramatically at scale: instruction-tuned and frontier models (e.g.\ Llama-3.1,
+Qwen-3, Gemini) reach near-perfect accuracy on standard homology and $\sim$$75\%$ on remote
+homology, with chain-of-thought traces that appear to reason about structural motifs
+\cite{wei2022cot,bommasani2021foundation}. We deliberately do \emph{not} build our claims on these
+results. The training corpora of such models are undisclosed and almost certainly contain
+biological databases (UniProt, Swiss-Prot, SCOP) and biology text, so their apparent structural
+reasoning cannot be distinguished from memorization or contamination---indeed their chain-of-thought
+often reveals explicit prior knowledge of protein families. This identifiability problem is precisely
+why our analysis is confined to models whose training data is fully known (GPT-2, BERT, ESM-2,
+ProtBERT); it is also what makes the directionality we report interpretable rather than an artifact
+of undocumented pretraining.
+
+\section{Part II: Reverse transfer (biology $\rightarrow$ language) is weak}
+We evaluate the reverse direction with progressively stronger methods; none yields robust transfer.
+
+\paragraph{Fine-tuning (100 seeds).} A GPT-2 classifier trained on protein homology learns the
+biological task nearly perfectly (in-domain accuracy $0.99$) but transfers to PAWS-X at
+$0.543 \pm 0.008$, indistinguishable from both the untrained baseline ($0.544$) and the
+majority-class rate ($0.5465$). Across 100 random seeds, \emph{zero} exceed the baseline by more
+than $0.05$---in sharp contrast to the forward direction, which exhibits a high-transfer tail.
+
+\paragraph{Continued pretraining with matched-token controls.} To test whether transfer emerges
+when language ability is \emph{preserved} rather than overwritten, we continue-pretrain GPT-2
+(next-token objective) on $50$M tokens of real protein, and on three matched-token controls:
+shuffled protein (same amino-acid composition, destroyed structure), random amino acids, and
+English text. We then measure sample-efficiency on PAWS-X (Table~\ref{tab:cpt}). At 124M
+parameters, real protein beats its shuffled control by $+0.09$ to $+0.11$ in the low-resource
+regime---a genuine structural signal---but it does \emph{not} beat text-CPT, and the effect
+\emph{vanishes} at 355M (protein$-$shuffled $\approx 0$) as the task saturates. On an adversarial
+nested-bracket (Dyck) task that remains hard at 355M, protein-CPT shows no advantage over its
+shuffled control at either scale. Reverse structural benefit is thus real only in a narrow,
+low-capacity, low-difficulty corner, and is always dominated by natural-language pretraining.
+
+\begin{table}[t]
+\centering
+\caption{\textbf{Iso-token continued-pretraining ablation, PAWS-X sample-efficiency.}
+Real protein beats its shuffled control only at 124M in the low-data regime, never beats text,
+and the effect disappears at 355M. Mean over 3 seeds.}
+\label{tab:cpt}
+\begin{tabular}{llccccc}
+\toprule
+Scale & Data frac & base & text & protein & shuffled & $\Delta$(prot$-$shuf) \\
+\midrule
+124M & 5\%  & 0.604 & 0.698 & 0.645 & 0.559 & $+0.087$ \\
+124M & 10\% & 0.777 & 0.802 & 0.789 & 0.675 & $+0.114$ \\
+355M & 5\%  & 0.826 & 0.839 & 0.832 & 0.831 & $+0.001$ \\
+355M & 10\% & 0.878 & 0.879 & 0.884 & 0.884 & $+0.001$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{Biological foundation models.} We test whether purpose-built protein language models
+transfer to language. Fine-tuned on PAWS-X, ESM-2 (8M) reaches $0.641$---above the $0.545$
+majority---but this signal is purely structural: it collapses to chance on grammatical
+acceptability (CoLA, MCC $\approx 0$) and entailment (RTE), tasks requiring lexical/semantic
+access that ESM-2's 33-token amino-acid vocabulary cannot provide (69\% of English becomes
+\texttt{<unk>}). Critically, the signal does not scale: across the ESM-2 ladder
+($8$M\,$\rightarrow$\,$650$M) PAWS-X accuracy \emph{decays} ($0.641\!\rightarrow\!0.569$), and
+ProtBERT (420M, a different family and architecture) lands at exactly $0.569$---the identical
+majority-class collapse. Two independent large protein models converge on chance, establishing
+this as a general property of protein LMs rather than a quirk of one model.
+
+\paragraph{Scope.} Symmetry with the forward direction would ideally also test very large models
+in the reverse direction. This is, however, both harder and less interpretable: frontier
+biological or general models are typically closed-weight, precluding the iso-token
+continued-pretraining and matched-control ablations that anchor our reverse analysis, and their
+pretraining already includes vast natural-language corpora---a reverse ``contamination'' that would
+confound any apparent biology$\rightarrow$language transfer. We therefore evaluate the reverse
+direction, as the forward, on open models with documented training data (ESM-2, ProtBERT), which
+also carry no natural-language pretraining and thus provide a clean test. The consistency of the
+effect across two families and four scales indicates the conclusion is not an artifact of small
+scale.
+
+\section{Part III: The transfer is directional}
+Placing both directions on architecture-matched models with known training data quantifies the
+asymmetry directly (Table~\ref{tab:2x2}). A pure protein model (ESM-2) solves biology
+($0.999$) but barely exceeds chance on language ($0.641$ vs.\ $0.545$): an off-domain drop of
+$0.36$. A size-matched English model (BERT) solves language ($0.732$) and, moved to biology,
+retains real competence ($0.656$ vs.\ $0.50$ chance): an off-domain drop of only $0.08$. The
+language model transfers roughly four times more of its competence across the domain boundary
+than the biological model does. Because these are small models with fully documented training
+corpora, this asymmetry cannot be an artifact of biological pretraining contamination---the
+principal confound in large-model studies.
+
+Scaling widens the gap rather than closing it. English pretraining transfers \emph{more} with
+size (BERT-tiny$\rightarrow$base: $0.583\!\rightarrow\!0.911$ on PAWS-X), while protein
+pretraining transfers \emph{less} with size (ESM $0.641\!\rightarrow\!0.569$), converging to
+chance (Fig.~\ref{fig:scaling}). Directionality is therefore not a small-model accident but a
+stable, scale-amplified, cross-family property.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.62\textwidth]{figures/fig3_scaling.pdf}
+\caption{\textbf{Scaling widens the asymmetry.} Transfer to natural language (PAWS-X accuracy)
+versus model size. English pretraining transfers \emph{more} with scale (BERT, blue), whereas
+protein pretraining transfers \emph{less}, decaying toward chance (ESM-2, orange); ProtBERT
+(a different family, red diamond) confirms the collapse at scale. Mean\,$\pm$\,s.d., 3 seeds.}
+\label{fig:scaling}
+\end{figure}
+
+\begin{table}[t]
+\centering
+\caption{\textbf{Architecture-matched $2{\times}2$ cross-modal transfer} (accuracy, 3 seeds;
+known-training-data models, no contamination confound). A language model retains far more
+off-domain competence than a biological model.}
+\label{tab:2x2}
+\begin{tabular}{llcc}
+\toprule
+Backbone & Pretraining & $\rightarrow$ protein homology & $\rightarrow$ PAWS-X \\
+\midrule
+ESM-2 (8M)   & protein & \textbf{0.999} & 0.641 \\
+BERT-small   & English & 0.656 & \textbf{0.732} \\
+BERT-tiny    & English & 0.636 & 0.583 \\
+\midrule
+\multicolumn{2}{l}{off-domain drop from home task} & bio-model: $0.36$ & language-model: $0.08$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Part IV: Mechanistic origin of the asymmetry}
+Three analyses localize the source of the asymmetry. They rule out two intuitive explanations
+(static representational sharing; an induced difference-detecting circuit) and point instead to a
+difference in \emph{learnability}: the target capability emerges during source-domain training in
+the forward direction only.
+
+\paragraph{Representations are not globally aligned (M1).} We first asked whether the two domains
+occupy a shared representational subspace by computing linear CKA \cite{zhang2019cka} between a
+model's per-layer representations of PAWS-X pairs and of protein pairs. Across base GPT-2,
+text-continued and protein-continued models, CKA remains at the row-shuffled control floor
+($\approx 0.04$--$0.05$) at every layer (Table~\ref{tab:mech}). The domains do \emph{not} share a
+globally aligned geometry; the transfer that does occur cannot be explained by a static shared
+manifold.
+
+\paragraph{Transfer emerges during forward training but never during reverse training (M2).}
+We snapshotted zero-shot transfer accuracy every 60 optimization steps. In the forward direction (Fig.~\ref{fig:dynamics}),
+transfer to protein \emph{rises monotonically} as the model learns the language task
+($0.630 \rightarrow 0.710$, peak $0.773$; $+0.08$ over training). In the reverse direction,
+transfer to language stays pinned at chance throughout ($0.533 \rightarrow 0.535$; $+0.001$).
+Forward transfer is an emergent by-product of learning language structure; reverse transfer never
+emerges, at any point in training.
+
+\paragraph{Difference-detecting heads are not the mechanism (M3).} A natural candidate mechanism,
+proposed in prior work, is that structural training induces attention heads acting as ``difference
+operators'' that localize the positions differing between a pair. We tested this rigorously with
+three variants: whether protein training induces heads that mark NL differences, whether language
+training induces heads that mark protein mutations, and---most carefully---a head-level
+difference-selectivity score (attention flowing into differing versus matched positions) $z$-scored
+against each model's own head distribution. The claim does not survive. Difference-selective heads
+\emph{exist} but are \emph{pretraining artifacts}: base GPT-2 already contains the strongest NL
+difference head (layer~0 head~5, $z=3.08$) before any fine-tuning, and neither PAWS training
+($z=2.83$, if anything lower) nor protein training strengthens it; the identical head tops all model
+variants (Table~\ref{tab:mech}). The asymmetry is therefore \emph{not} explained by differential
+induction of difference heads. We report this as a cautious correction: a mechanism attractive on
+qualitative single-head inspection does not hold under systematic, baseline-controlled testing.
+
+\begin{table}[t]
+\centering
+\caption{\textbf{Mechanistic analyses.} (M1) cross-modal CKA at the shuffled floor; (M2) transfer
+emerges only in the forward direction; (M3) protein training does not induce NL difference heads.}
+\label{tab:mech}
+\begin{tabular}{lll}
+\toprule
+Analysis & Forward / language-trained & Reverse / biology-trained \\
+\midrule
+M1 CKA (max layer) & $\approx 0.05$ (=shuffled floor) & $\approx 0.05$ (=shuffled floor) \\
+M2 transfer over training & $0.630 \rightarrow 0.710$ (rises) & $0.533 \rightarrow 0.535$ (flat) \\
+M3 top diff-head ($z$) & base $z{=}3.08$; PAWS-tuned $z{=}2.83$ & \multicolumn{1}{c}{(same head L0H5 in all models)} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.62\textwidth]{figures/fig2_dynamics.pdf}
+\caption{\textbf{Transfer emerges during forward training only (M2).} Zero-shot transfer accuracy
+on the target domain, snapshotted every 60 steps during source-domain training (mean\,$\pm$\,s.d.,
+3 seeds). Language$\rightarrow$biology transfer rises steadily as the model learns language
+structure; biology$\rightarrow$language transfer remains at the chance line throughout training.}
+\label{fig:dynamics}
+\end{figure}
+
+\paragraph{Interpretation.} The three analyses locate the asymmetry precisely. It is not a matter of
+static representational sharing (M1: the domains are not even globally aligned) nor of a specific
+induced circuit (M3: difference heads are pretraining artifacts, not trained-in operators). What
+distinguishes the two directions is \emph{whether the target capability emerges as a by-product of
+source-domain learning} (M2): learning language structure progressively confers biological
+discrimination, whereas learning biological structure never confers linguistic discrimination at any
+point in training. We therefore frame the directionality as a difference in the \emph{learnability}
+of cross-domain transfer, and \emph{hypothesize}---as an account consistent with, but not proven by,
+the present evidence---that natural-language training, with its demands of abstraction, recursion and
+compositionality, shapes representations that generalize more readily to other structured domains
+than do the evolution-, folding- and fitness-shaped representations of protein models. We explicitly
+do not claim a specific mechanistic circuit; our difference-head analysis shows that an intuitively
+appealing candidate does not, in fact, account for the effect.
+
+\section{Discussion}
+Our results establish that the existence of shared structural regularities between natural
+language and biological sequences does \emph{not} imply symmetric representational transfer,
+highlighting an intrinsic directionality in cross-domain foundation-model learning. This reframes
+the much-discussed language$\rightarrow$biology transfer: it is not evidence of a symmetric
+universal grammar but of an \emph{asymmetric} one, in which language serves as the stronger prior.
+The directionality is stable across fine-tuning, continued pretraining, scaling, model families,
+and task difficulty, and---because it is demonstrated on models with known training data---is not
+attributable to pretraining contamination. Our mechanistic analyses rule out two intuitive
+explanations---static representational alignment and an induced difference-detecting circuit---and
+localize the asymmetry to learnability: biological discrimination emerges as a by-product of
+learning language structure, but not the converse. We frame the deeper account as a hypothesis to
+be tested rather than a settled claim: the abstraction, recursion and compositionality demanded by
+natural language may shape representations that generalize to other structured domains more readily
+than the evolution-, folding- and fitness-shaped representations of biological models.
+
+\section*{Methods}
+
+\paragraph{Task schema and datasets.} Every task is a binary structural-pair classification:
+given $(x_1, x_2)$, predict match (label 1) vs.\ mismatch (label 0). Natural-language pairs use
+PAWS-X English \cite{yang2019paws} (49{,}401 train, 2{,}000 test), whose adversarial pairs share
+lexical content but differ in word order. Biological pairs use a balanced protein-homology set:
+positives are Swiss-Prot pairs with BLASTp $E$-value $\le 10^{-10}$ and sequence identity above
+threshold; negatives are length-matched random pairs verified non-homologous by global alignment;
+20{,}000 balanced pairs, lengths 40--250 residues. Grammatical-acceptability (CoLA) and entailment
+(RTE) tasks use the GLUE distributions \cite{wang2019glue}. The exact dataset files, splits, and
+accession-level metadata are released (Data availability).
+
+\paragraph{Models.} Language backbones: GPT-2 (124M) and GPT-2-medium (355M) \cite{radford2019gpt2};
+BERT-tiny (4M), BERT-small (11M), BERT-base (110M) \cite{devlin2019bert}. Biological backbones:
+ESM-2 at 8M/35M/150M/650M \cite{lin2023} and ProtBERT (420M) \cite{brandes2022proteinbert}. All are
+public checkpoints with documented training corpora, so no biological data could have leaked into
+the language models and no natural-language data into the protein models---this is what makes the
+$2{\times}2$ comparison free of the contamination confound.
+
+\paragraph{Fine-tuning and zero-shot transfer.} For classification transfer we attach a linear head
+and fine-tune on the source domain (AdamW, learning rate $1\times10^{-5}$, batch size 32, 3--4
+epochs, constant-with-warmup schedule), then evaluate zero-shot on the target domain. Because a
+freshly initialized binary head has arbitrary polarity, we report flip-best accuracy
+$\max(\mathrm{acc}, 1-\mathrm{acc})$ against the majority-class baseline, and additionally report
+raw accuracy and full per-seed distributions; we never select polarity to inflate a headline
+number. Forward and reverse directions are run by the same script with source and target swapped.
+
+\paragraph{Iso-token continued pretraining.} From GPT-2 we continue-pretrain (causal-LM objective,
+block size 512) on exactly $5.0\times10^{7}$ tokens per corpus, matched across four groups so that
+only sequence \emph{content} differs: (G2) real Swiss-Prot proteins rendered as space-separated
+residues \texttt{<protein> M K V ... </protein>}; (G3) the same sequences with residues shuffled
+within each protein (identical amino-acid frequency and length, destroyed structure); (G4) residues
+resampled i.i.d.\ from the background amino-acid distribution; (G1) OpenWebText English. Token
+counts are measured with the GPT-2 tokenizer to guarantee the iso-token constraint. All groups use
+identical optimizer, steps ($\approx$3050), and batch size. Sample-efficiency is then measured by
+fine-tuning each resulting checkpoint on $\{1,5,10,100\}\%$ of a downstream task.
+
+\paragraph{Hard structural control (Dyck).} To obtain a natural-language-side structural task that
+does not saturate at 355M, we generate Dyck-language nested-bracket sequences over three bracket
+types; positives are well-formed, negatives are corrupted by a single bracket edit at a random
+depth, so local heuristics fail and only tracking the nesting stack succeeds. Difficulty is tuned
+by length ($L\in\{40,60\}$).
+
+\paragraph{Mechanistic analyses.} (M1) Representational alignment: linear CKA \cite{zhang2019cka}
+between a model's per-layer last-token representations of PAWS-X pairs and of protein pairs, against
+a row-shuffled floor. (M2) Learning dynamics: during training we snapshot zero-shot transfer
+accuracy on a fixed held-out target set every 60 steps, yielding a transfer-vs-step trajectory for
+each direction. (M3) Difference-operator heads: for each attention head we measure a
+difference-selectivity score---attention flowing into the positions that differ between $x_1$ and
+$x_2$ minus that into matched positions---$z$-scored against the same model's head distribution, and
+compare base GPT-2, PAWS-tuned, and protein-continued models on both modalities to test whether
+either training direction \emph{induces} difference-detecting heads above the pretrained baseline.
+
+\paragraph{Statistics.} Distribution experiments use up to 100 random seeds; all other experiments
+use 3 seeds and report mean\,$\pm$\,s.d. Chance levels are the majority-class rates (protein $0.50$,
+PAWS-X $0.545$).
+
+\section*{Data availability}
+Datasets are released at \url{https://huggingface.co/dnagpt/biopaws}, including exact file names,
+splits, and accession metadata.
+
+\section*{Code availability}
+All code for corpus construction, continued pretraining, evaluation, and mechanistic analysis is
+available at \url{https://github.com/maris205/bio2nl}.
+
+\bibliographystyle{unsrt}
+\bibliography{refs}
+
+\end{document}

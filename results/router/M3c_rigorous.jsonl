@@ -1,0 +1,6 @@
+{"max": 0.0162, "max_head": [0, 5], "z_of_max": 3.08, "mean_over_heads": -0.00041, "model": "base", "modality": "NL", "n": 400}
+{"max": 0.00375, "max_head": [0, 11], "z_of_max": 1.96, "mean_over_heads": -0.0021, "model": "base", "modality": "protein", "n": 322}
+{"max": 0.01667, "max_head": [0, 5], "z_of_max": 2.83, "mean_over_heads": 0.00016, "model": "paws_tuned", "modality": "NL", "n": 400}
+{"max": 0.00396, "max_head": [0, 11], "z_of_max": 2.18, "mean_over_heads": -0.00152, "model": "paws_tuned", "modality": "protein", "n": 322}
+{"max": 0.01618, "max_head": [0, 5], "z_of_max": 2.88, "mean_over_heads": -0.00012, "model": "protein_cpt", "modality": "NL", "n": 400}
+{"max": 0.0043, "max_head": [7, 7], "z_of_max": 2.12, "mean_over_heads": -0.00192, "model": "protein_cpt", "modality": "protein", "n": 322}
