@@ -32,3 +32,4 @@ results/logs/
 # Misc
 *.DS_Store
 reviews/
+data/hf_upload.log
