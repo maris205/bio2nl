@@ -25,22 +25,19 @@ Cross-domain transfer is a defining property of foundation models, yet whether s
 is \emph{symmetric} across domains remains unknown. Prior work has reported a striking
 transfer from natural language to biological sequences: language models fine-tuned only on
 English structural tasks acquire zero-shot protein-homology discrimination. Here we ask the
-converse and general question---\emph{is structural transfer between language and biology
-directional?}---and answer it systematically. We first reproduce forward transfer
-(language\,$\rightarrow$\,biology) under controlled conditions, then evaluate the reverse
-direction (biology\,$\rightarrow$\,language) across fine-tuning, iso-token continued
-pretraining, model scaling, multiple biological foundation-model families (ESM-2, ProtBERT),
-and adversarial synthetic structure tasks. Reverse transfer is consistently weak: it does not
-exceed matched-token controls, does not scale, and does not generalize. In an
-architecture-matched $2{\times}2$ analysis on models with \emph{known} training data---which
-eliminates the pretraining-contamination confound that clouds large-model studies---a language
-model retains far more competence when moved to biology (off-domain drop $0.08$) than a
-biological model retains when moved to language (drop $0.36$). Scaling widens rather than
-closes this gap: language$\rightarrow$biology transfer strengthens with size while
-biology$\rightarrow$language transfer decays toward chance, a pattern shared by two independent
-protein-model families. Our findings establish that shared structural regularities between
-natural language and biological sequences do \emph{not} imply symmetric representational
-transfer, revealing an intrinsic directionality in cross-domain foundation-model learning.
+converse question---\emph{is structural transfer between language and biology directional?}---and
+answer it systematically. We reproduce forward transfer (language\,$\rightarrow$\,biology), then
+evaluate the reverse direction across fine-tuning, iso-token continued pretraining, model scaling,
+two biological foundation-model families (ESM-2, ProtBERT), and adversarial synthetic tasks. Reverse
+transfer is consistently weak: it never exceeds matched-token controls, does not scale, and does not
+generalize. In an architecture-matched $2{\times}2$ analysis on models with \emph{known} training
+data---eliminating the pretraining-contamination confound that clouds large-model studies---a
+language model retains far more competence when moved to biology (off-domain drop $0.08$) than a
+biological model moved to language (drop $0.36$). Scaling widens this gap: language$\rightarrow$biology
+transfer strengthens with size while biology$\rightarrow$language transfer decays toward chance, in
+two independent protein-model families. Shared structural regularities between language and
+biological sequences thus do \emph{not} imply symmetric representational transfer, revealing an
+intrinsic directionality in cross-domain foundation-model learning.
 \end{abstract}
 
 \section{Introduction}
@@ -119,7 +116,9 @@ finding.}
 \label{fig:overview}
 \end{figure}
 
-\section{A unified protocol for measuring transfer in both directions}
+\section{Results}
+
+\subsection{A unified protocol for measuring transfer in both directions}
 All experiments share one schema: a structural pair $(x_1, x_2)$ with a binary label indicating
 whether the pair is a structural match (paraphrase / homolog) or mismatch
 (adversarial non-paraphrase / non-homolog). Natural-language pairs are drawn from PAWS-X (English),
@@ -132,7 +131,7 @@ audit raw accuracy and seed distributions rather than a single run (Methods). Cr
 central comparisons use models whose training corpora are fully known (GPT-2, BERT, ESM-2,
 ProtBERT), so measured transfer cannot be attributed to biological data leaked during pretraining.
 
-\section{Part I: Forward transfer (language $\rightarrow$ biology)}
+\subsection{Part I: Forward transfer (language $\rightarrow$ biology)}
 Under this protocol we first confirm the forward effect. A GPT-2 classifier fine-tuned only on
 PAWS-X and evaluated zero-shot on protein-homology pairs transfers well above chance: in the
 bidirectional protocol (Table~\ref{tab:bidir}) forward transfer reaches
@@ -199,7 +198,7 @@ why our analysis is confined to models whose training data is fully known (GPT-2
 ProtBERT); it is also what makes the directionality we report interpretable rather than an artifact
 of undocumented pretraining.
 
-\section{Part II: Reverse transfer (biology $\rightarrow$ language) is weak}
+\subsection{Part II: Reverse transfer (biology $\rightarrow$ language) is weak}
 We evaluate the reverse direction with progressively stronger methods; none yields robust transfer.
 
 \paragraph{Fine-tuning (100 seeds).} A GPT-2 classifier trained on protein homology learns the
@@ -261,7 +260,7 @@ also carry no natural-language pretraining and thus provide a clean test. The co
 effect across two families and four scales indicates the conclusion is not an artifact of small
 scale.
 
-\section{Part III: The transfer is directional}
+\subsection{Part III: The transfer is directional}
 Placing both directions on architecture-matched models with known training data quantifies the
 asymmetry directly (Table~\ref{tab:2x2}). A pure protein model (ESM-2) solves biology
 ($0.999$) but barely exceeds chance on language ($0.641$ vs.\ $0.545$): an off-domain drop of
@@ -307,7 +306,7 @@ BERT-tiny    & English & 0.636 & 0.583 \\
 \end{tabular}
 \end{table}
 
-\section{Part IV: Mechanistic origin of the asymmetry}
+\subsection{Part IV: Mechanistic origin of the asymmetry}
 Three analyses localize the source of the asymmetry. They rule out two intuitive explanations
 (static representational sharing; an induced difference-detecting circuit) and point instead to a
 difference in \emph{learnability}: the target capability emerges during source-domain training in
