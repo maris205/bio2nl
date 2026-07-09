@@ -1,0 +1,71 @@
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{parskip}
+\usepackage[hidelinks]{hyperref}
+\setlength{\emergencystretch}{3em}
+\begin{document}
+\thispagestyle{empty}
+
+\noindent\textbf{Cover Letter --- Nature Communications}\\[0.3em]
+\noindent\emph{Asymmetric Structural Transfer Between Natural Language and Biological Foundation Models}\\[1em]
+
+\noindent Dear Editors,\\[0.5em]
+
+We submit our manuscript, \textbf{``Asymmetric Structural Transfer Between Natural Language and
+Biological Foundation Models,''} for consideration as an Article in \emph{Nature Communications}.
+
+\textbf{The question.} Cross-domain transfer---reusing representations learned in one domain to
+solve tasks in another---is among the most consequential yet least understood properties of
+foundation models. A striking recent instance has been reported between human language and the
+``language of life'': models trained only on natural-language structure can, without any biological
+pre-training, discriminate homologous biological sequences. This has been read as evidence that
+abstract linguistic structure is a universal prior for biology. We ask a more basic question that
+this literature has left unexamined: \textbf{is such structural transfer symmetric?} If two domains
+truly share a structural substrate, transfer should run in both directions. We show it does not.
+
+\textbf{What we find.} Through a systematic bidirectional study---fine-tuning across 100 seeds,
+iso-token continued pre-training with shuffled and random controls, model scaling, two independent
+biological foundation-model families (ESM-2 and ProtBERT), and adversarial synthetic structure
+tasks---we establish that structural transfer is \textbf{bidirectional but strongly and universally
+asymmetric}. Language$\rightarrow$biology transfer is robust and strengthens with scale;
+biology$\rightarrow$language transfer is weak, never exceeds matched-token controls, and
+\emph{decays toward chance} as protein models grow. In an architecture-matched analysis on models
+with fully \textbf{known} training data, a language model retains roughly four times more competence
+when moved to biology (off-domain drop 0.08) than a biological model retains when moved to language
+(drop 0.36). We further show the forward effect is genuinely structural, not paraphrase-specific:
+three distinct language-structure tasks---including a purely syntactic bracket-matching task with no
+semantics---all transfer to protein homology.
+
+\textbf{Why it matters.} The contribution is conceptual, not a benchmark result. First, it reframes
+a much-discussed phenomenon: language$\rightarrow$biology transfer is not evidence of a
+\emph{symmetric} universal grammar but of an \emph{asymmetric} one. Second, it overturns a common
+intuition about scale---more parameters do not universally improve cross-domain transfer; here
+scaling \emph{deepens domain specialization} and drives the two directions apart. Third, and most
+broadly, it establishes a principle likely to extend beyond this domain pair: \textbf{structural
+similarity between domains does not imply transferable capability.} Two domains can share
+statistical and structural regularities, and a model can be highly competent in each, without
+transfer between them being symmetric or even present.
+
+\textbf{Rigor and scope.} Because our central comparisons use small models whose training corpora
+are fully documented (GPT-2, BERT, ESM-2, ProtBERT), the effect cannot be attributed to
+pre-training contamination---the confound that clouds studies relying on proprietary large models,
+which we report only as an exploratory upper bound. Mechanistic analyses (representational-alignment,
+learning-dynamics, and attention-circuit tests) localize the asymmetry to \emph{learnability} rather
+than static representation. We believe the breadth of the question---spanning machine learning,
+computational biology, and the foundations of representation learning---suits the cross-disciplinary
+readership of \emph{Nature Communications}.
+
+The manuscript has not been published elsewhere and is not under consideration by another journal.
+All data, code, and the from-scratch control model are publicly released. The author declares no
+competing interests. We thank you for your consideration.
+
+\vspace{1em}
+\noindent Sincerely,\\[0.3em]
+\noindent Liang Wang\\
+\noindent School of Artificial Intelligence and Automation,\\
+\noindent Huazhong University of Science and Technology\\
+\noindent \href{mailto:wangliang.f@gmail.com}{wangliang.f@gmail.com}
+
+\end{document}
