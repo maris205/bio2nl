@@ -1,0 +1,15 @@
+{"source": "paws-x", "seed": 0, "target": "protein_standard", "acc_flipbest": 0.8067, "auc": 0.9357}
+{"source": "paws-x", "seed": 1, "target": "protein_standard", "acc_flipbest": 0.753, "auc": 0.8024}
+{"source": "paws-x", "seed": 2, "target": "protein_standard", "acc_flipbest": 0.6777, "auc": 0.8219}
+{"source": "paws-x", "seed": 3, "target": "protein_standard", "acc_flipbest": 0.6357, "auc": 0.7202}
+{"source": "paws-x", "seed": 4, "target": "protein_standard", "acc_flipbest": 0.503, "auc": 0.5432}
+{"source": "cola", "seed": 0, "target": "protein_standard", "acc_flipbest": 0.6677, "auc": 0.7214}
+{"source": "cola", "seed": 1, "target": "protein_standard", "acc_flipbest": 0.6877, "auc": 0.9223}
+{"source": "cola", "seed": 2, "target": "protein_standard", "acc_flipbest": 0.683, "auc": 0.6323}
+{"source": "cola", "seed": 3, "target": "protein_standard", "acc_flipbest": 0.6887, "auc": 0.8218}
+{"source": "cola", "seed": 4, "target": "protein_standard", "acc_flipbest": 0.6223, "auc": 0.6864}
+{"source": "dyck", "seed": 0, "target": "protein_standard", "acc_flipbest": 0.5653, "auc": 0.5546}
+{"source": "dyck", "seed": 1, "target": "protein_standard", "acc_flipbest": 0.683, "auc": 0.911}
+{"source": "dyck", "seed": 2, "target": "protein_standard", "acc_flipbest": 0.6473, "auc": 0.559}
+{"source": "dyck", "seed": 3, "target": "protein_standard", "acc_flipbest": 0.6413, "auc": 0.8169}
+{"source": "dyck", "seed": 4, "target": "protein_standard", "acc_flipbest": 0.674, "auc": 0.8424}

@@ -95,6 +95,18 @@ general structural prior. This directionality, rather than any single transfer r
 contribution: it reframes ``can models cross domains?'' as ``why is crossing easier in one
 direction?''---a question about the nature of structure in foundation models.
 
+\medskip\noindent\textbf{Contributions.} (1) \emph{Transfer is directional.} On
+architecture-matched models with known training data, structural transfer between language and
+biology is strongly asymmetric---a language model moved to biology retains far more competence
+(off-domain drop $0.08$) than a biological model moved to language ($0.36$). (2) \emph{Scaling
+amplifies the asymmetry.} Language$\rightarrow$biology transfer strengthens with model size, whereas
+biology$\rightarrow$language transfer \emph{decays} toward chance; scaling does not universally
+improve transfer but increases domain specialization---a pattern reproduced across two independent
+protein-model families. (3) \emph{Structural similarity does not imply transferable intelligence.}
+Language and biological sequences share structural regularities, yet this shared structure does not
+license symmetric transfer---a principle for cross-domain foundation-model learning beyond this
+particular pair of domains.
+
 \begin{figure}[t]
 \centering
 \includegraphics[width=0.82\textwidth]{figures/fig1.png}
@@ -143,6 +155,33 @@ Direction & Train on & Zero-shot eval & Transfer (flip-best) \\
 \midrule
 Language\,$\rightarrow$\,Biology & PAWS-X & protein homology & $0.68 \pm 0.10$ \quad (chance $0.50$) \\
 Biology\,$\rightarrow$\,Language & protein homology & PAWS-X & $0.54 \pm 0.01$ \quad (chance $0.545$) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{The forward effect is structural, not paraphrase-specific.} A natural concern is that
+transfer reflects something peculiar to paraphrase identification rather than natural-language
+\emph{structure}. To test this we fine-tuned GPT-2 on three distinct structural language sources and
+evaluated each zero-shot on protein homology (Table~\ref{tab:sources}): PAWS-X (paraphrase /
+word-order), CoLA (grammatical acceptability), and a synthetic Dyck nested-bracket task (pure
+hierarchical structure, no semantics). All three transfer well above chance and to a comparable
+degree (AUC $0.74$--$0.77$). That even a purely syntactic bracket-matching task transfers to protein
+homology indicates the forward effect is a general consequence of learning natural-language
+structure, not an artifact of the paraphrase task.
+
+\begin{table}[t]
+\centering
+\caption{\textbf{Forward transfer is structural, not paraphrase-specific.} GPT-2 fine-tuned on three
+distinct natural-language structural tasks, evaluated zero-shot on protein homology (mean$\pm$s.d.,
+5 seeds). All transfer comparably above chance.}
+\label{tab:sources}
+\begin{tabular}{lcc}
+\toprule
+Language source (fine-tuning) & Protein AUC & Transfer (flip-best) \\
+\midrule
+PAWS-X (paraphrase / word order) & $0.77 \pm 0.13$ & $0.68 \pm 0.10$ \\
+CoLA (grammatical acceptability) & $0.76 \pm 0.10$ & $0.67 \pm 0.03$ \\
+Dyck (nested brackets, pure structure) & $0.74 \pm 0.15$ & $0.64 \pm 0.04$ \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -360,6 +399,17 @@ learning language structure, but not the converse. We frame the deeper account a
 be tested rather than a settled claim: the abstraction, recursion and compositionality demanded by
 natural language may shape representations that generalize to other structured domains more readily
 than the evolution-, folding- and fitness-shaped representations of biological models.
+
+A striking corollary concerns scale. It is tempting to assume that whatever a small model fails to
+transfer, a larger one will; our scaling analysis shows the opposite for the reverse direction, where
+transfer \emph{decays} toward chance as protein models grow. Scaling does not universally improve
+cross-domain transfer---it can instead deepen domain specialization---and the two directions diverge
+rather than converge. More broadly, our findings caution against inferring transferable capability
+from structural resemblance: two domains can share statistical and structural regularities, and a
+model can be highly competent in each, without transfer between them being symmetric or even
+present. We suggest that the direction and scaling behaviour of cross-domain transfer, rather than
+the mere existence of shared structure, is the more informative probe of what foundation models
+actually learn.
 
 \section*{Methods}
 
