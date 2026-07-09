@@ -44,22 +44,31 @@ transfer, revealing an intrinsic directionality in cross-domain foundation-model
 \end{abstract}
 
 \section{Introduction}
-The emergence of foundation models has made \emph{cross-domain transfer}---the reuse of
-representations learned in one domain to solve tasks in another---one of their most consequential
-and least understood properties. A particularly surprising instance has been reported between
+The emergence of foundation models \cite{brown2020gpt3,bommasani2021foundation,vaswani2017attention}
+has made \emph{cross-domain transfer}---the reuse of
+representations learned in one domain to solve tasks in another \cite{pan2010survey,raffel2020t5,neyshabur2020transfer}---one of their most consequential
+and least understood properties. It underlies transfer across languages
+\cite{artetxe2020cross,conneau2020}, across modalities, and even into specialized scientific domains
+\cite{raghu2019transfusion}. A particularly surprising instance has been reported between
 human language and the ``language of life'': models optimized purely on natural-language
 structure acquire, without biological pretraining, a latent ability to discriminate homologous
 biological sequences \cite{searls2002,vig2021,ofer2025}. This observation invites a bold
 interpretation---that abstract linguistic structure constitutes a universal cognitive prior for
-decoding biology.
+decoding biology, echoing the emergent, hard-to-predict capabilities documented in large models
+\cite{wei2022emergent}.
 
 Such a claim, however, raises an immediate and rarely examined question. If natural language and
 biological sequences truly share a common structural substrate, then transfer between them should
 be a property of that shared substrate---and one would expect it to operate in \emph{both}
 directions. Yet essentially all evidence to date concerns a single direction
 (language\,$\rightarrow$\,biology), and much of it relies on large proprietary models whose
-training corpora may already contain biological data, confounding genuine structural transfer with
-memorization \cite{lin2023,elnaggar2021}. Whether the reverse transfer exists, and whether
+training corpora may already contain biological data---large models are known to memorize training
+content \cite{carlini2021extracting}---confounding genuine structural transfer with
+memorization \cite{lin2023,elnaggar2021}. Protein and genomic foundation models
+\cite{rives2021esm,lin2023esm2,brandes2022proteinbert,madani2023progen,ji2021dnabert,nguyen2023hyenadna}
+and structure predictors \cite{jumper2021alphafold} are typically trained on domain data from
+scratch, leaving open whether their competence could instead arise from generic sequence structure.
+Whether the reverse transfer exists, and whether
 cross-domain structural transfer is symmetric at all, is unknown.
 
 Here we treat directionality itself as the object of study. We ask: \emph{is structural transfer
@@ -166,8 +175,9 @@ English text. We then measure sample-efficiency on PAWS-X (Table~\ref{tab:cpt}).
 parameters, real protein beats its shuffled control by $+0.09$ to $+0.11$ in the low-resource
 regime---a genuine structural signal---but it does \emph{not} beat text-CPT, and the effect
 \emph{vanishes} at 355M (protein$-$shuffled $\approx 0$) as the task saturates. On an adversarial
-nested-bracket (Dyck) task that remains hard at 355M, protein-CPT shows no advantage over its
-shuffled control at either scale. Reverse structural benefit is thus real only in a narrow,
+nested-bracket (Dyck) task---designed, in the spirit of adversarial diagnostics such as HANS
+\cite{mccoy2019hans}, to resist shallow heuristics and remain hard at 355M---protein-CPT shows no
+advantage over its shuffled control at either scale. Reverse structural benefit is thus real only in a narrow,
 low-capacity, low-difficulty corner, and is always dominated by natural-language pretraining.
 
 \begin{table}[t]
@@ -189,7 +199,7 @@ Scale & Data frac & base & text & protein & shuffled & $\Delta$(prot$-$shuf) \\
 \end{table}
 
 \paragraph{Biological foundation models.} We test whether purpose-built protein language models
-transfer to language. Fine-tuned on PAWS-X, ESM-2 (8M) reaches $0.641$---above the $0.545$
+\cite{rives2021esm,lin2023esm2} transfer to language. Fine-tuned on PAWS-X, ESM-2 (8M) reaches $0.641$---above the $0.545$
 majority---but this signal is purely structural: it collapses to chance on grammatical
 acceptability (CoLA, MCC $\approx 0$) and entailment (RTE), tasks requiring lexical/semantic
 access that ESM-2's 33-token amino-acid vocabulary cannot provide (69\% of English becomes
@@ -263,8 +273,9 @@ difference in \emph{learnability}: the target capability emerges during source-d
 the forward direction only.
 
 \paragraph{Representations are not globally aligned (M1).} We first asked whether the two domains
-occupy a shared representational subspace by computing linear CKA \cite{zhang2019cka} between a
-model's per-layer representations of PAWS-X pairs and of protein pairs. Across base GPT-2,
+occupy a shared representational subspace by computing linear CKA \cite{zhang2019cka,kornblith2019similarity}
+between a model's per-layer representations of PAWS-X pairs and of protein pairs, following the
+representation-analysis and probing tradition \cite{tenney2019bert,hewitt2019probe}. Across base GPT-2,
 text-continued and protein-continued models, CKA remains at the row-shuffled control floor
 ($\approx 0.04$--$0.05$) at every layer (Table~\ref{tab:mech}). The domains do \emph{not} share a
 globally aligned geometry; the transfer that does occur cannot be explained by a static shared
