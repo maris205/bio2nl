@@ -1,0 +1,258 @@
+{
+  "comparison_caveats": [
+    "EE matches total input-token budget but has twice the English exposure of EP/ES.",
+    "English next-token teacher forcing is parameter self-supervision; English task labels remain excluded from training and selection.",
+    "Natural and shuffled corpora share eligible raw parent membership/order, but equal BPE-token budgets may expose unequal residues and parent-prefix coverage.",
+    "Reusing the v2 tokenizer requires a separate vocabulary-training exposure audit for any new holdout."
+  ],
+  "conditions": [
+    {
+      "english_tokens": 8388608,
+      "id": "EP",
+      "protein_tokens": 8388608,
+      "shuffled_tokens": 0,
+      "total_tokens": 16777216
+    },
+    {
+      "english_tokens": 8388608,
+      "id": "ES",
+      "protein_tokens": 0,
+      "shuffled_tokens": 8388608,
+      "total_tokens": 16777216
+    },
+    {
+      "english_tokens": 16777216,
+      "id": "EE",
+      "protein_tokens": 0,
+      "shuffled_tokens": 0,
+      "total_tokens": 16777216
+    }
+  ],
+  "constant_references": {
+    "labels": [
+      0,
+      1
+    ],
+    "target_selection": false
+  },
+  "evaluation": {
+    "aggregation": "mean_three_fine_tuning_seeds_within_pretraining_seed_then_mean_and_sample_SD_of_three_pretraining_seed_effects",
+    "all_selected_classifiers_reported": true,
+    "auc_only_gain_establishes_fixed_head_classification_success": false,
+    "directional_support_rule": "positive_mean_EP_minus_ES_AUC_and_positive_effect_in_all_three_pretraining_seeds_with_source_learning_documented",
+    "fixed_label1_direction": true,
+    "polarity_flipping": false,
+    "primary_effect": "EP_minus_ES_paired_by_pretraining_seed_and_fine_tuning_seed",
+    "primary_metric": "fixed_direction_label1_auroc_from_logit_margin",
+    "secondary_metrics": [
+      "accuracy",
+      "balanced_accuracy",
+      "mcc",
+      "cross_entropy",
+      "predicted_positive_fraction",
+      "confusion_matrix"
+    ],
+    "support_rule_is_significance_test": false,
+    "target_based_exclusions": false,
+    "target_calibration": false,
+    "threshold": "unchanged_argmax_ties_label0",
+    "weak_source_arm_filtering": false
+  },
+  "pretraining": {
+    "architecture": {
+      "activation_function": "gelu_new",
+      "attn_pdrop": 0.1,
+      "embd_pdrop": 0.1,
+      "initializer_range": 0.02,
+      "layer_norm_epsilon": 1e-05,
+      "model_type": "gpt2",
+      "n_embd": 768,
+      "n_head": 12,
+      "n_inner": 3072,
+      "n_layer": 12,
+      "resid_pdrop": 0.1,
+      "tie_word_embeddings": true
+    },
+    "autocast_dtype": "float16",
+    "batch_size": 16,
+    "blocks_per_run": 32768,
+    "causal_loss_positions_per_run": 16744448,
+    "context_length": 512,
+    "dataloader_workers": 0,
+    "epochs": 1,
+    "expected_runs": 9,
+    "grad_scaler": {
+      "backoff_factor": 0.5,
+      "growth_factor": 2.0,
+      "growth_interval": 2000,
+      "init_scale": 1024
+    },
+    "gradient_accumulation": 2,
+    "initialization": "fresh_random_paired_by_pretraining_seed",
+    "input_tokens_per_run": 16777216,
+    "loader": "direct_cpu_memmap_with_frozen_schedule_no_worker_pool",
+    "loader_resolution": "The draft 2-worker suggestion is replaced by direct scheduled memmap reads; no changes to block identities/order, budget, batch positions or model RNG consumption.",
+    "loss_scaling": true,
+    "microbatch_stream_blocks": [
+      8,
+      8
+    ],
+    "mixed_domain_context_blocks": false,
+    "optimizer": {
+      "betas": [
+        0.9,
+        0.999
+      ],
+      "eps": 1e-08,
+      "learning_rate": 0.0003,
+      "max_grad_norm": 1.0,
+      "name": "adamw_torch",
+      "no_decay": "bias_and_layernorm_matching_prior_Trainer_groups",
+      "scheduler": "cosine",
+      "warmup_ratio": 0.02,
+      "warmup_steps": 21,
+      "weight_decay": 0.01
+    },
+    "paired_english_schedule": true,
+    "parameter_dtype": "float32",
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "selection": "final_successful_optimizer_step_only",
+    "unexpected_skipped_optimizer_update": "stop_and_record_failure",
+    "updates_per_run": 1024
+  },
+  "primary_contrast": [
+    "EP",
+    "ES"
+  ],
+  "retention": {
+    "all_epoch_checkpoint_archive": false,
+    "estimated_weight_only_total_gib": 14.76,
+    "extra_source_final_epoch_checkpoints": 0,
+    "historical_artifact_deletion": false,
+    "measured_old_pretraining_weight_bytes": 440115840,
+    "minimum_projected_peak_free_gib": 8,
+    "per_row_predictions_and_selection_evidence": true,
+    "persistent_optimizer_states": false,
+    "pretraining_final_complete_checkpoints": 9,
+    "require_actual_smoke_artifact_size_measurement": true,
+    "source_best_complete_classifiers": 27,
+    "storage_acceptance_status": "required_in_training_acceptance_before_full_launch"
+  },
+  "source_sft": {
+    "autocast_dtype": "bfloat16",
+    "batch_size": 32,
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "candidate_presentations_per_fit": 40220,
+    "candidate_updates_per_fit": 1260,
+    "checkpoint_selection": "minimum_source_validation_cross_entropy_ties_earlier_epoch",
+    "counts_must_be_recomputed_if_source_membership_changes": true,
+    "crossed_with_all_pretraining_runs": true,
+    "dropout": 0.1,
+    "endpoint_content_token_cap": 255,
+    "english_task_labels_allowed": false,
+    "epochs": 5,
+    "eps": 1e-08,
+    "expected_fits": 27,
+    "fine_tuning_seeds": [
+      0,
+      1,
+      2
+    ],
+    "format": "A_content+SEP+B_content+EOS",
+    "head_initializer_std": 0.02,
+    "keep_final_partial_batch": true,
+    "learning_rate": 2e-05,
+    "lr_search": false,
+    "max_grad_norm": 1.0,
+    "new_full_source_counts": {
+      "train": 8044,
+      "validation": 20276
+    },
+    "no_decay": "bias_and_one_dimensional_parameters",
+    "optimizer": "AdamW_foreach",
+    "parameter_dtype": "float32",
+    "pooling": "last_attention_mask_one_position",
+    "presentations_per_fit": 40220,
+    "preserve_exact_selected_backbone_and_head": true,
+    "route": "full_backbone_and_bias_free_two_logit_head",
+    "scheduler": "linear",
+    "selection_epochs": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "source_labels_only": true,
+    "source_selection_barrier_before_target_examples": true,
+    "steps_per_epoch": 252,
+    "updates_per_fit": 1260,
+    "warmup_steps": 0,
+    "weight_decay": 0.01
+  },
+  "statistics": {
+    "all_conditions_reported_regardless_of_source_performance": true,
+    "confidence_intervals": false,
+    "fine_tuning_repeats_per_pretraining_seed": 3,
+    "group_ids_must_be_preserved": true,
+    "hypothesis_tests": false,
+    "independent_pretraining_seeds": 3,
+    "scope": "descriptive"
+  },
+  "surface_reference": {
+    "dtype": "float64",
+    "expected_cpu_fits": 5,
+    "family": "length_unigram_bigram",
+    "feature_dimension": 9,
+    "final_source_membership_matches_neural_sft": true,
+    "freeze_before_target_examples": true,
+    "initialization": "all_zero",
+    "input": "same_first255_content_token_ids_excluding_specials_no_retokenization",
+    "interpretation": "predictive_sufficiency_reference_not_neural_mechanism_identification",
+    "lambdas": [
+      0.0001,
+      0.001,
+      0.01,
+      0.1,
+      1.0
+    ],
+    "objective": "mean_binary_CE_plus_half_lambda_squared_weight_norm_intercept_unpenalized",
+    "optimizer": {
+      "accept_gradient_inf_le": 1e-05,
+      "ftol": 1e-12,
+      "gtol": 1e-08,
+      "maxiter": 2000,
+      "maxls": 50,
+      "method": "L-BFGS-B"
+    },
+    "refit_in_new_namespace": true,
+    "retain_all_source_fit_artifacts": true,
+    "scaler_fit": "source_train_only_float64_population_mean_std",
+    "scaler_floor_replacement": 1.0,
+    "scaler_std_floor": 1e-06,
+    "seed_sd": null,
+    "selected_classifiers": 1,
+    "selection": "minimum_source_validation_CE_ties_smaller_lambda",
+    "target_calibration": false,
+    "target_scaler_refit": false
+  },
+  "tokenizer": {
+    "eos_token_id": 1,
+    "new_blind_target_claimed": false,
+    "pad_token_id": 0,
+    "pair_separator_id": 2,
+    "rebuilt_in_raw_release": true,
+    "retrained_for_this_experiment": false,
+    "sha256": "1bb8092348368961ca211cbf4d066a0e0ebf612b35b401b07ed173476088130b",
+    "source_release_id": "2026-10-01-portable-v2",
+    "unk_token_id": 3,
+    "vocab_size": 32000
+  }
+}

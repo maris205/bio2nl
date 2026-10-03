@@ -1,0 +1,4 @@
+# Python 3.12.3. verify/report/source-input use only the Python standard library.
+# Figure rendering only:
+matplotlib==3.9.0
+numpy==2.2.6

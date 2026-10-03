@@ -1,0 +1,31 @@
+{
+  "schema": 1,
+  "resources": {
+    "openwebtext": {
+      "source_id": "openwebtext",
+      "repository": "Skylion007/openwebtext",
+      "revision": "79d93d786212f7344586290adb811d4ae6a1762c",
+      "upstream_file": "plain_text/train-00000-of-00080.parquet",
+      "url": "https://huggingface.co/datasets/Skylion007/openwebtext/resolve/79d93d786212f7344586290adb811d4ae6a1762c/plain_text/train-00000-of-00080.parquet",
+      "file": "raw/corpora/openwebtext-00000.parquet",
+      "sha256": "caed9f4b7053d7cd4d1a13ce9ec9224d84a3bba1f11579193562a7e31ebe656e",
+      "bytes": 302848326,
+      "acquired_at": "2026-09-25T07:21:17.137540+00:00",
+      "scope": "One explicitly selected source shard; not the full 8M-document corpus",
+      "license": "Repository card: CC0-1.0; individual crawled texts retain their original rights"
+    },
+    "qqp": {
+      "url": "https://huggingface.co/datasets/nyu-mll/glue/resolve/bcdcba79d07bc864c1c254ccfcedcce55bcc9a8c/qqp/validation-00000-of-00001.parquet",
+      "bytes": 3729274,
+      "sha256": "efd86a539c412d74874ee451573d7bd142f56c47fe36de033b9f367d8bb0fa71"
+    },
+    "input_bundle": {
+      "bytes": 259590089,
+      "sha256": "e9d6e7260879a9132c3cfee41b0e4b6efe8c0f13b8602e5095daf903ce08d7b9",
+      "url": "https://huggingface.co/datasets/dnagpt/bio2nl/resolve/5c5692107582866a3984973f83a2ac27d9a1ea89/releases/2026-10-03-portable-v2/input_bundle.tar.gz",
+      "repo_id": "dnagpt/bio2nl",
+      "repo_type": "dataset",
+      "revision": "5c5692107582866a3984973f83a2ac27d9a1ea89"
+    }
+  }
+}

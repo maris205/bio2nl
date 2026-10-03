@@ -1,0 +1,13 @@
+# Current-study public input bundle
+
+This bundle extends the 2026-10-03-v1 protein release with an explicit, SHA-bound subset of the accepted 2026-10-01-portable-v2 inputs. It contains 17 source-preparation inputs, one nontext English-exclusion hash index, and the separate protein test-pair table. English documents, QQP questions, encoded NLP examples, imported sessions and original qualification row ledgers are absent.
+
+Swiss-Prot sequences and canonical/pair tables derive from UniProtKB/Swiss-Prot release 2026_03, credited to the UniProt Consortium. Copyrightable database parts use CC BY 4.0; other rights remain as described by [UniProt](https://rest.uniprot.org/help/license). Transformations include canonical-AA filtering, deduplication, operational clustering/splitting, alignment-based similarity pairing, deterministic candidate order and SCOPe overlap exclusion. These operational labels do not certify evolutionary nonhomology.
+
+The remote sequence identity table derives from SCOPe/ASTRAL 2.08-stable, by John-Marc Chandonia, Lindsey Guan, Shiangyi Lin, Changhua Yu, Naomi K. Fox and Steven E. Brenner, Lawrence Berkeley National Laboratory. The source record [10.5281/zenodo.5829561](https://doi.org/10.5281/zenodo.5829561) lists CC BY 4.0. Our table parses and filters its sequence/classification files and adds experiment identity/split fields. This is used as an exclusion input; no new remote-homology model evaluation is claimed.
+
+The shared byte-level BPE tokenizer is an experiment-generated vocabulary/merge artifact (32,000 entries), learned from 16 MiB each of training-only English and protein text. It is not a corpus of training sentences. The training-record file contains source IDs only. This statement does not extend the biological CC BY terms to the tokenizer, model weights, code or individual OpenWebText documents; no new blanket license is assigned to those assets.
+
+The exclusion index contains 607,081 sorted 16-byte BLAKE2b digests of normalized eight-word spans from nine frozen benchmark splits, without words, labels or examples. Its source-file hashes are recorded in `english_recipe.json`. Using it reproduces the historical exclusion operation but does not independently rebuild or requalify the original benchmark splits. OpenWebText is fetched directly from its pinned upstream revision and reconstructed locally; its texts and reversible bins remain outside this bundle.
+
+Small JSON files retain historical counts and execution provenance. One historical MMseqs command contains its original absolute paths; these are evidence strings only and are never executed by the portable adapter. No historical raw/training acceptance gate is included or impersonated. New preparation and training require their own checks.

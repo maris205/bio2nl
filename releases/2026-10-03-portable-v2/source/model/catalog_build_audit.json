@@ -1,0 +1,336 @@
+{
+  "catalog_sha256": "5f6694f206084ad51dcc27c1485c4b4d000ffe5023310482aab367d0815df067",
+  "completed_at_utc": "2026-10-03T08:13:32.395981+00:00",
+  "gpu_used": false,
+  "models": [
+    {
+      "config_verified": true,
+      "file_verified": true,
+      "finite_fp32": true,
+      "id": "EP-pt0",
+      "source_selection_verified": false,
+      "state_verified": true,
+      "tensor_count": 149
+    },
+    {
+      "config_verified": true,
+      "file_verified": true,
+      "finite_fp32": true,
+      "id": "EP-pt1",
+      "source_selection_verified": false,
+      "state_verified": true,
+      "tensor_count": 149
+    },
+    {
+      "config_verified": true,
+      "file_verified": true,
+      "finite_fp32": true,
+      "id": "EP-pt2",
+      "source_selection_verified": false,
+      "state_verified": true,
+      "tensor_count": 149
+    },
+    {
+      "config_verified": true,
+      "file_verified": true,
+      "finite_fp32": true,
+      "id": "ES-pt0",
+      "source_selection_verified": false,
+      "state_verified": true,
+      "tensor_count": 149
+    },
+    {
+      "config_verified": true,
+      "file_verified": true,
+      "finite_fp32": true,
+      "id": "ES-pt1",
+      "source_selection_verified": false,
+      "state_verified": true,
+      "tensor_count": 149
+    },
+    {
+      "config_verified": true,
+      "file_verified": true,
+      "finite_fp32": true,
+      "id": "ES-pt2",
+      "source_selection_verified": false,
+      "state_verified": true,
+      "tensor_count": 149
+    },
+    {
+      "config_verified": true,
+      "file_verified": true,
+      "finite_fp32": true,
+      "id": "EE-pt0",
+      "source_selection_verified": false,
+      "state_verified": true,
+      "tensor_count": 149
+    },
+    {
+      "config_verified": true,
+      "file_verified": true,
+      "finite_fp32": true,
+      "id": "EE-pt1",
+      "source_selection_verified": false,
+      "state_verified": true,
+      "tensor_count": 149
+    },
+    {
+      "config_verified": true,
+      "file_verified": true,
+      "finite_fp32": true,
+      "id": "EE-pt2",
+      "source_selection_verified": false,
+      "state_verified": true,
+      "tensor_count": 149
+    },
+    {
+      "config_verified": true,
+      "file_verified": true,
+      "finite_fp32": true,
+      "id": "EP-pt0-ft0",
+      "source_selection_verified": true,
+      "state_verified": true,
+      "tensor_count": 149
+    },
+    {
+      "config_verified": true,
+      "file_verified": true,
+      "finite_fp32": true,
+      "id": "EP-pt0-ft1",
+      "source_selection_verified": true,
+      "state_verified": true,
+      "tensor_count": 149
+    },
+    {
+      "config_verified": true,
+      "file_verified": true,
+      "finite_fp32": true,
+      "id": "EP-pt0-ft2",
+      "source_selection_verified": true,
+      "state_verified": true,
+      "tensor_count": 149
+    },
+    {
+      "config_verified": true,
+      "file_verified": true,
+      "finite_fp32": true,
+      "id": "ES-pt0-ft0",
+      "source_selection_verified": true,
+      "state_verified": true,
+      "tensor_count": 149
+    },
+    {
+      "config_verified": true,
+      "file_verified": true,
+      "finite_fp32": true,
+      "id": "ES-pt0-ft1",
+      "source_selection_verified": true,
+      "state_verified": true,
+      "tensor_count": 149
+    },
+    {
+      "config_verified": true,
+      "file_verified": true,
+      "finite_fp32": true,
+      "id": "ES-pt0-ft2",
+      "source_selection_verified": true,
+      "state_verified": true,
+      "tensor_count": 149
+    },
+    {
+      "config_verified": true,
+      "file_verified": true,
+      "finite_fp32": true,
+      "id": "EE-pt0-ft0",
+      "source_selection_verified": true,
+      "state_verified": true,
+      "tensor_count": 149
+    },
+    {
+      "config_verified": true,
+      "file_verified": true,
+      "finite_fp32": true,
+      "id": "EE-pt0-ft1",
+      "source_selection_verified": true,
+      "state_verified": true,
+      "tensor_count": 149
+    },
+    {
+      "config_verified": true,
+      "file_verified": true,
+      "finite_fp32": true,
+      "id": "EE-pt0-ft2",
+      "source_selection_verified": true,
+      "state_verified": true,
+      "tensor_count": 149
+    },
+    {
+      "config_verified": true,
+      "file_verified": true,
+      "finite_fp32": true,
+      "id": "EP-pt1-ft0",
+      "source_selection_verified": true,
+      "state_verified": true,
+      "tensor_count": 149
+    },
+    {
+      "config_verified": true,
+      "file_verified": true,
+      "finite_fp32": true,
+      "id": "EP-pt1-ft1",
+      "source_selection_verified": true,
+      "state_verified": true,
+      "tensor_count": 149
+    },
+    {
+      "config_verified": true,
+      "file_verified": true,
+      "finite_fp32": true,
+      "id": "EP-pt1-ft2",
+      "source_selection_verified": true,
+      "state_verified": true,
+      "tensor_count": 149
+    },
+    {
+      "config_verified": true,
+      "file_verified": true,
+      "finite_fp32": true,
+      "id": "ES-pt1-ft0",
+      "source_selection_verified": true,
+      "state_verified": true,
+      "tensor_count": 149
+    },
+    {
+      "config_verified": true,
+      "file_verified": true,
+      "finite_fp32": true,
+      "id": "ES-pt1-ft1",
+      "source_selection_verified": true,
+      "state_verified": true,
+      "tensor_count": 149
+    },
+    {
+      "config_verified": true,
+      "file_verified": true,
+      "finite_fp32": true,
+      "id": "ES-pt1-ft2",
+      "source_selection_verified": true,
+      "state_verified": true,
+      "tensor_count": 149
+    },
+    {
+      "config_verified": true,
+      "file_verified": true,
+      "finite_fp32": true,
+      "id": "EE-pt1-ft0",
+      "source_selection_verified": true,
+      "state_verified": true,
+      "tensor_count": 149
+    },
+    {
+      "config_verified": true,
+      "file_verified": true,
+      "finite_fp32": true,
+      "id": "EE-pt1-ft1",
+      "source_selection_verified": true,
+      "state_verified": true,
+      "tensor_count": 149
+    },
+    {
+      "config_verified": true,
+      "file_verified": true,
+      "finite_fp32": true,
+      "id": "EE-pt1-ft2",
+      "source_selection_verified": true,
+      "state_verified": true,
+      "tensor_count": 149
+    },
+    {
+      "config_verified": true,
+      "file_verified": true,
+      "finite_fp32": true,
+      "id": "EP-pt2-ft0",
+      "source_selection_verified": true,
+      "state_verified": true,
+      "tensor_count": 149
+    },
+    {
+      "config_verified": true,
+      "file_verified": true,
+      "finite_fp32": true,
+      "id": "EP-pt2-ft1",
+      "source_selection_verified": true,
+      "state_verified": true,
+      "tensor_count": 149
+    },
+    {
+      "config_verified": true,
+      "file_verified": true,
+      "finite_fp32": true,
+      "id": "EP-pt2-ft2",
+      "source_selection_verified": true,
+      "state_verified": true,
+      "tensor_count": 149
+    },
+    {
+      "config_verified": true,
+      "file_verified": true,
+      "finite_fp32": true,
+      "id": "ES-pt2-ft0",
+      "source_selection_verified": true,
+      "state_verified": true,
+      "tensor_count": 149
+    },
+    {
+      "config_verified": true,
+      "file_verified": true,
+      "finite_fp32": true,
+      "id": "ES-pt2-ft1",
+      "source_selection_verified": true,
+      "state_verified": true,
+      "tensor_count": 149
+    },
+    {
+      "config_verified": true,
+      "file_verified": true,
+      "finite_fp32": true,
+      "id": "ES-pt2-ft2",
+      "source_selection_verified": true,
+      "state_verified": true,
+      "tensor_count": 149
+    },
+    {
+      "config_verified": true,
+      "file_verified": true,
+      "finite_fp32": true,
+      "id": "EE-pt2-ft0",
+      "source_selection_verified": true,
+      "state_verified": true,
+      "tensor_count": 149
+    },
+    {
+      "config_verified": true,
+      "file_verified": true,
+      "finite_fp32": true,
+      "id": "EE-pt2-ft1",
+      "source_selection_verified": true,
+      "state_verified": true,
+      "tensor_count": 149
+    },
+    {
+      "config_verified": true,
+      "file_verified": true,
+      "finite_fp32": true,
+      "id": "EE-pt2-ft2",
+      "source_selection_verified": true,
+      "state_verified": true,
+      "tensor_count": 149
+    }
+  ],
+  "status": "passed",
+  "trained_or_scored_benchmarks": false,
+  "weight_bytes": 15845506290,
+  "weight_files": 36,
+  "weight_files_copied": 0
+}

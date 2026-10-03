@@ -1,0 +1,122 @@
+{
+  "schema": 1,
+  "files": [
+    {
+      "path": "data/corpora/protein/train.jsonl.gz",
+      "sha256": "d253923bb46f64508f62a59109417c642245beefdd411d403324d972732c7117",
+      "bytes": 42897525,
+      "origin_release": "2026-10-01-portable-v2"
+    },
+    {
+      "path": "data/pairs/protein_sequence_similarity_train.tsv.gz",
+      "sha256": "0f058464e29394d2414f5cf8fb7488af1a125bea23244edb4b0e62ebb2a3ec43",
+      "bytes": 39623434,
+      "origin_release": "2026-10-01-portable-v2"
+    },
+    {
+      "path": "data/pairs/protein_sequence_similarity_validation.tsv.gz",
+      "sha256": "97ef462ce6d0140386b4a4564a3318a3f94e32d75e7be2bd39621508f7ff4ad7",
+      "bytes": 8119233,
+      "origin_release": "2026-10-01-portable-v2"
+    },
+    {
+      "path": "data/sequences/protein_canonical_sequences.tsv.gz",
+      "sha256": "3134a5ab8160807a19c5c40a6bbfe2932e9007528604d638919569dd4fad9728",
+      "bytes": 140574383,
+      "origin_release": "2026-10-01-portable-v2"
+    },
+    {
+      "path": "data/sequences/remote_sequences.tsv.gz",
+      "sha256": "ea72b1aac4d991abb9a6d9417b42a368f13f7caecb995ad6bf2a19b6ccbc01eb",
+      "bytes": 9859027,
+      "origin_release": "2026-10-01-portable-v2"
+    },
+    {
+      "path": "metadata/corpora_english.json",
+      "sha256": "f1c8aad99e16f67e110a48dffa26d94775ee2dc7a0592a7f8994c76f13fce846",
+      "bytes": 982,
+      "origin_release": "2026-10-01-portable-v2"
+    },
+    {
+      "path": "metadata/corpora_protein.json",
+      "sha256": "25185327b546784cb56c5a1dd258f69e43e49fbea0c0fea5bb33085da33d6eaa",
+      "bytes": 986,
+      "origin_release": "2026-10-01-portable-v2"
+    },
+    {
+      "path": "metadata/protein_pair_construction.json",
+      "sha256": "6d39b431bc1d597e6f0e8dc46644721bad4a766dd23690322b477807eef35a71",
+      "bytes": 1532,
+      "origin_release": "2026-10-01-portable-v2"
+    },
+    {
+      "path": "metadata/protein_remote_pretraining_exclusion.json",
+      "sha256": "2f60f8a3fc2808d04c34a4783731fe96446673149ae2bf85a146c87bde4b2e3c",
+      "bytes": 1951,
+      "origin_release": "2026-10-01-portable-v2"
+    },
+    {
+      "path": "metadata/protein_split_policy.json",
+      "sha256": "c3e9aa43c707704e37c12685c102e09bd0121498fa616ef7b243d42a33186585",
+      "bytes": 841,
+      "origin_release": "2026-10-01-portable-v2"
+    },
+    {
+      "path": "tokenizers/mixed_bpe/metadata.json",
+      "sha256": "f0da6de79b635e473adfba12c54e2e8df39ce33fbb0f16529e42f58821ce812d",
+      "bytes": 697,
+      "origin_release": "2026-10-01-portable-v2"
+    },
+    {
+      "path": "tokenizers/mixed_bpe/tokenizer.json",
+      "sha256": "1bb8092348368961ca211cbf4d066a0e0ebf612b35b401b07ed173476088130b",
+      "bytes": 2122913,
+      "origin_release": "2026-10-01-portable-v2"
+    },
+    {
+      "path": "tokenizers/mixed_bpe/training_records.json",
+      "sha256": "cdbbcbe333ab4d5e9244dcf1044e462d8ca303c33deff53966ead6bed3b751ea",
+      "bytes": 1333423,
+      "origin_release": "2026-10-01-portable-v2"
+    },
+    {
+      "path": "validation/corpora_english.json",
+      "sha256": "29f5a94f30484bf8e00eb35046b98ec271e15289f8dd2df0a79dff1a45c95454",
+      "bytes": 2282,
+      "origin_release": "2026-10-01-portable-v2"
+    },
+    {
+      "path": "validation/corpora_protein.json",
+      "sha256": "3a51fe27b1ba63330c28c90703a3bd327faa255b5fba2a0ede90ff5dfe346816",
+      "bytes": 1658,
+      "origin_release": "2026-10-01-portable-v2"
+    },
+    {
+      "path": "validation/cross_dataset_homology.json",
+      "sha256": "3d66f2a14b580ee9c1c5db174f3ad6fe9640d2d6a0ef95c3668f8536405535f2",
+      "bytes": 2055,
+      "origin_release": "2026-10-01-portable-v2"
+    },
+    {
+      "path": "validation/protein_pair_acceptance.json",
+      "sha256": "d6633da43757dc2e3b90bdc9eaa53f1de2e1f54fd2184a1b41100018729d8514",
+      "bytes": 1164,
+      "origin_release": "2026-10-01-portable-v2"
+    },
+    {
+      "path": "metadata/english_exclusion_hashes.bin",
+      "sha256": "64a4019d6634a23c0d7750f9db082ac5a78a18d49344566b339b351ab3810f69",
+      "bytes": 9713296,
+      "origin_release": "projection of 9 fixed rebuilt NLP splits; BLAKE2b-128 eight-word digests only"
+    },
+    {
+      "path": "data/pairs/protein_sequence_similarity_test.tsv.gz",
+      "sha256": "00cc491007a13c5f3253e6abf47fae471fb24ab05e6f98af5801b206cab19c1f",
+      "bytes": 8351374,
+      "origin_release": "2026-10-01-portable-v2; separate held-out resource"
+    }
+  ],
+  "scope": "Current-study source-input closure excluding locally reconstructed English text; exact accepted biological derivatives, tokenizer and hash-only exclusion projection. Not full 361-file raw rebuild.",
+  "old_raw_gate_copied": false,
+  "old_training_gate_copied": false
+}

@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "smallweb_local.py": {
+    "source": "bio2nl/data/rebuild_v2/build_gpt2_smallweb_data.py",
+    "source_sha256": "09bed0da6040a7cc348f15ffb2d53df18761e1374e3de139188acd0fdb776437",
+    "changes": [
+      "Load checksum-verified cached GPT-2 tokenizer with local_files_only=True",
+      "Keep external tokenizer files immutable instead of save_pretrained",
+      "Standalone SHA/JSON helpers",
+      "Reject existing SmallWeb output/config and symlinked local paths",
+      "Require exact five-file pinned tokenizer membership and disable remote code"
+    ],
+    "scientific_tokenization_changes": false
+  }
+}

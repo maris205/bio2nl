@@ -1,0 +1,122 @@
+{
+  "schema": 1,
+  "raw": {
+    "source_id": "openwebtext",
+    "repository": "Skylion007/openwebtext",
+    "revision": "79d93d786212f7344586290adb811d4ae6a1762c",
+    "upstream_file": "plain_text/train-00000-of-00080.parquet",
+    "url": "https://huggingface.co/datasets/Skylion007/openwebtext/resolve/79d93d786212f7344586290adb811d4ae6a1762c/plain_text/train-00000-of-00080.parquet",
+    "file": "raw/corpora/openwebtext-00000.parquet",
+    "sha256": "caed9f4b7053d7cd4d1a13ce9ec9224d84a3bba1f11579193562a7e31ebe656e",
+    "bytes": 302848326,
+    "acquired_at": "2026-09-25T07:21:17.137540+00:00",
+    "scope": "One explicitly selected source shard; not the full 8M-document corpus",
+    "license": "Repository card: CC0-1.0; individual crawled texts retain their original rights"
+  },
+  "exclusion": {
+    "file": "metadata/english_exclusion_hashes.bin",
+    "sha256": "64a4019d6634a23c0d7750f9db082ac5a78a18d49344566b339b351ab3810f69",
+    "bytes": 9713296,
+    "entries": 607081,
+    "algorithm": "BLAKE2b digest_size=16, normalized 8-word spans",
+    "source_files": {
+      "data/nlp/cola/test.jsonl": "3a2c0e46510c70b69b9cd7b360ddea70d50f9b909bc511ced3ee7b99a4fa5b64",
+      "data/nlp/cola/train.jsonl": "8dfaf0067402e2617cacf2987be1e27c3f3841a3811e9cd43fcbc90fcc3a982c",
+      "data/nlp/cola/validation.jsonl": "55977bf00853801a5e0e70dd48c97702a30f777d3a6cb537da14e9771910628f",
+      "data/nlp/pawsx_en/test.jsonl": "ecc224383c32ac66e0ca6f27067f087f64f1153d7758e4697a9b6eaf920e4e95",
+      "data/nlp/pawsx_en/train.jsonl": "87e637eb0f4559070a14e41232dff150fe9a845031045856db5da425e8826016",
+      "data/nlp/pawsx_en/validation.jsonl": "6543f82830c1aa3ccb808ff1476a11e1253cd5f43335b5912a111408b19c5ce2",
+      "data/nlp/rte/test.jsonl": "ecc319f60754e9cd6bfd3ae009b2285c9f900b17259d5f0d075b61ff0269f3f1",
+      "data/nlp/rte/train.jsonl": "aa18841d0c98d3546673e7d097d5cbcca68542a3d4a4591df3a6fdd5e23df6c2",
+      "data/nlp/rte/validation.jsonl": "c40e5c05edcb14f3d76b78a747a9f0a45e67564b2d6969b86bd39ce709443651"
+    }
+  },
+  "expected_report": {
+    "condition": "english",
+    "splits": {
+      "train": {
+        "records": 94533,
+        "utf8_bytes": 464934380,
+        "characters": 460813975,
+        "file": "data/corpora/english/train.jsonl.gz",
+        "sha256": "3d7c0188ab2cdf5f70afe2082e0a5e2698d6d6a49170fd2d0e8c468db395ac58",
+        "unique_texts": 94533
+      },
+      "validation": {
+        "records": 2406,
+        "utf8_bytes": 11834585,
+        "characters": 11726058,
+        "file": "data/corpora/english/validation.jsonl.gz",
+        "sha256": "31d0890d6d181823562c992d7c6baa0700cf4d163058a6a8c1e6db31bd0a55ed",
+        "unique_texts": 2406
+      },
+      "test": {
+        "records": 2463,
+        "utf8_bytes": 12378252,
+        "characters": 12270562,
+        "file": "data/corpora/english/test.jsonl.gz",
+        "sha256": "5387927bf865d6f6712a4f7eaa9945d45a619c0c2513776fdc36c9b7d6333324",
+        "unique_texts": 2463
+      }
+    },
+    "exact_text_cross_split_overlap": {
+      "train/validation": 0,
+      "train/test": 0,
+      "validation/test": 0
+    },
+    "source_rows": 100173,
+    "rejected": {
+      "shares_eight_word_span_with_any_nlp_split": 771
+    },
+    "split_rule": "normalized document SHA256 mod 1000; 950/25/25",
+    "benchmark_exclusion_files": {
+      "data/nlp/cola/test.jsonl": "3a2c0e46510c70b69b9cd7b360ddea70d50f9b909bc511ced3ee7b99a4fa5b64",
+      "data/nlp/cola/train.jsonl": "8dfaf0067402e2617cacf2987be1e27c3f3841a3811e9cd43fcbc90fcc3a982c",
+      "data/nlp/cola/validation.jsonl": "55977bf00853801a5e0e70dd48c97702a30f777d3a6cb537da14e9771910628f",
+      "data/nlp/pawsx_en/test.jsonl": "ecc224383c32ac66e0ca6f27067f087f64f1153d7758e4697a9b6eaf920e4e95",
+      "data/nlp/pawsx_en/train.jsonl": "87e637eb0f4559070a14e41232dff150fe9a845031045856db5da425e8826016",
+      "data/nlp/pawsx_en/validation.jsonl": "6543f82830c1aa3ccb808ff1476a11e1253cd5f43335b5912a111408b19c5ce2",
+      "data/nlp/rte/test.jsonl": "ecc319f60754e9cd6bfd3ae009b2285c9f900b17259d5f0d075b61ff0269f3f1",
+      "data/nlp/rte/train.jsonl": "aa18841d0c98d3546673e7d097d5cbcca68542a3d4a4591df3a6fdd5e23df6c2",
+      "data/nlp/rte/validation.jsonl": "c40e5c05edcb14f3d76b78a747a9f0a45e67564b2d6969b86bd39ce709443651"
+    },
+    "forbidden_eight_word_spans": 607081,
+    "limitation": "Exact normalized documents and exact 8-word overlap excluded; semantic/near-document independence not proven"
+  },
+  "outputs": {
+    "data/corpora/english/train.jsonl.gz": {
+      "sha256": "3d7c0188ab2cdf5f70afe2082e0a5e2698d6d6a49170fd2d0e8c468db395ac58",
+      "bytes": 193377097
+    },
+    "data/corpora/english/validation.jsonl.gz": {
+      "sha256": "31d0890d6d181823562c992d7c6baa0700cf4d163058a6a8c1e6db31bd0a55ed",
+      "bytes": 4934900
+    },
+    "data/corpora/english/test.jsonl.gz": {
+      "sha256": "5387927bf865d6f6712a4f7eaa9945d45a619c0c2513776fdc36c9b7d6333324",
+      "bytes": 5134032
+    },
+    "metadata/corpora_english.json": {
+      "sha256": "f1c8aad99e16f67e110a48dffa26d94775ee2dc7a0592a7f8994c76f13fce846",
+      "bytes": 982
+    },
+    "validation/corpora_english.json": {
+      "sha256": "29f5a94f30484bf8e00eb35046b98ec271e15289f8dd2df0a79dff1a45c95454",
+      "bytes": 2282
+    }
+  },
+  "vendor": {
+    "build_corpora.py": {
+      "sha256": "6b329c9fc5e3c3de0766a2358641d20befd96a207c206f370b905b3fefc7583f",
+      "bytes": 11168
+    },
+    "common.py": {
+      "sha256": "f936298d11fe73c3aa2fed418b7e7a4078ee0c6bcae1e037c9576b198839dc7e",
+      "bytes": 2721
+    },
+    "fetch_corpora.py": {
+      "sha256": "0c73a5576bae7361c5596e884ae43df919cbfc2d60779a6128ba0d12bb21a23f",
+      "bytes": 2932
+    }
+  }
+}

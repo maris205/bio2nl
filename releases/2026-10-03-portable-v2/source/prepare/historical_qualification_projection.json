@@ -1,0 +1,51 @@
+{
+  "artifact_type": "historical_qualification_projection_not_current_acceptance",
+  "current_target_bytes_verified": false,
+  "explanation": "Hashes bind an attributed historical metadata projection. This preparation verifies only source inputs and equivalence of two exposure assets; it does not reconstruct or requalify the historically scored QQP cohort.",
+  "historical_evidence_hashes": {
+    "confirmation_acceptance": {
+      "bytes": 4873,
+      "sha256": "57f6ad8b9d082195ddf19aad810ec4dd54c83b9261a7770a5c2b38aca8c8c9d7"
+    },
+    "confirmation_audit": {
+      "bytes": 20757,
+      "sha256": "148e5c623348940e185e07dc84d654cc519b4de054d9bed982559e340375ab9b"
+    },
+    "confirmation_manifest": {
+      "bytes": 12244,
+      "sha256": "16373825f4d629b463611cb042e3eced4fd182f422436c5b6fc9dd4c1f9df762"
+    },
+    "confirmation_references": {
+      "bytes": 55836,
+      "sha256": "32dbb5f989265a1bc9e1104d3aa0571b24c10a9373592541d88365ec0654273d"
+    },
+    "design": {
+      "bytes": 9538,
+      "sha256": "ce21b3790ecc809ce1a665b26550a15bbfdc47d6d24c8be0024fcf2fc72515e5"
+    }
+  },
+  "historical_target_has_already_been_scored": true,
+  "new_blind_confirmation_claimed": false,
+  "projection_contains_examples_or_reversible_encoded_inputs": false,
+  "projection_is_training_gate": false,
+  "qualification_scope": "Frozen-rule local QQP public-validation confirmation target; no semantic/global unseen guarantee",
+  "reference_bindings": {
+    "data/corpora/english/train.jsonl.gz": {
+      "current_sha256": "3d7c0188ab2cdf5f70afe2082e0a5e2698d6d6a49170fd2d0e8c468db395ac58",
+      "historical_reference_sha256": "3d7c0188ab2cdf5f70afe2082e0a5e2698d6d6a49170fd2d0e8c468db395ac58",
+      "raw_gate_comparison_mode": "gzip_ordered_json_rows_exact",
+      "same_scientific_content": true
+    },
+    "tokenizers/mixed_bpe/tokenizer.json": {
+      "current_sha256": "1bb8092348368961ca211cbf4d066a0e0ebf612b35b401b07ed173476088130b",
+      "historical_reference_sha256": "1bb8092348368961ca211cbf4d066a0e0ebf612b35b401b07ed173476088130b",
+      "raw_gate_comparison_mode": "canonical_json_exact",
+      "same_scientific_content": true
+    }
+  },
+  "retained_lexical_hits_zero_inherited_from_M1": true,
+  "same_full_english_train_pool_and_tokenizer_scientific_content": true,
+  "schema_version": 1,
+  "status": "historical_claims_preserved_not_reaudited",
+  "target_scoring_enabled": false
+}

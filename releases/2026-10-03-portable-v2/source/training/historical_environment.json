@@ -1,0 +1,12 @@
+{
+  "packages": {
+    "numpy": "2.2.6",
+    "pyarrow": "17.0.0",
+    "scikit-learn": "1.5.2",
+    "scipy": "1.14.1",
+    "tokenizers": "0.20.0",
+    "torch": "2.9.1",
+    "transformers": "4.45.2"
+  },
+  "python": "3.12.3 | packaged by Anaconda, Inc. | (main, May  6 2024, 19:46:43) [GCC 11.2.0]"
+}

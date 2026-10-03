@@ -1,0 +1,10 @@
+{
+  "status": "observed_and_documented",
+  "torch_imported_version": "2.3.0+cu121",
+  "torch_cuda_build": "12.1",
+  "torch_distribution_metadata": "2.9.1",
+  "cpu_replay_imported_binary": "2.3.0+cu121",
+  "clean_environment_installation_validated": false,
+  "historical_training_binary_version_established": false,
+  "scope": "Current CPU portable-loader checks; distribution metadata is inconsistent with imported module. This addendum does not alter checkpoints, scientific scores or the frozen core."
+}

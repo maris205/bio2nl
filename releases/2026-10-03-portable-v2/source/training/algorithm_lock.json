@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "scope": "Exact October 2 numerical/source-audit algorithms, with enumerated provenance-only adapter substitutions at compile time",
+  "files": {
+    "runtime.py": {
+      "sha256": "0ef37a1321f796490b927a07a5299d0916c6778b223420f9be043c48bdddf930",
+      "bytes": 33994
+    },
+    "model.py": {
+      "sha256": "b2362edf8850fe20fbd23cc958a71f92ac2a187de4316f53f8750d3bca857592",
+      "bytes": 12837
+    },
+    "audit_runtime.py": {
+      "sha256": "e2cc04212164e0de2ceb323f0e250ec8ae16530236f7f31d7a50ff4b91577f73",
+      "bytes": 18789
+    },
+    "fit_surface.py": {
+      "sha256": "9f6775832404688dd4d842cb4fb7900e2d0c560f5939c5297d6c71943ed304b2",
+      "bytes": 10822
+    },
+    "surface_features.py": {
+      "sha256": "f515bd6063627d252838eb6ab5fe4d4cba1b423d44c97eddd775abb5912bffc9",
+      "bytes": 4317
+    },
+    "audit_surface.py": {
+      "sha256": "533c24e10129b23f068965fc1db7d8ba65f459fca1c928eaddc843482f6835b4",
+      "bytes": 15998
+    },
+    "audit_source.py": {
+      "sha256": "1ee7ed55f04714e409477b861fabb1081f2c7d5114834e6ec810643cc3f4fbfa",
+      "bytes": 33413
+    }
+  }
+}

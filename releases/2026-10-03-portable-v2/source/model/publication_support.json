@@ -1,0 +1,101 @@
+{
+  "note": "Explicit publication allowlist. Regenerate affected file hashes after publication README edits; never upload __pycache__ or unlisted files.",
+  "repo_id": "dnagpt/bio2nl-models",
+  "repo_type": "model",
+  "schema_version": 1,
+  "self_included": false,
+  "support_file_count": 18,
+  "support_files": [
+    {
+      "bytes": 8270,
+      "path_in_repo": "README.md",
+      "sha256": "80b389d063944450b23ae116d58d1eb8fbfbbd465532efa3e8e9bc3c5c9b0022"
+    },
+    {
+      "bytes": 11184,
+      "path_in_repo": "inference.py",
+      "sha256": "43f5a1c770354b588b046ff02e4d03df4c13086224df4fba1285f8f2b3cf91ec"
+    },
+    {
+      "bytes": 12837,
+      "path_in_repo": "portable_core.py",
+      "sha256": "b2362edf8850fe20fbd23cc958a71f92ac2a187de4316f53f8750d3bca857592"
+    },
+    {
+      "bytes": 52255,
+      "path_in_repo": "model_catalog.json",
+      "sha256": "5f6694f206084ad51dcc27c1485c4b4d000ffe5023310482aab367d0815df067"
+    },
+    {
+      "bytes": 2148,
+      "path_in_repo": "config.json",
+      "sha256": "64692b503d0444f55c0c2b8f402f3c88877dac428f9ed6780748d4eeab3f21c5"
+    },
+    {
+      "bytes": 2122913,
+      "path_in_repo": "tokenizer.json",
+      "sha256": "1bb8092348368961ca211cbf4d066a0e0ebf612b35b401b07ed173476088130b"
+    },
+    {
+      "bytes": 245,
+      "path_in_repo": "example_pairs.json",
+      "sha256": "5e2e7bef1c0bbf37b5621fe63e12e182ded2c46624667cdd399c548442c674bf"
+    },
+    {
+      "bytes": 66,
+      "path_in_repo": "requirements-inference.txt",
+      "sha256": "705036aec85d567ca510b4c08b24d70ad574f3bb1803baca4c530807e4deab6e"
+    },
+    {
+      "bytes": 7349,
+      "path_in_repo": "test_inference.py",
+      "sha256": "26a8dd9c94fee295a7ba20ae65da922975f6ee1a66ad9f500fea16c8ad63f3d8"
+    },
+    {
+      "bytes": 430,
+      "path_in_repo": "test_audit.json",
+      "sha256": "c15c33ee95fba076524887cca1e5c27939edc59bbaf94b6625cd8070d080a946"
+    },
+    {
+      "bytes": 1904,
+      "path_in_repo": "test_output.txt",
+      "sha256": "3dc4baf97e4d49b0ac37138b7048bddd61d8cd7a9a541292050366e6ce71ccc7"
+    },
+    {
+      "bytes": 8333,
+      "path_in_repo": "catalog_build_audit.json",
+      "sha256": "18a536075836091e925a385bf7c4e9ef40d20d2e84c7a1401fe47d602f3b80fe"
+    },
+    {
+      "bytes": 1680,
+      "path_in_repo": "cpu_replay_audit.json",
+      "sha256": "4951182c49b713e84290a003f5993605a50e97763e30b09e7a168aa239011778"
+    },
+    {
+      "bytes": 7597,
+      "path_in_repo": "weight_payload_metadata_audit.json",
+      "sha256": "d6c81d4501b4e507274547fb73d9d8b103439c911e0a963d323d99cc0032746a"
+    },
+    {
+      "bytes": 9825,
+      "path_in_repo": "build_catalog.py",
+      "sha256": "35af46c0b10fbe26c21e0f5be1c260db644773f319ddca347edf2420e040f4b5"
+    },
+    {
+      "bytes": 7711,
+      "path_in_repo": "validate_cpu_replay.py",
+      "sha256": "c8d232a6a386b6ce2a1d204887c0d582cd12d90b7988ed315158f1ed141f8ac4"
+    },
+    {
+      "bytes": 11108,
+      "path_in_repo": "upload_mapping.json",
+      "sha256": "cb3872ce868864565c463a64efd8e228c0484ffac299e921108e53ff1da49503"
+    },
+    {
+      "path_in_repo": "ENVIRONMENT_NOTE.json",
+      "bytes": 506,
+      "sha256": "00a635751a4dc3dab48a1aa5497afc72a2f1609a2c7fd8c257e1e4e4534264ea"
+    }
+  ],
+  "weight_mapping": "upload_mapping.json"
+}

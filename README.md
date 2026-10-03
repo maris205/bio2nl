@@ -1,15 +1,16 @@
 # bio2nl: protein-pair supervision and English transfer
 
-This repository studies whether protein sequence-pair supervision transfers to English sentence-pair prediction. The current audited experiment uses the deterministic October 2026 data reconstruction, nine fresh pretraining runs, 27 full source fine-tuning runs, and fixed evaluation of all 27 source-selected classifiers. Older root-level experiments and paper files remain historical; the release below identifies the current code and results.
+This repository studies whether protein sequence-pair supervision transfers to English sentence-pair prediction. The current audited experiment uses nine fresh pretraining runs, 27 full source fine-tuning runs, and fixed evaluation of all 27 source-selected classifiers. Historical root-level experiments and paper files remain unchanged; the versioned release below identifies the current source and access instructions.
 
-## Current release
+## Current portable release
 
-- [Release documentation and CPU commands](releases/2026-10-03-v1/README.md).
-- [Complete 190-file source snapshot](releases/2026-10-03-v1/source/) and [file manifest](releases/2026-10-03-v1/source/MANIFEST.json).
-- [Protein data and the same code archive on Hugging Face](https://huggingface.co/datasets/dnagpt/bio2nl/tree/62ced1ec44444b1879f2c473c553e6b5a9c6767f/releases/2026-10-03-v1), pinned to dataset commit `62ced1ec44444b1879f2c473c553e6b5a9c6767f`.
-- [Fixed-transfer results](releases/2026-10-03-v1/source/results/oct2/fixed_transfer/REPORT.md), [source-fit results](releases/2026-10-03-v1/source/results/oct2/source/REPORT.md), and [Source Data](releases/2026-10-03-v1/source/paper_assets/source_data/README.md).
+- [Portable reproduction instructions](releases/2026-10-03-portable-v2/source/README.md) and [exact source manifest](releases/2026-10-03-portable-v2/source/MANIFEST.json).
+- [The same versioned source archive on Hugging Face](https://huggingface.co/datasets/dnagpt/bio2nl/tree/b333517eb3f03886ab92215175653a5c87b5f7cf/releases/2026-10-03-portable-v2), dataset revision `b333517eb3f03886ab92215175653a5c87b5f7cf`.
+- [Pinned biological inputs and tokenizer](https://huggingface.co/datasets/dnagpt/bio2nl/tree/5c5692107582866a3984973f83a2ac27d9a1ea89/releases/2026-10-03-portable-v2), dataset revision `5c5692107582866a3984973f83a2ac27d9a1ea89`.
+- [All 9 pretrained models and 27 complete source-selected classifiers](https://huggingface.co/dnagpt/bio2nl-models/tree/9fdd0794820ef4534b7f97fcd2c7a2893aba7a9d), model revision `9fdd0794820ef4534b7f97fcd2c7a2893aba7a9d`. Weights are separate downloads, approximately 15.85 GB; they are not in this Git repository.
+- [Current fixed-transfer results](releases/2026-10-03-portable-v2/source/study_source/results/oct2/fixed_transfer/REPORT.md) and [Source Data](releases/2026-10-03-portable-v2/source/study_source/paper_assets/source_data/README.md).
 
-The source capture is `b8d50d0ae61c8407ea8dcf62e47edef5969fc56c`; it is a later exact code capture, not the Git revision used during the original training. Both the `bio2nl/` and `biopaws/` source layouts are retained inside the snapshot. No model weights or protein-data payloads are added to this Git repository by this release. Eight biological payloads are available in the linked Hugging Face data archive; the source archive contains only the identities of 36 model checkpoints.
+The release retains all 190 previously published source files under `study_source/` and adds public acquisition, local input preparation, guarded source-training and standalone CPU model-loading tools. English/QQP text is obtained from fixed upstream versions and reconstructed locally under original terms. Raw or reversible NLP inputs, row predictions and private review correspondence are not redistributed in this source release.
 
 ## Experiment and interpretation
 
@@ -21,16 +22,10 @@ Protein examples are constructed directly from pinned UniProtKB/Swiss-Prot recor
 
 ## Reproduction scope
 
-From the checkout root with Python 3.12:
+Read the [versioned README](releases/2026-10-03-portable-v2/source/README.md) for installation and exact commands. CPU input preparation reproduces the 22 locked scientific payloads. The frozen training algorithms and budgets are preserved, but a new complete GPU training run and second-machine reproduction have not been demonstrated by this publication.
 
-```sh
-SOURCE="$PWD/releases/2026-10-03-v1/source"
-python -I -B "$SOURCE/release_cli.py" --source-root "$SOURCE" verify
-python -I -B "$SOURCE/release_cli.py" --source-root "$SOURCE" report --output "$PWD/oct2_report.json"
-```
+The current environment imports PyTorch 2.3.0+cu121 while installed package metadata reports 2.9.1. The portable compiler refuses normal GPU execution under that mismatch; an explicit CPU-validation-only protocol permanently disables its GPU paths. The exact October 2 imported binary is not established by archived package metadata. Original weights and recorded results remain unchanged.
 
-Use a fresh output path outside the source snapshot. The release documentation also covers figure rebuilding and downloaded protein-input checks. These commands inspect released files and recompute aggregate statistics; they do not rerun neural predictions or training.
+The model readback checks all 36 remote LFS identities and physically downloads 2 prespecified weights, plus all 18 supporting files. The downloaded PT and classifier pass standalone CPU loading and an unlabeled toy-pair check. This is a technical loading check, not new benchmark evidence.
 
-The original local raw reconstruction and full training completed. A complete public-download-only raw-to-training workflow has **not** been validated: historical workers retain private-reference, absolute-path and execution-evidence dependencies. Model weights, tokenizer payloads and restricted natural-language text/reversible inputs are not supplied in this release. No permanent DOI is claimed. Source-specific licenses and UniProt attribution are preserved; a code license does not relicense upstream data or omitted weights.
-
-The earlier September matrix and other historical studies are distinct data/protocol versions. They are not relabelled as runs on the current data. Historical files and results remain in Git history and their existing locations; the separate `emergence` project is not merged into this release.
+No permanent DOI or blanket model-weight license is asserted. Source-specific attribution and terms apply. Earlier releases remain at [2026-10-03-v1](releases/2026-10-03-v1/README.md); the historical September experiments and the separate `emergence` project are not relabelled as current results.

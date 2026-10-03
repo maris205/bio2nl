@@ -1,0 +1,7 @@
+reference,role,cross_entropy_status,cross_entropy_reason,rows,accuracy,balanced_accuracy,auroc,cross_entropy,mcc,predicted_positive_fraction,confusion_matrix
+surface,source_test,finite,,20854,0.9052459959719957,0.9052459959719957,0.9633899766808711,0.22774493067720128,0.8141850300167144,0.45243118826124484,"[[9935, 492], [1484, 8943]]"
+surface,target,finite,,39893,0.38460381520567516,0.5134038906545828,0.7200822977656078,36.251790788888094,0.09992957871776763,0.9829794700824707,"[[678, 24549], [1, 14665]]"
+constant0,source_test,infinite,deterministic_wrong_predictions_have_infinite_CE,20854,0.5,0.5,0.5,,0.0,0.0,"[[10427, 0], [10427, 0]]"
+constant0,target,infinite,deterministic_wrong_predictions_have_infinite_CE,39893,0.6323665806031133,0.5,0.5,,0.0,0.0,"[[25227, 0], [14666, 0]]"
+constant1,source_test,infinite,deterministic_wrong_predictions_have_infinite_CE,20854,0.5,0.5,0.5,,0.0,1.0,"[[0, 10427], [0, 10427]]"
+constant1,target,infinite,deterministic_wrong_predictions_have_infinite_CE,39893,0.36763341939688665,0.5,0.5,,0.0,1.0,"[[0, 25227], [0, 14666]]"

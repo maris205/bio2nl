@@ -1,0 +1,53 @@
+{
+  "scope": "Copied hash-bound aggregate reports and design metadata; no new model scoring",
+  "inputs": {
+    "bio2nl/review/new_data_full_training_v1_2026-10-02/results/report/audit.json": "ef62c32f1b9fdb696609e17032aead9b2880a22b060dd746e1413284b446dbe9",
+    "bio2nl/review/new_data_full_training_v1_2026-10-02/results/report/summary.json": "ef86b3b5a6bc5411e71eae58faad35ab19aed7ea579d597e1270c9ebb4186f7d",
+    "bio2nl/review/new_data_fixed_transfer_v1_2026-10-02/results/report/audit.json": "348944ef56dae949b8a910d6fd6ba3b94de921f78a4fdc17a1a085070e636a1c",
+    "bio2nl/review/new_data_fixed_transfer_v1_2026-10-02/results/report/summary.json": "3d3b40c4233c789c3d1df76a3bf895e1b0de7ac148a040598ee19e6b5ffd8354",
+    "bio2nl/review/new_data_full_training_v1_2026-10-02/protocol.json": "60ce5e0518475fb0e4ba8a83d34d45fbe4c89e74e12fb984abbe41c8fd3eff24",
+    "bio2nl/review/new_data_training_smoke_v1_2026-10-01/prepared/manifest.json": "2ea23ffd2793ed2142156f2942cc4bfb77767a0c3e87ba668a77c34a3a16c010",
+    "bio2nl/review/new_data_training_smoke_v1_2026-10-01/prepared/parent_prefix_coverage.json": "d81b97f09263015fd459355132b750b6d22d7e2588d66e261cc6bfb11bf95a85",
+    "bio2nl/review/new_data_full_training_v1_2026-10-02/results/report/epoch_metrics.csv": "769c567509dd6f1bb4e5a0bd45f7a073a67ec2b535f1e779afcb39eaa0d5aab6",
+    "bio2nl/review/new_data_full_training_v1_2026-10-02/results/report/per_job_metrics.csv": "dca075dbe1f163bc3e3e4b266260a744d68204bb5b6eff0f8391c16177e97aa6",
+    "bio2nl/review/new_data_full_training_v1_2026-10-02/results/report/nested_metrics.csv": "7c72b2c5ec04c9bb63eb44f65e0f3416bebeb587db7e3a7eab0a7d00d3799aaa",
+    "bio2nl/review/new_data_full_training_v1_2026-10-02/results/report/paired_contrasts.csv": "ce288604e7c30054e644384e6e6238cdbaf15c817a878ed138962874bde93c30",
+    "bio2nl/review/new_data_fixed_transfer_v1_2026-10-02/results/report/per_job_metrics.csv": "e9159cb487743e63382acfa06ebf70f8f5d66313f92d98b351be6c819c96fd9a",
+    "bio2nl/review/new_data_fixed_transfer_v1_2026-10-02/results/report/nested_metrics.csv": "30b00b4848d572ba005aab191ef537a23eeefd92329a4e567b7bb89e44f95c8e",
+    "bio2nl/review/new_data_fixed_transfer_v1_2026-10-02/results/report/paired_contrasts.csv": "144a5a4e249a48eb4762e7e89a3d9d36db31f80300144fb5bd7e6054870bb6cd",
+    "bio2nl/review/new_data_fixed_transfer_v1_2026-10-02/results/report/reference_metrics.csv": "d45b889d40b486720d6c6f1218e46a0b99b25ac8aefc92f40be4ec99ca4953a8",
+    "data_rebuild/2026-10-01-portable-v2/manifest.json": "c65ad951dced3285856f8edf49618e3d6b5329fc4ad006520dab748d35b407bf",
+    "data_rebuild/2026-10-01-portable-v2/validation/protein_pair_baselines.csv": "a0b53c48d06ba34d3cb965089697883d4a04d85cba09f8f502455154153cf773"
+  },
+  "outputs": {
+    "README.md": "56ad2a9c3a23c6e022469ffdb0999be7a09b454caee3e923a63089b5d51c3f41",
+    "SourceData.xlsx": "cd001e6395036012a29306bb7735a75dd15dceac6744358d1c1f975a34802227",
+    "design.json": "16e634284e70f0e4ad7bdbfb334015ea202f9142bf2e7d3959c61870756412bb",
+    "raw_residue_baselines_99818_train.csv": "a0b53c48d06ba34d3cb965089697883d4a04d85cba09f8f502455154153cf773",
+    "source_epoch_metrics.csv": "769c567509dd6f1bb4e5a0bd45f7a073a67ec2b535f1e779afcb39eaa0d5aab6",
+    "source_nested_metrics.csv": "7c72b2c5ec04c9bb63eb44f65e0f3416bebeb587db7e3a7eab0a7d00d3799aaa",
+    "source_paired_contrasts.csv": "ce288604e7c30054e644384e6e6238cdbaf15c817a878ed138962874bde93c30",
+    "source_per_job_metrics.csv": "dca075dbe1f163bc3e3e4b266260a744d68204bb5b6eff0f8391c16177e97aa6",
+    "source_summary.json": "ef86b3b5a6bc5411e71eae58faad35ab19aed7ea579d597e1270c9ebb4186f7d",
+    "transfer_nested_metrics.csv": "30b00b4848d572ba005aab191ef537a23eeefd92329a4e567b7bb89e44f95c8e",
+    "transfer_paired_contrasts.csv": "144a5a4e249a48eb4762e7e89a3d9d36db31f80300144fb5bd7e6054870bb6cd",
+    "transfer_per_job_metrics.csv": "e9159cb487743e63382acfa06ebf70f8f5d66313f92d98b351be6c819c96fd9a",
+    "transfer_reference_metrics.csv": "d45b889d40b486720d6c6f1218e46a0b99b25ac8aefc92f40be4ec99ca4953a8",
+    "transfer_summary.json": "3d3b40c4233c789c3d1df76a3bf895e1b0de7ac148a040598ee19e6b5ffd8354"
+  },
+  "workbook_sheets": [
+    "README",
+    "source_epoch",
+    "source_per_job",
+    "source_nested",
+    "source_paired_contrasts",
+    "transfer_per_job",
+    "transfer_nested",
+    "transfer_paired_contrasts",
+    "transfer_reference",
+    "raw_residue_baselines"
+  ],
+  "new_model_inference": false,
+  "new_training": false,
+  "upstream_inputs_unchanged": true
+}

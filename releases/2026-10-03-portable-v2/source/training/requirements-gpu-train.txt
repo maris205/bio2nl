@@ -1,0 +1,12 @@
+# Requires a CONSISTENT CUDA-capable PyTorch 2.9.1 distribution/binary.
+# Current local metadata=2.9.1 but imported binary=2.3.0+cu121 is inconsistent;
+# these requirements describe a fresh environment, not proof of historical binary identity.
+# This package-version file does not install a driver or certify GPU compatibility.
+-r requirements-source-prepare.txt
+torch==2.9.1
+transformers==4.45.2
+threadpoolctl==3.5.0
+safetensors==0.4.5
+huggingface-hub==0.34.4
+tqdm==4.66.5
+regex==2024.9.11

@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "status": "observed_environment_mismatch_gpu_refused",
+  "current_imported_torch": "2.3.0+cu121",
+  "current_torch_cuda_build": "12.1",
+  "current_distribution_metadata_torch": "2.9.1",
+  "cpu_validation_imported_binary": "2.3.0+cu121",
+  "intended_training_distribution": "2.9.1",
+  "consistent_intended_training_install_validated": false,
+  "historical_oct2_imported_binary_version_established": false,
+  "gpu_smoke_performed_by_portable_adapter": false,
+  "full_training_reproduction_performed": false,
+  "behavior": "Normal compilation and GPU execution reject mismatched distribution and imported versions. --cpu-validation-only creates a permanently GPU-disabled run; it cannot mint training acceptance. A consistent isolated intended environment still needs validation and a fresh technical GPU smoke. Do not recreate inconsistent metadata or alter historical files."
+}

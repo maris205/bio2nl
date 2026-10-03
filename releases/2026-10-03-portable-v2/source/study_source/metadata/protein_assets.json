@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "scope": "six raw derived protein files and exact two text-only experimental protein subsets",
+  "raw_manifest_sha256": "c65ad951dced3285856f8edf49618e3d6b5329fc4ad006520dab748d35b407bf",
+  "prepared_manifest_sha256": "2ea23ffd2793ed2142156f2942cc4bfb77767a0c3e87ba668a77c34a3a16c010",
+  "files": [
+    {
+      "path": "data/pairs/protein_sequence_similarity_train.tsv.gz",
+      "sha256": "0f058464e29394d2414f5cf8fb7488af1a125bea23244edb4b0e62ebb2a3ec43",
+      "bytes": 39623434,
+      "kind": "pairs",
+      "split": "train",
+      "source_path": "data_rebuild/2026-10-01-portable-v2/data/pairs/protein_sequence_similarity_train.tsv.gz",
+      "license": "CC-BY-4.0 for Swiss-Prot database material; see ATTRIBUTION"
+    },
+    {
+      "path": "data/corpora/protein/train.jsonl.gz",
+      "sha256": "d253923bb46f64508f62a59109417c642245beefdd411d403324d972732c7117",
+      "bytes": 42897525,
+      "kind": "corpus",
+      "split": "train",
+      "source_path": "data_rebuild/2026-10-01-portable-v2/data/corpora/protein/train.jsonl.gz",
+      "license": "CC-BY-4.0 for Swiss-Prot database material; see ATTRIBUTION"
+    },
+    {
+      "path": "data/pairs/protein_sequence_similarity_validation.tsv.gz",
+      "sha256": "97ef462ce6d0140386b4a4564a3318a3f94e32d75e7be2bd39621508f7ff4ad7",
+      "bytes": 8119233,
+      "kind": "pairs",
+      "split": "validation",
+      "source_path": "data_rebuild/2026-10-01-portable-v2/data/pairs/protein_sequence_similarity_validation.tsv.gz",
+      "license": "CC-BY-4.0 for Swiss-Prot database material; see ATTRIBUTION"
+    },
+    {
+      "path": "data/corpora/protein/validation.jsonl.gz",
+      "sha256": "62fd46c049805469f0721aa7d9d49a1ed323708a8edfc0ca083a401266873466",
+      "bytes": 9651579,
+      "kind": "corpus",
+      "split": "validation",
+      "source_path": "data_rebuild/2026-10-01-portable-v2/data/corpora/protein/validation.jsonl.gz",
+      "license": "CC-BY-4.0 for Swiss-Prot database material; see ATTRIBUTION"
+    },
+    {
+      "path": "data/pairs/protein_sequence_similarity_test.tsv.gz",
+      "sha256": "00cc491007a13c5f3253e6abf47fae471fb24ab05e6f98af5801b206cab19c1f",
+      "bytes": 8351374,
+      "kind": "pairs",
+      "split": "test",
+      "source_path": "data_rebuild/2026-10-01-portable-v2/data/pairs/protein_sequence_similarity_test.tsv.gz",
+      "license": "CC-BY-4.0 for Swiss-Prot database material; see ATTRIBUTION"
+    },
+    {
+      "path": "data/corpora/protein/test.jsonl.gz",
+      "sha256": "7e987e1a4be7ce13b3273941ac2eaf279ed3716e3900d79e54111d0c289a3ef5",
+      "bytes": 9413204,
+      "kind": "corpus",
+      "split": "test",
+      "source_path": "data_rebuild/2026-10-01-portable-v2/data/corpora/protein/test.jsonl.gz",
+      "license": "CC-BY-4.0 for Swiss-Prot database material; see ATTRIBUTION"
+    },
+    {
+      "path": "experimental_source/train.jsonl",
+      "sha256": "3f28333d2bee29bf75f5e9381c926937c58ad3a49b79e6ebb1d3175422d0c9c1",
+      "bytes": 5990458,
+      "kind": "exact_experimental_subset",
+      "split": "train",
+      "source_path": "bio2nl/review/new_data_training_smoke_v1_2026-10-01/prepared/source/train.jsonl",
+      "license": "CC-BY-4.0 for Swiss-Prot database material; see ATTRIBUTION"
+    },
+    {
+      "path": "experimental_source/validation.jsonl",
+      "sha256": "25c42d361fa1c89f2982c788a3108a7c2fb903d86c251d2200f824877cb65d3c",
+      "bytes": 15968750,
+      "kind": "exact_experimental_subset",
+      "split": "validation",
+      "source_path": "bio2nl/review/new_data_training_smoke_v1_2026-10-01/prepared/source/validation.jsonl",
+      "license": "CC-BY-4.0 for Swiss-Prot database material; see ATTRIBUTION"
+    }
+  ],
+  "text_reversible_NLP_assets_included": false
+}

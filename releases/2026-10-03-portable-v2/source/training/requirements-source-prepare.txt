@@ -1,0 +1,9 @@
+# Python 3.12.3; prepare-stage scientific packages observed on this machine.
+numpy==2.2.6
+scipy==1.14.1
+scikit-learn==1.5.2
+pyarrow==17.0.0
+tokenizers==0.20.0
+pandas==2.2.3
+biopython==1.85
+requests==2.32.3

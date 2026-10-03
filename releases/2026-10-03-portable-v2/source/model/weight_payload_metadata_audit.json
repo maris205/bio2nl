@@ -1,0 +1,226 @@
+{
+  "completed_at_utc": "2026-10-03T08:20:20.511179+00:00",
+  "count": 36,
+  "credential_fields_included": false,
+  "files": [
+    {
+      "embedded_private_paths": false,
+      "only_allowlisted_metadata_keys": true,
+      "only_allowlisted_payload_keys": true,
+      "path_in_repo": "checkpoints/pretrain/EP/pt0/model.pt"
+    },
+    {
+      "embedded_private_paths": false,
+      "only_allowlisted_metadata_keys": true,
+      "only_allowlisted_payload_keys": true,
+      "path_in_repo": "checkpoints/pretrain/EP/pt1/model.pt"
+    },
+    {
+      "embedded_private_paths": false,
+      "only_allowlisted_metadata_keys": true,
+      "only_allowlisted_payload_keys": true,
+      "path_in_repo": "checkpoints/pretrain/EP/pt2/model.pt"
+    },
+    {
+      "embedded_private_paths": false,
+      "only_allowlisted_metadata_keys": true,
+      "only_allowlisted_payload_keys": true,
+      "path_in_repo": "checkpoints/pretrain/ES/pt0/model.pt"
+    },
+    {
+      "embedded_private_paths": false,
+      "only_allowlisted_metadata_keys": true,
+      "only_allowlisted_payload_keys": true,
+      "path_in_repo": "checkpoints/pretrain/ES/pt1/model.pt"
+    },
+    {
+      "embedded_private_paths": false,
+      "only_allowlisted_metadata_keys": true,
+      "only_allowlisted_payload_keys": true,
+      "path_in_repo": "checkpoints/pretrain/ES/pt2/model.pt"
+    },
+    {
+      "embedded_private_paths": false,
+      "only_allowlisted_metadata_keys": true,
+      "only_allowlisted_payload_keys": true,
+      "path_in_repo": "checkpoints/pretrain/EE/pt0/model.pt"
+    },
+    {
+      "embedded_private_paths": false,
+      "only_allowlisted_metadata_keys": true,
+      "only_allowlisted_payload_keys": true,
+      "path_in_repo": "checkpoints/pretrain/EE/pt1/model.pt"
+    },
+    {
+      "embedded_private_paths": false,
+      "only_allowlisted_metadata_keys": true,
+      "only_allowlisted_payload_keys": true,
+      "path_in_repo": "checkpoints/pretrain/EE/pt2/model.pt"
+    },
+    {
+      "embedded_private_paths": false,
+      "only_allowlisted_metadata_keys": true,
+      "only_allowlisted_payload_keys": true,
+      "path_in_repo": "checkpoints/source/EP/pt0/ft0/best.pt"
+    },
+    {
+      "embedded_private_paths": false,
+      "only_allowlisted_metadata_keys": true,
+      "only_allowlisted_payload_keys": true,
+      "path_in_repo": "checkpoints/source/EP/pt0/ft1/best.pt"
+    },
+    {
+      "embedded_private_paths": false,
+      "only_allowlisted_metadata_keys": true,
+      "only_allowlisted_payload_keys": true,
+      "path_in_repo": "checkpoints/source/EP/pt0/ft2/best.pt"
+    },
+    {
+      "embedded_private_paths": false,
+      "only_allowlisted_metadata_keys": true,
+      "only_allowlisted_payload_keys": true,
+      "path_in_repo": "checkpoints/source/ES/pt0/ft0/best.pt"
+    },
+    {
+      "embedded_private_paths": false,
+      "only_allowlisted_metadata_keys": true,
+      "only_allowlisted_payload_keys": true,
+      "path_in_repo": "checkpoints/source/ES/pt0/ft1/best.pt"
+    },
+    {
+      "embedded_private_paths": false,
+      "only_allowlisted_metadata_keys": true,
+      "only_allowlisted_payload_keys": true,
+      "path_in_repo": "checkpoints/source/ES/pt0/ft2/best.pt"
+    },
+    {
+      "embedded_private_paths": false,
+      "only_allowlisted_metadata_keys": true,
+      "only_allowlisted_payload_keys": true,
+      "path_in_repo": "checkpoints/source/EE/pt0/ft0/best.pt"
+    },
+    {
+      "embedded_private_paths": false,
+      "only_allowlisted_metadata_keys": true,
+      "only_allowlisted_payload_keys": true,
+      "path_in_repo": "checkpoints/source/EE/pt0/ft1/best.pt"
+    },
+    {
+      "embedded_private_paths": false,
+      "only_allowlisted_metadata_keys": true,
+      "only_allowlisted_payload_keys": true,
+      "path_in_repo": "checkpoints/source/EE/pt0/ft2/best.pt"
+    },
+    {
+      "embedded_private_paths": false,
+      "only_allowlisted_metadata_keys": true,
+      "only_allowlisted_payload_keys": true,
+      "path_in_repo": "checkpoints/source/EP/pt1/ft0/best.pt"
+    },
+    {
+      "embedded_private_paths": false,
+      "only_allowlisted_metadata_keys": true,
+      "only_allowlisted_payload_keys": true,
+      "path_in_repo": "checkpoints/source/EP/pt1/ft1/best.pt"
+    },
+    {
+      "embedded_private_paths": false,
+      "only_allowlisted_metadata_keys": true,
+      "only_allowlisted_payload_keys": true,
+      "path_in_repo": "checkpoints/source/EP/pt1/ft2/best.pt"
+    },
+    {
+      "embedded_private_paths": false,
+      "only_allowlisted_metadata_keys": true,
+      "only_allowlisted_payload_keys": true,
+      "path_in_repo": "checkpoints/source/ES/pt1/ft0/best.pt"
+    },
+    {
+      "embedded_private_paths": false,
+      "only_allowlisted_metadata_keys": true,
+      "only_allowlisted_payload_keys": true,
+      "path_in_repo": "checkpoints/source/ES/pt1/ft1/best.pt"
+    },
+    {
+      "embedded_private_paths": false,
+      "only_allowlisted_metadata_keys": true,
+      "only_allowlisted_payload_keys": true,
+      "path_in_repo": "checkpoints/source/ES/pt1/ft2/best.pt"
+    },
+    {
+      "embedded_private_paths": false,
+      "only_allowlisted_metadata_keys": true,
+      "only_allowlisted_payload_keys": true,
+      "path_in_repo": "checkpoints/source/EE/pt1/ft0/best.pt"
+    },
+    {
+      "embedded_private_paths": false,
+      "only_allowlisted_metadata_keys": true,
+      "only_allowlisted_payload_keys": true,
+      "path_in_repo": "checkpoints/source/EE/pt1/ft1/best.pt"
+    },
+    {
+      "embedded_private_paths": false,
+      "only_allowlisted_metadata_keys": true,
+      "only_allowlisted_payload_keys": true,
+      "path_in_repo": "checkpoints/source/EE/pt1/ft2/best.pt"
+    },
+    {
+      "embedded_private_paths": false,
+      "only_allowlisted_metadata_keys": true,
+      "only_allowlisted_payload_keys": true,
+      "path_in_repo": "checkpoints/source/EP/pt2/ft0/best.pt"
+    },
+    {
+      "embedded_private_paths": false,
+      "only_allowlisted_metadata_keys": true,
+      "only_allowlisted_payload_keys": true,
+      "path_in_repo": "checkpoints/source/EP/pt2/ft1/best.pt"
+    },
+    {
+      "embedded_private_paths": false,
+      "only_allowlisted_metadata_keys": true,
+      "only_allowlisted_payload_keys": true,
+      "path_in_repo": "checkpoints/source/EP/pt2/ft2/best.pt"
+    },
+    {
+      "embedded_private_paths": false,
+      "only_allowlisted_metadata_keys": true,
+      "only_allowlisted_payload_keys": true,
+      "path_in_repo": "checkpoints/source/ES/pt2/ft0/best.pt"
+    },
+    {
+      "embedded_private_paths": false,
+      "only_allowlisted_metadata_keys": true,
+      "only_allowlisted_payload_keys": true,
+      "path_in_repo": "checkpoints/source/ES/pt2/ft1/best.pt"
+    },
+    {
+      "embedded_private_paths": false,
+      "only_allowlisted_metadata_keys": true,
+      "only_allowlisted_payload_keys": true,
+      "path_in_repo": "checkpoints/source/ES/pt2/ft2/best.pt"
+    },
+    {
+      "embedded_private_paths": false,
+      "only_allowlisted_metadata_keys": true,
+      "only_allowlisted_payload_keys": true,
+      "path_in_repo": "checkpoints/source/EE/pt2/ft0/best.pt"
+    },
+    {
+      "embedded_private_paths": false,
+      "only_allowlisted_metadata_keys": true,
+      "only_allowlisted_payload_keys": true,
+      "path_in_repo": "checkpoints/source/EE/pt2/ft1/best.pt"
+    },
+    {
+      "embedded_private_paths": false,
+      "only_allowlisted_metadata_keys": true,
+      "only_allowlisted_payload_keys": true,
+      "path_in_repo": "checkpoints/source/EE/pt2/ft2/best.pt"
+    }
+  ],
+  "optimizer_states_included": false,
+  "session_logs_included": false,
+  "status": "passed"
+}

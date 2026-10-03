@@ -1,0 +1,22 @@
+test_catalog_file_tamper (test_inference.IntegrityTests.test_catalog_file_tamper) ... ok
+test_corrupt_file_rejected (test_inference.IntegrityTests.test_corrupt_file_rejected) ... ok
+test_encoding_caps_and_roundtrip (test_inference.IntegrityTests.test_encoding_caps_and_roundtrip) ... ok
+test_intact_reloads (test_inference.IntegrityTests.test_intact_reloads) ... ok
+test_json_config_label_keys_roundtrip (test_inference.IntegrityTests.test_json_config_label_keys_roundtrip) ... ok
+test_labels_or_empty_endpoints_rejected (test_inference.IntegrityTests.test_labels_or_empty_endpoints_rejected) ... ok
+test_missing_head_rejected_even_with_new_digest (test_inference.IntegrityTests.test_missing_head_rejected_even_with_new_digest) ... ok
+test_nonfinite_rejected (test_inference.IntegrityTests.test_nonfinite_rejected) ... ok
+test_path_escape_and_ambiguity_rejected (test_inference.IntegrityTests.test_path_escape_and_ambiguity_rejected) ... ok
+test_provenance_rejected (test_inference.IntegrityTests.test_provenance_rejected) ... ok
+test_tokenizer_hash_tamper (test_inference.IntegrityTests.test_tokenizer_hash_tamper) ... ok
+test_unexpected_config_runtime_value_rejected (test_inference.IntegrityTests.test_unexpected_config_runtime_value_rejected) ... ok
+test_wrong_config_rejected (test_inference.IntegrityTests.test_wrong_config_rejected) ... ok
+test_wrong_epoch_rejected (test_inference.IntegrityTests.test_wrong_epoch_rejected) ... ok
+test_wrong_head_shape_rejected_even_with_new_digest (test_inference.IntegrityTests.test_wrong_head_shape_rejected_even_with_new_digest) ... ok
+test_wrong_job_rejected (test_inference.IntegrityTests.test_wrong_job_rejected) ... ok
+test_wrong_parent_rejected_with_rehashed_catalog (test_inference.IntegrityTests.test_wrong_parent_rejected_with_rehashed_catalog) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 0.361s
+
+OK

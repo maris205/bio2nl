@@ -1,0 +1,12 @@
+{
+  "code_sha256": {
+    "inference.py": "43f5a1c770354b588b046ff02e4d03df4c13086224df4fba1285f8f2b3cf91ec",
+    "portable_core.py": "b2362edf8850fe20fbd23cc958a71f92ac2a187de4316f53f8750d3bca857592",
+    "test_inference.py": "26a8dd9c94fee295a7ba20ae65da922975f6ee1a66ad9f500fea16c8ad63f3d8"
+  },
+  "completed_at_utc": "2026-10-03T08:22:52.059505+00:00",
+  "errors": 0,
+  "failures": 0,
+  "status": "passed",
+  "tests_run": 17
+}

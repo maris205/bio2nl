@@ -1,0 +1,224 @@
+{
+  "model_repository": "dnagpt/bio2nl-models",
+  "repo_type": "model",
+  "schema_version": 1,
+  "scope": "Existing original weights; no second weight copy; package support files added separately",
+  "weights": [
+    {
+      "bytes": 440148490,
+      "path_in_repo": "checkpoints/pretrain/EP/pt0/model.pt",
+      "sha256": "f6d44eb163960891e8af7d4f701580c852534f3ab476d9b6c281903f3c329327",
+      "source_relative": "bio2nl/review/new_data_full_training_v1_2026-10-02/results/full/pretrain/EP/pt0/model.pt"
+    },
+    {
+      "bytes": 440148490,
+      "path_in_repo": "checkpoints/pretrain/EP/pt1/model.pt",
+      "sha256": "09c034afc616d6ed529fe62af1c604a07e0bc64a32f58630908300caf250c44a",
+      "source_relative": "bio2nl/review/new_data_full_training_v1_2026-10-02/results/full/pretrain/EP/pt1/model.pt"
+    },
+    {
+      "bytes": 440148490,
+      "path_in_repo": "checkpoints/pretrain/EP/pt2/model.pt",
+      "sha256": "a1285feb6eb6380bfedfe670a27e9f09b19163b33f76145cc008de0b1e223155",
+      "source_relative": "bio2nl/review/new_data_full_training_v1_2026-10-02/results/full/pretrain/EP/pt2/model.pt"
+    },
+    {
+      "bytes": 440148490,
+      "path_in_repo": "checkpoints/pretrain/ES/pt0/model.pt",
+      "sha256": "452c6178f682ae50e53c8df1311134e188c99d2fcce7805f0d65d379910f277d",
+      "source_relative": "bio2nl/review/new_data_full_training_v1_2026-10-02/results/full/pretrain/ES/pt0/model.pt"
+    },
+    {
+      "bytes": 440148490,
+      "path_in_repo": "checkpoints/pretrain/ES/pt1/model.pt",
+      "sha256": "2f357c92c20c633a636f936246bfeadec31a9ee8792bfcaef1db2acf3ee1a737",
+      "source_relative": "bio2nl/review/new_data_full_training_v1_2026-10-02/results/full/pretrain/ES/pt1/model.pt"
+    },
+    {
+      "bytes": 440148490,
+      "path_in_repo": "checkpoints/pretrain/ES/pt2/model.pt",
+      "sha256": "e954373b086d2d3fe3b015440a185f4a146e01825007bc57cbcc609ed3d30254",
+      "source_relative": "bio2nl/review/new_data_full_training_v1_2026-10-02/results/full/pretrain/ES/pt2/model.pt"
+    },
+    {
+      "bytes": 440148490,
+      "path_in_repo": "checkpoints/pretrain/EE/pt0/model.pt",
+      "sha256": "5af7730f436af372a0d43bfed57f87a3ea2e6aa4826493aa21eacd3acdd4dccc",
+      "source_relative": "bio2nl/review/new_data_full_training_v1_2026-10-02/results/full/pretrain/EE/pt0/model.pt"
+    },
+    {
+      "bytes": 440148490,
+      "path_in_repo": "checkpoints/pretrain/EE/pt1/model.pt",
+      "sha256": "653a88903ee373e5b8933c71d386a64ca6840249f9a42cc2c992b0202f04739f",
+      "source_relative": "bio2nl/review/new_data_full_training_v1_2026-10-02/results/full/pretrain/EE/pt1/model.pt"
+    },
+    {
+      "bytes": 440148490,
+      "path_in_repo": "checkpoints/pretrain/EE/pt2/model.pt",
+      "sha256": "68e49c6af5cb3fa34b1820925cb1751055c38c25de8122b5ba19a40937ad0ba9",
+      "source_relative": "bio2nl/review/new_data_full_training_v1_2026-10-02/results/full/pretrain/EE/pt2/model.pt"
+    },
+    {
+      "bytes": 440154440,
+      "path_in_repo": "checkpoints/source/EP/pt0/ft0/best.pt",
+      "sha256": "574117f9bbbaa589a0f1fd726567ead899510c05bcbcc0cbf71e3b57c72edebb",
+      "source_relative": "bio2nl/review/new_data_full_training_v1_2026-10-02/results/full/source/EP/pt0/ft0/best.pt"
+    },
+    {
+      "bytes": 440154440,
+      "path_in_repo": "checkpoints/source/EP/pt0/ft1/best.pt",
+      "sha256": "a5c9522ed086bb54ce62ca74717c130143cfe07352b07a698529f1bedb497b6c",
+      "source_relative": "bio2nl/review/new_data_full_training_v1_2026-10-02/results/full/source/EP/pt0/ft1/best.pt"
+    },
+    {
+      "bytes": 440154440,
+      "path_in_repo": "checkpoints/source/EP/pt0/ft2/best.pt",
+      "sha256": "19277d64bb879906e98df99d1c77623c46d8ccad2c33eda796ba1b9bcd4cf3b5",
+      "source_relative": "bio2nl/review/new_data_full_training_v1_2026-10-02/results/full/source/EP/pt0/ft2/best.pt"
+    },
+    {
+      "bytes": 440154440,
+      "path_in_repo": "checkpoints/source/ES/pt0/ft0/best.pt",
+      "sha256": "69069d19cade14739612d991743be14f3debe97e8c8cf48379810bed1498e913",
+      "source_relative": "bio2nl/review/new_data_full_training_v1_2026-10-02/results/full/source/ES/pt0/ft0/best.pt"
+    },
+    {
+      "bytes": 440154440,
+      "path_in_repo": "checkpoints/source/ES/pt0/ft1/best.pt",
+      "sha256": "bde6f1f919b7f5657edb0edb920941df3db8a88dd44089acd05b6b89c29c19be",
+      "source_relative": "bio2nl/review/new_data_full_training_v1_2026-10-02/results/full/source/ES/pt0/ft1/best.pt"
+    },
+    {
+      "bytes": 440154440,
+      "path_in_repo": "checkpoints/source/ES/pt0/ft2/best.pt",
+      "sha256": "ec82de031e16af6005b1221327e6b58f9b8d1dc8f1a0072325a33453575b3b51",
+      "source_relative": "bio2nl/review/new_data_full_training_v1_2026-10-02/results/full/source/ES/pt0/ft2/best.pt"
+    },
+    {
+      "bytes": 440154440,
+      "path_in_repo": "checkpoints/source/EE/pt0/ft0/best.pt",
+      "sha256": "c1aa8820704665541550d7f59fed367c30dcc55b60c90f4ea2dcec75dce4103e",
+      "source_relative": "bio2nl/review/new_data_full_training_v1_2026-10-02/results/full/source/EE/pt0/ft0/best.pt"
+    },
+    {
+      "bytes": 440154440,
+      "path_in_repo": "checkpoints/source/EE/pt0/ft1/best.pt",
+      "sha256": "2a3ac91f4392196e836221e0435388b0e6ecae6c117be26f2b43de3e6507c4a1",
+      "source_relative": "bio2nl/review/new_data_full_training_v1_2026-10-02/results/full/source/EE/pt0/ft1/best.pt"
+    },
+    {
+      "bytes": 440154440,
+      "path_in_repo": "checkpoints/source/EE/pt0/ft2/best.pt",
+      "sha256": "22d6e120e8f24fb5b0bb15bcb2d463733dea39d6599ed0234841cb9ff47f2ee1",
+      "source_relative": "bio2nl/review/new_data_full_training_v1_2026-10-02/results/full/source/EE/pt0/ft2/best.pt"
+    },
+    {
+      "bytes": 440154440,
+      "path_in_repo": "checkpoints/source/EP/pt1/ft0/best.pt",
+      "sha256": "1a4e205e237b684cc14b79aea27a59ba45adb68e3e2ee0d345a7476433d88e3c",
+      "source_relative": "bio2nl/review/new_data_full_training_v1_2026-10-02/results/full/source/EP/pt1/ft0/best.pt"
+    },
+    {
+      "bytes": 440154440,
+      "path_in_repo": "checkpoints/source/EP/pt1/ft1/best.pt",
+      "sha256": "2e3ad2344834e5a70403bbef8c19f55aacb6b25b83725138bb82e2274723797c",
+      "source_relative": "bio2nl/review/new_data_full_training_v1_2026-10-02/results/full/source/EP/pt1/ft1/best.pt"
+    },
+    {
+      "bytes": 440154440,
+      "path_in_repo": "checkpoints/source/EP/pt1/ft2/best.pt",
+      "sha256": "47615a93378959abbe6ffaf3475a6561ec9c6d11a94a04da6954b6801994704e",
+      "source_relative": "bio2nl/review/new_data_full_training_v1_2026-10-02/results/full/source/EP/pt1/ft2/best.pt"
+    },
+    {
+      "bytes": 440154440,
+      "path_in_repo": "checkpoints/source/ES/pt1/ft0/best.pt",
+      "sha256": "b24e6de1f73186bc5167afce790c5794dd109f1d077fde1dc207ff4c360bed5c",
+      "source_relative": "bio2nl/review/new_data_full_training_v1_2026-10-02/results/full/source/ES/pt1/ft0/best.pt"
+    },
+    {
+      "bytes": 440154440,
+      "path_in_repo": "checkpoints/source/ES/pt1/ft1/best.pt",
+      "sha256": "d43962d06f256000a8707dbc61e3d860dcebd4d50e0ac77b724ef921a79aae2c",
+      "source_relative": "bio2nl/review/new_data_full_training_v1_2026-10-02/results/full/source/ES/pt1/ft1/best.pt"
+    },
+    {
+      "bytes": 440154440,
+      "path_in_repo": "checkpoints/source/ES/pt1/ft2/best.pt",
+      "sha256": "fe879c8b4f45a84e08d728affc2c4cd6d28fb87b92cc8759b4ddc408f786d8f9",
+      "source_relative": "bio2nl/review/new_data_full_training_v1_2026-10-02/results/full/source/ES/pt1/ft2/best.pt"
+    },
+    {
+      "bytes": 440154440,
+      "path_in_repo": "checkpoints/source/EE/pt1/ft0/best.pt",
+      "sha256": "7e75b5380df75393dae4a125df812f6500288955ab92a20ef610eb15eaff646f",
+      "source_relative": "bio2nl/review/new_data_full_training_v1_2026-10-02/results/full/source/EE/pt1/ft0/best.pt"
+    },
+    {
+      "bytes": 440154440,
+      "path_in_repo": "checkpoints/source/EE/pt1/ft1/best.pt",
+      "sha256": "c869b1c0c8cf4288485936795fbb8263b5af55bc39fa9df0513758c5cbfd5a87",
+      "source_relative": "bio2nl/review/new_data_full_training_v1_2026-10-02/results/full/source/EE/pt1/ft1/best.pt"
+    },
+    {
+      "bytes": 440154440,
+      "path_in_repo": "checkpoints/source/EE/pt1/ft2/best.pt",
+      "sha256": "0db9423ef969016260d1ddbbf700d5bbc71340b6847e0c8ecf5e4696fa2bb732",
+      "source_relative": "bio2nl/review/new_data_full_training_v1_2026-10-02/results/full/source/EE/pt1/ft2/best.pt"
+    },
+    {
+      "bytes": 440154440,
+      "path_in_repo": "checkpoints/source/EP/pt2/ft0/best.pt",
+      "sha256": "7ecaeba8d20e8f65b78a11412817da9cdaf84127c03765c1fb95a44442f921f4",
+      "source_relative": "bio2nl/review/new_data_full_training_v1_2026-10-02/results/full/source/EP/pt2/ft0/best.pt"
+    },
+    {
+      "bytes": 440154440,
+      "path_in_repo": "checkpoints/source/EP/pt2/ft1/best.pt",
+      "sha256": "34c588c5e10d7ba6c6320cc59cf883ad47465cdcf9a07d540a45e55720e993eb",
+      "source_relative": "bio2nl/review/new_data_full_training_v1_2026-10-02/results/full/source/EP/pt2/ft1/best.pt"
+    },
+    {
+      "bytes": 440154440,
+      "path_in_repo": "checkpoints/source/EP/pt2/ft2/best.pt",
+      "sha256": "c1af8f442b9e13944e2bb5158900c2f1ca824af7583ebcb5a365d6b6317cdd3f",
+      "source_relative": "bio2nl/review/new_data_full_training_v1_2026-10-02/results/full/source/EP/pt2/ft2/best.pt"
+    },
+    {
+      "bytes": 440154440,
+      "path_in_repo": "checkpoints/source/ES/pt2/ft0/best.pt",
+      "sha256": "4e3193aba5334d7c1093a156b8dc72b3690ac3cce149373c7aa01958e2dceb73",
+      "source_relative": "bio2nl/review/new_data_full_training_v1_2026-10-02/results/full/source/ES/pt2/ft0/best.pt"
+    },
+    {
+      "bytes": 440154440,
+      "path_in_repo": "checkpoints/source/ES/pt2/ft1/best.pt",
+      "sha256": "5509eb7ac7f77b3378874e9f5ceb2d51176ff1b175edaec8bd86449596335c48",
+      "source_relative": "bio2nl/review/new_data_full_training_v1_2026-10-02/results/full/source/ES/pt2/ft1/best.pt"
+    },
+    {
+      "bytes": 440154440,
+      "path_in_repo": "checkpoints/source/ES/pt2/ft2/best.pt",
+      "sha256": "bbe4ea6d3953fb9c4e954952c7deb3cbbfde9ad102de1c797fcb35333e4e41e5",
+      "source_relative": "bio2nl/review/new_data_full_training_v1_2026-10-02/results/full/source/ES/pt2/ft2/best.pt"
+    },
+    {
+      "bytes": 440154440,
+      "path_in_repo": "checkpoints/source/EE/pt2/ft0/best.pt",
+      "sha256": "92946799e5a378609b6dae042db4c263e53fd8123f101102a3e50b1c8a694b1a",
+      "source_relative": "bio2nl/review/new_data_full_training_v1_2026-10-02/results/full/source/EE/pt2/ft0/best.pt"
+    },
+    {
+      "bytes": 440154440,
+      "path_in_repo": "checkpoints/source/EE/pt2/ft1/best.pt",
+      "sha256": "3879fab3b33328347f852ac813bbc194be808526b4b97b1613292126b56f7751",
+      "source_relative": "bio2nl/review/new_data_full_training_v1_2026-10-02/results/full/source/EE/pt2/ft1/best.pt"
+    },
+    {
+      "bytes": 440154440,
+      "path_in_repo": "checkpoints/source/EE/pt2/ft2/best.pt",
+      "sha256": "c2fcac930e4a69d8138dc508ca4471f52be6ce76c8a90efd819b0780f73225b5",
+      "source_relative": "bio2nl/review/new_data_full_training_v1_2026-10-02/results/full/source/EE/pt2/ft2/best.pt"
+    }
+  ]
+}

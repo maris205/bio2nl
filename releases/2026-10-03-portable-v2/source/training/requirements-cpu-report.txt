@@ -1,0 +1,4 @@
+# Aggregate release_cli verify/report/source-input uses Python's standard library.
+# Numerical source audits require the training layer (torch loads CPU weights).
+# Plotting has its separate published requirements-release.txt; no extra training
+# or download dependencies are introduced by aggregate verification.
