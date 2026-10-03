@@ -1,0 +1,154 @@
+{
+  "evidence": [
+    {
+      "bytes": 66148,
+      "path": "data_rebuild/2026-10-01-portable-v2/manifest.json",
+      "publication_allowed": false,
+      "purpose": "local_identity_evidence_requires_public_metadata_projection",
+      "sha256": "c65ad951dced3285856f8edf49618e3d6b5329fc4ad006520dab748d35b407bf"
+    },
+    {
+      "bytes": 728448,
+      "path": "data_rebuild/2026-10-01-portable-v2/portable_validation/acceptance.json",
+      "publication_allowed": false,
+      "purpose": "local_identity_evidence_requires_public_metadata_projection",
+      "sha256": "dc35bd6dd36566fef25120434419ab2b358f204678b5d83f7daa89903f5be3f2"
+    },
+    {
+      "bytes": 22401,
+      "path": "data_rebuild/2026-10-01-portable-v2/portable_validation/builder_manifest.json",
+      "publication_allowed": false,
+      "purpose": "local_identity_evidence_requires_public_metadata_projection",
+      "sha256": "231c0163e50e304f2f1e9514174592926cc3e562b399d19a55317ad3f7c6604c"
+    },
+    {
+      "bytes": 175154,
+      "path": "bio2nl/review/portable_data_rebuild_v2_2026-10-01/protocol.json",
+      "publication_allowed": false,
+      "purpose": "local_identity_evidence_requires_public_metadata_projection",
+      "sha256": "17935d224073fed3e112a108c64500932c18f454f3036613556b3bded6764b76"
+    },
+    {
+      "bytes": 4803,
+      "path": "bio2nl/review/portable_data_rebuild_v2_2026-10-01/execution_freeze.json",
+      "publication_allowed": false,
+      "purpose": "local_identity_evidence_requires_public_metadata_projection",
+      "sha256": "5b922ae727cf2f29b9569ba91ebe92744374a6786647fd36654c9ec08d28ddb1"
+    },
+    {
+      "bytes": 10463,
+      "path": "bio2nl/review/new_data_training_smoke_v1_2026-10-01/data_protocol.json",
+      "publication_allowed": false,
+      "purpose": "local_identity_evidence_requires_public_metadata_projection",
+      "sha256": "1c658a380e1688880645ccea6158d5f8e8cc9fbdf60ed7ac556338555b2e58c2"
+    },
+    {
+      "bytes": 53934,
+      "path": "bio2nl/review/new_data_training_smoke_v1_2026-10-01/prepared/manifest.json",
+      "publication_allowed": false,
+      "purpose": "local_identity_evidence_requires_public_metadata_projection",
+      "sha256": "2ea23ffd2793ed2142156f2942cc4bfb77767a0c3e87ba668a77c34a3a16c010"
+    },
+    {
+      "bytes": 35733,
+      "path": "bio2nl/review/new_data_training_smoke_v1_2026-10-01/data_acceptance.json",
+      "publication_allowed": false,
+      "purpose": "local_identity_evidence_requires_public_metadata_projection",
+      "sha256": "395752ab8a836d1d82c829d60c37b189071e5b7b6a023bbad3bc29b3d5a97043"
+    },
+    {
+      "bytes": 19494,
+      "path": "bio2nl/review/new_data_training_smoke_v1_2026-10-01/execution_protocol.json",
+      "publication_allowed": false,
+      "purpose": "local_identity_evidence_requires_public_metadata_projection",
+      "sha256": "87e513c0deb8932b8f0fdfe7a8829f7440646692a0fff7c1ecb20281c659c580"
+    },
+    {
+      "bytes": 11474,
+      "path": "bio2nl/review/new_data_training_smoke_v1_2026-10-01/execution_status.json",
+      "publication_allowed": false,
+      "purpose": "local_identity_evidence_requires_public_metadata_projection",
+      "sha256": "f3101d9fdfb98bffa56ee02a7fe04659920662e8e50315c351a48c92dee347e3"
+    },
+    {
+      "bytes": 10477,
+      "path": "bio2nl/review/new_data_training_smoke_v1_2026-10-01/reload_review_v2/review_protocol.json",
+      "publication_allowed": false,
+      "purpose": "local_identity_evidence_requires_public_metadata_projection",
+      "sha256": "b0bf5b9d6aa9e5e53a0cf0171e6dca0efc4d6969f59b7164e6f6fb4fc5e723fb"
+    },
+    {
+      "bytes": 31622,
+      "path": "bio2nl/review/new_data_full_training_v1_2026-10-02/protocol.json",
+      "publication_allowed": false,
+      "purpose": "local_identity_evidence_requires_public_metadata_projection",
+      "sha256": "60ce5e0518475fb0e4ba8a83d34d45fbe4c89e74e12fb984abbe41c8fd3eff24"
+    },
+    {
+      "bytes": 3287,
+      "path": "bio2nl/review/new_data_full_training_v1_2026-10-02/execution_freeze.json",
+      "publication_allowed": false,
+      "purpose": "local_identity_evidence_requires_public_metadata_projection",
+      "sha256": "3e329a58e61fda3ae2ddc89a7c12ca68d32de4d0d5d0924aa8a0be5df3bde3f8"
+    },
+    {
+      "bytes": 34731,
+      "path": "bio2nl/review/new_data_full_training_v1_2026-10-02/training_acceptance.json",
+      "publication_allowed": false,
+      "purpose": "local_identity_evidence_requires_public_metadata_projection",
+      "sha256": "b0ba144e08e13aeb5776bae82109a8516226ddeb3485820c74e0617302201e19"
+    },
+    {
+      "bytes": 37270,
+      "path": "bio2nl/review/new_data_full_training_v1_2026-10-02/results/source_selection.json",
+      "publication_allowed": false,
+      "purpose": "local_identity_evidence_requires_public_metadata_projection",
+      "sha256": "48de918e0b4a2b12ac3021072f601e2b1caf61730c77097fa9bfbfc75e15fb4c"
+    },
+    {
+      "bytes": 10656,
+      "path": "bio2nl/review/new_data_fixed_transfer_v1_2026-10-02/protocol.json",
+      "publication_allowed": false,
+      "purpose": "local_identity_evidence_requires_public_metadata_projection",
+      "sha256": "6d9bd6c180c26c17a746ccdc408414a252adfd037cbd13ee166e9342ac95e93d"
+    },
+    {
+      "bytes": 16859,
+      "path": "bio2nl/review/new_data_fixed_transfer_v1_2026-10-02/source_barrier.json",
+      "publication_allowed": false,
+      "purpose": "local_identity_evidence_requires_public_metadata_projection",
+      "sha256": "0337bd7e6603da85b13589a97e168ea16aeeb3cf78bbb450a3617d31eada6eaf"
+    },
+    {
+      "bytes": 2866,
+      "path": "bio2nl/review/new_data_fixed_transfer_v1_2026-10-02/execution_freeze.json",
+      "publication_allowed": false,
+      "purpose": "local_identity_evidence_requires_public_metadata_projection",
+      "sha256": "fc7ce2835adf7512e7a264aa47e85d74f1376e29c38b47c7914efee488135150"
+    },
+    {
+      "bytes": 4466,
+      "path": "bio2nl/review/new_data_fixed_transfer_v1_2026-10-02/data_input_spec.json",
+      "publication_allowed": false,
+      "purpose": "local_identity_evidence_requires_public_metadata_projection",
+      "sha256": "7b941cdca03888367631f16ebe9b338e60e6145cd1187174690df84b941da6ba"
+    },
+    {
+      "bytes": 8799,
+      "path": "bio2nl/review/new_data_fixed_transfer_v1_2026-10-02/prepared/manifest.json",
+      "publication_allowed": false,
+      "purpose": "local_identity_evidence_requires_public_metadata_projection",
+      "sha256": "9db3fcfe4320b1d1d3cc275318d91ea5213991304fae0966ad183c47b66097e4"
+    },
+    {
+      "bytes": 22883,
+      "path": "bio2nl/review/new_data_fixed_transfer_v1_2026-10-02/verification/completion_statistics_review_2026-10-02.json",
+      "publication_allowed": false,
+      "purpose": "local_identity_evidence_requires_public_metadata_projection",
+      "sha256": "cb48f2fcb0e21a01ef7dbfb04d1099b2000ab076e772018e1bcf1b52459b3f73"
+    }
+  ],
+  "interpretation": "Hashes identify immutable original runs. Original absolute-path gate files are not rewritten or asserted portable.",
+  "new_weight_loads": 0,
+  "new_training": 0
+}

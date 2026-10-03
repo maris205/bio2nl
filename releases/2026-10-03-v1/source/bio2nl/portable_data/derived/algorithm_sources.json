@@ -1,0 +1,57 @@
+{
+  "adaptations": [
+    "Explicit base directory passed to StreamWriter, make_source, build_protein",
+    "M3 encode_role output paths relative to supplied folder",
+    "New deterministic output writers and new pinned input resolver",
+    "Source TASKS restricted to protein_sequence_similarity"
+  ],
+  "m1": {
+    "function_body_extracts": [
+      "run: candidate parquet parsing through build_report serialization; acquisition and historical absolute-path provenance excluded"
+    ],
+    "sha256": "928d462555799060247f8362c6dd0847bb0b892c27d2b3cfc0ae16e698ca98e3",
+    "source": "bio2nl/review/confirmation_data_v1_2026-09-29/build_confirmation.py",
+    "symbols": [
+      "norm",
+      "patterns",
+      "scan_document",
+      "Graph"
+    ]
+  },
+  "m2": {
+    "sha256": "2353015fb9f42945f236cbb8b40e11a2f3e32b5848b4c861ae9862a298337ada",
+    "source": "bio2nl/review/joint_pretraining_v1_2026-09-29/prepare_data.py",
+    "symbols": [
+      "shuffle_record",
+      "encode_content",
+      "make_schedule",
+      "StreamWriter",
+      "read_canonical_metadata",
+      "remote_hashes",
+      "make_source",
+      "build_protein"
+    ]
+  },
+  "m3": {
+    "sha256": "5c041c00395992983405921962f1baeb6c9d739d6cf60e247a5396da19f8a27f",
+    "source": "bio2nl/review/joint_transfer_v1_2026-09-30/prepare_data.py",
+    "symbols": [
+      "write_records",
+      "pack",
+      "check_target_alignment",
+      "validate_label",
+      "encode_role"
+    ]
+  },
+  "source": {
+    "sha256": "5d3cb4776a41abb6a48ba9cc012d72275a5432a765d05a3e852749a0b96041a9",
+    "source": "bio2nl/review/eval_v2/prepare_downstream.py",
+    "symbols": [
+      "stable_hash",
+      "select_groups",
+      "distribution",
+      "audit_split",
+      "prepared_row"
+    ]
+  }
+}

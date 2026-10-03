@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "verified_at_utc": "2026-09-25T07:18:44.179451+00:00",
+  "sources": [
+    {
+      "task": "pawsx_en",
+      "repo_id": "google-research-datasets/paws-x",
+      "config": "en",
+      "revision": "4cd8187c404bda33cb1f62b49b001115862acf37",
+      "revision_api": "https://huggingface.co/api/datasets/google-research-datasets/paws-x/revision/4cd8187c404bda33cb1f62b49b001115862acf37",
+      "tree_api": "https://huggingface.co/api/datasets/google-research-datasets/paws-x/tree/4cd8187c404bda33cb1f62b49b001115862acf37/en",
+      "files": [
+        {
+          "split": "train",
+          "path": "en/train-00000-of-00001.parquet",
+          "sha256": "0de6e8a4ba4bd88ee79c883349d112ec1ca85cda78726b59c215fab5849e49f3",
+          "size": 8428142,
+          "url": "https://huggingface.co/datasets/google-research-datasets/paws-x/resolve/4cd8187c404bda33cb1f62b49b001115862acf37/en/train-00000-of-00001.parquet"
+        },
+        {
+          "split": "validation",
+          "path": "en/validation-00000-of-00001.parquet",
+          "sha256": "e91c4c89a3d74deaf82bf2e87e626cf8d69d85f3c8e736b1ab3b6c3503ff26da",
+          "size": 307014,
+          "url": "https://huggingface.co/datasets/google-research-datasets/paws-x/resolve/4cd8187c404bda33cb1f62b49b001115862acf37/en/validation-00000-of-00001.parquet"
+        },
+        {
+          "split": "test",
+          "path": "en/test-00000-of-00001.parquet",
+          "sha256": "fdb1e43f1068cf0cec955327cfdedc2d3065f15d3cd673c9d0002e6e87cc7915",
+          "size": 309849,
+          "url": "https://huggingface.co/datasets/google-research-datasets/paws-x/resolve/4cd8187c404bda33cb1f62b49b001115862acf37/en/test-00000-of-00001.parquet"
+        }
+      ],
+      "card_url": "https://huggingface.co/datasets/google-research-datasets/paws-x/resolve/4cd8187c404bda33cb1f62b49b001115862acf37/README.md",
+      "card_sha256": "a497f37155a0812792b18c2914614112171a520c7cd47ab624dcce0885488303",
+      "card_license_metadata": [
+        "other"
+      ]
+    },
+    {
+      "task": "cola",
+      "repo_id": "nyu-mll/glue",
+      "config": "cola",
+      "revision": "bcdcba79d07bc864c1c254ccfcedcce55bcc9a8c",
+      "revision_api": "https://huggingface.co/api/datasets/nyu-mll/glue/revision/bcdcba79d07bc864c1c254ccfcedcce55bcc9a8c",
+      "tree_api": "https://huggingface.co/api/datasets/nyu-mll/glue/tree/bcdcba79d07bc864c1c254ccfcedcce55bcc9a8c/cola",
+      "files": [
+        {
+          "split": "train",
+          "path": "cola/train-00000-of-00001.parquet",
+          "sha256": "2e7538afa2000e63f5343f16a758d75c452661a384208399d2035cd2fce45c33",
+          "size": 251124,
+          "url": "https://huggingface.co/datasets/nyu-mll/glue/resolve/bcdcba79d07bc864c1c254ccfcedcce55bcc9a8c/cola/train-00000-of-00001.parquet"
+        },
+        {
+          "split": "validation",
+          "path": "cola/validation-00000-of-00001.parquet",
+          "sha256": "c14b7219a7d9f9fe3dd291fd000f6623ee413805eb108c9c49578ed50873e4ba",
+          "size": 37551,
+          "url": "https://huggingface.co/datasets/nyu-mll/glue/resolve/bcdcba79d07bc864c1c254ccfcedcce55bcc9a8c/cola/validation-00000-of-00001.parquet"
+        },
+        {
+          "split": "test",
+          "path": "cola/test-00000-of-00001.parquet",
+          "sha256": "3c4d526b6f49f432621de43569f9ecf6af41f639baaf4a9d821b95d745def61d",
+          "size": 37719,
+          "url": "https://huggingface.co/datasets/nyu-mll/glue/resolve/bcdcba79d07bc864c1c254ccfcedcce55bcc9a8c/cola/test-00000-of-00001.parquet"
+        }
+      ],
+      "card_url": "https://huggingface.co/datasets/nyu-mll/glue/resolve/bcdcba79d07bc864c1c254ccfcedcce55bcc9a8c/README.md",
+      "card_sha256": "073f689c80fc6b3366d583eb570a05be2140b01ff2fdd706c416e14d0d2d5d5a",
+      "card_license_metadata": [
+        "other"
+      ]
+    },
+    {
+      "task": "rte",
+      "repo_id": "nyu-mll/glue",
+      "config": "rte",
+      "revision": "bcdcba79d07bc864c1c254ccfcedcce55bcc9a8c",
+      "revision_api": "https://huggingface.co/api/datasets/nyu-mll/glue/revision/bcdcba79d07bc864c1c254ccfcedcce55bcc9a8c",
+      "tree_api": "https://huggingface.co/api/datasets/nyu-mll/glue/tree/bcdcba79d07bc864c1c254ccfcedcce55bcc9a8c/rte",
+      "files": [
+        {
+          "split": "train",
+          "path": "rte/train-00000-of-00001.parquet",
+          "sha256": "a6252ab17015d718f6de1effe0980f7b158df63e3d16207cd8bd396b608e5147",
+          "size": 583976,
+          "url": "https://huggingface.co/datasets/nyu-mll/glue/resolve/bcdcba79d07bc864c1c254ccfcedcce55bcc9a8c/rte/train-00000-of-00001.parquet"
+        },
+        {
+          "split": "validation",
+          "path": "rte/validation-00000-of-00001.parquet",
+          "sha256": "fb2aa2e04f551133ba663617a15ae133dc22b0f6a969bc0629b5ea6003ee9cf8",
+          "size": 69020,
+          "url": "https://huggingface.co/datasets/nyu-mll/glue/resolve/bcdcba79d07bc864c1c254ccfcedcce55bcc9a8c/rte/validation-00000-of-00001.parquet"
+        },
+        {
+          "split": "test",
+          "path": "rte/test-00000-of-00001.parquet",
+          "sha256": "3f44aadbfb8bbb7a64ba0674bd26ff77b66e88fdf7a6d64255a5ba6ae9057383",
+          "size": 621413,
+          "url": "https://huggingface.co/datasets/nyu-mll/glue/resolve/bcdcba79d07bc864c1c254ccfcedcce55bcc9a8c/rte/test-00000-of-00001.parquet"
+        }
+      ],
+      "card_url": "https://huggingface.co/datasets/nyu-mll/glue/resolve/bcdcba79d07bc864c1c254ccfcedcce55bcc9a8c/README.md",
+      "card_sha256": "073f689c80fc6b3366d583eb570a05be2140b01ff2fdd706c416e14d0d2d5d5a",
+      "card_license_metadata": [
+        "other"
+      ]
+    }
+  ]
+}

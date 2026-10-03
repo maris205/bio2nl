@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "scope": "Four declared raw biological/English inputs only; not a complete full-rebuild dependency closure",
+  "files": [
+    {
+      "id": "swiss_prot",
+      "path": "raw/protein/uniprot_sprot_2026_03.fasta.gz",
+      "url": "https://ftp.uniprot.org/pub/databases/uniprot/current_release/knowledgebase/complete/uniprot_sprot.fasta.gz",
+      "sha256": "a9c3496aa727e61d25d9e1291c9ba28d2c2ad19c0e26569dc083d53ec4169536",
+      "bytes": 93801562,
+      "source_release": "2026_03",
+      "url_is_immutable": false,
+      "retrieval_note": "Current-release URL may have moved. Obtain the exact 2026_03 snapshot from the provider/archive and require this SHA; never silently accept newer bytes.",
+      "redistribution": "CC-BY-4.0 database parts; attribution/other rights retained"
+    },
+    {
+      "id": "openwebtext_fixed_shard",
+      "path": "raw/corpora/openwebtext-00000.parquet",
+      "url": "https://huggingface.co/datasets/Skylion007/openwebtext/resolve/79d93d786212f7344586290adb811d4ae6a1762c/plain_text/train-00000-of-00080.parquet",
+      "sha256": "caed9f4b7053d7cd4d1a13ce9ec9224d84a3bba1f11579193562a7e31ebe656e",
+      "bytes": 302848326,
+      "revision": "79d93d786212f7344586290adb811d4ae6a1762c",
+      "url_is_immutable": true,
+      "redistribution": "private_only text; downloader does not grant rights"
+    },
+    {
+      "id": "dir.cla.scope.2.08-stable.txt",
+      "path": "raw/remote/dir.cla.scope.2.08-stable.txt",
+      "url": "https://zenodo.org/api/records/5829561/files/dir.cla.scope.2.08-stable.txt/content",
+      "sha256": "979eceafbc2cb8c50a6549d156d888478a43003e8f9e21e1940d11bcf3d728ca",
+      "bytes": 34697841,
+      "source_release": "2.08-stable",
+      "url_is_immutable": true,
+      "redistribution": "Historical upstream record CC-BY-4.0; fresh asset-specific review pending; not included"
+    },
+    {
+      "id": "scopeseq-2.08.tgz",
+      "path": "raw/remote/scopeseq-2.08.tgz",
+      "url": "https://zenodo.org/api/records/5829561/files/scopeseq-2.08.tgz/content",
+      "sha256": "0157a1f0179703dd483c2ef43db8bd9a31f73091aac14e9df7801cb9d0a42b0b",
+      "bytes": 314568929,
+      "source_release": "2.08-stable",
+      "url_is_immutable": true,
+      "redistribution": "Historical upstream record CC-BY-4.0; fresh asset-specific review pending; not included"
+    }
+  ],
+  "public_archive_dependency_resolved": false
+}

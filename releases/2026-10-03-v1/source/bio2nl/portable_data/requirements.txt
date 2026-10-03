@@ -1,0 +1,15 @@
+# Validated data-build package versions (Python 3.12.3).
+biopython==1.85
+huggingface-hub==0.34.4
+numpy==2.2.6
+pandas==2.2.3
+pyahocorasick==2.1.0
+pyarrow==17.0.0
+requests==2.32.3
+scikit-learn==1.5.2
+scipy==1.14.1
+tokenizers==0.20.0
+transformers==4.45.2
+
+# Test runner; not used during data construction.
+pytest==8.4.2

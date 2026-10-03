@@ -1,70 +1,36 @@
-# bio2nl — Asymmetric Structural Transfer Between Natural Language and Biological Foundation Models
+# bio2nl: protein-pair supervision and English transfer
 
-Code and analysis for the paper *Asymmetric Structural Transfer Between Natural Language and
-Biological Foundation Models*.
+This repository studies whether protein sequence-pair supervision transfers to English sentence-pair prediction. The current audited experiment uses the deterministic October 2026 data reconstruction, nine fresh pretraining runs, 27 full source fine-tuning runs, and fixed evaluation of all 27 source-selected classifiers. Older root-level experiments and paper files remain historical; the release below identifies the current code and results.
 
-**Question.** Prior work shows language models transfer to biology (language\,→\,biology). Is the
-transfer symmetric? We systematically evaluate the reverse direction and find that structural
-transfer is **bidirectional but strongly and universally asymmetric**: language\,→\,biology is
-robust and scales up, whereas biology\,→\,language is weak, never beats matched-token controls, and
-decays toward chance as protein models grow (reproduced across ESM-2 and ProtBERT). All central
-comparisons use models with **known training data**, eliminating the pretraining-contamination
-confound.
+## Current release
 
-## Repository layout
+- [Release documentation and CPU commands](releases/2026-10-03-v1/README.md).
+- [Complete 190-file source snapshot](releases/2026-10-03-v1/source/) and [file manifest](releases/2026-10-03-v1/source/MANIFEST.json).
+- [Protein data and the same code archive on Hugging Face](https://huggingface.co/datasets/dnagpt/bio2nl/tree/62ced1ec44444b1879f2c473c553e6b5a9c6767f/releases/2026-10-03-v1), pinned to dataset commit `62ced1ec44444b1879f2c473c553e6b5a9c6767f`.
+- [Fixed-transfer results](releases/2026-10-03-v1/source/results/oct2/fixed_transfer/REPORT.md), [source-fit results](releases/2026-10-03-v1/source/results/oct2/source/REPORT.md), and [Source Data](releases/2026-10-03-v1/source/paper_assets/source_data/README.md).
 
-```
-bio2nl/
-├── tier1_gpt2/        GPT-2 experiments
-│   ├── 01_pilot_bio2nl.py            reverse pilot
-│   ├── 02_batch_distribution.py      reverse FT, 100-seed distribution
-│   ├── 03_batch_remote_source.py     remote-homology source
-│   ├── 04_batch_backbone.py          backbone ablation
-│   ├── 05_bidirectional_symmetry.py  both directions, one protocol
-│   └── run_cpt.py                    iso-token continued pretraining
-├── tier2_llama/       cross-modal / larger backbones
-│   ├── eval_esm_on_nl.py             ESM/ProtBERT/BERT on NL tasks + scaling
-│   └── eval_crossmodal_2x2.py        backbones on protein homology (2x2 matrix)
-├── eval/
-│   ├── eval_structural_nl.py         sample-efficiency FT harness
-│   ├── make_dyck_task.py             hard nested-bracket task
-│   └── make_longrange_task.py        synthetic long-range task
-├── analysis/
-│   ├── make_all_tables.py            regenerate ALL tables -> results/SUMMARY.md
-│   ├── M1_cka_alignment.py           representation alignment (CKA)
-│   ├── M2_learning_dynamics.py       transfer-vs-training-step trajectories
-│   ├── M3_difference_heads.py        difference-head test (reverse)
-│   ├── M3b_forward_difference_heads.py   difference-head test (forward)
-│   ├── M3c_rigorous_diff_heads.py    rigorous, z-scored difference-head test
-│   └── analyze_distribution.py       100-seed distribution stats
-├── data/
-│   ├── cpt_corpus/build_cpt_corpora.py   builds iso-token CPT corpora
-│   └── eval_nl/                      synthetic eval tasks (Dyck, long-range)
-├── results/
-│   ├── SUMMARY.md                    all result tables (auto-generated)
-│   └── benchmarks/*.jsonl            raw per-run records
-└── paper/             LaTeX manuscript + figures
+The source capture is `b8d50d0ae61c8407ea8dcf62e47edef5969fc56c`; it is a later exact code capture, not the Git revision used during the original training. Both the `bio2nl/` and `biopaws/` source layouts are retained inside the snapshot. No model weights or protein-data payloads are added to this Git repository by this release. Eight biological payloads are available in the linked Hugging Face data archive; the source archive contains only the identities of 36 model checkpoints.
+
+## Experiment and interpretation
+
+EP combines English with natural protein exposure; ES uses the same English blocks and shuffled protein; EE uses twice the English exposure at the same total token budget. Each condition has three independent pretraining seeds, each followed by three source fine-tuning seeds. Statistics first average the fine-tuning repeats within each pretraining seed, then report the mean and sample SD across the three pretraining seeds.
+
+The natural-protein condition has a modest exploratory QQP ranking gain over its shuffled control: paired AUC difference **+0.029560 ± 0.018655**, positive for all three pretraining-seed groups. Its protein-test accuracy is **50.76%**, and English balanced accuracy is **50.18%**. Weak source learning and fixed English classification limit interpretation. These results do not establish statistical significance, transferable protein-relation semantics, a general directional asymmetry, or impossibility of transfer. The QQP cohort was evaluated historically and is not a new blind test.
+
+Protein examples are constructed directly from pinned UniProtKB/Swiss-Prot records using normalization, MMseqs2 search/clustering, split assignment and explicit pairing rules. Labels describe **operational sequence similarity**, not certified structural homology or evolutionary independence. Pair splits contain 99,818 / 20,276 / 20,854 rows; the experimental source training subset contains 8,044 rows. The budget-matched surface reference uses BPE-token statistics; raw-residue construction baselines use all 99,818 training rows and are reported separately. Equal BPE-token budgets do not guarantee equal residue or parent-record exposure.
+
+## Reproduction scope
+
+From the checkout root with Python 3.12:
+
+```sh
+SOURCE="$PWD/releases/2026-10-03-v1/source"
+python -I -B "$SOURCE/release_cli.py" --source-root "$SOURCE" verify
+python -I -B "$SOURCE/release_cli.py" --source-root "$SOURCE" report --output "$PWD/oct2_report.json"
 ```
 
-## Data & checkpoints
+Use a fresh output path outside the source snapshot. The release documentation also covers figure rebuilding and downloaded protein-input checks. These commands inspect released files and recompute aggregate statistics; they do not rerun neural predictions or training.
 
-Large artifacts are **not** in this repo. The CPT corpora, Swiss-Prot source, and evaluation
-datasets are hosted on HuggingFace: **[`dnagpt/bio2nl`](https://huggingface.co/datasets/dnagpt/bio2nl)**.
-Protein-homology pairs use the existing [`dnagpt/biopaws`](https://huggingface.co/datasets/dnagpt/biopaws)
-release. Model checkpoints (24 CPT models) can be regenerated with `run_cpt.py`.
+The original local raw reconstruction and full training completed. A complete public-download-only raw-to-training workflow has **not** been validated: historical workers retain private-reference, absolute-path and execution-evidence dependencies. Model weights, tokenizer payloads and restricted natural-language text/reversible inputs are not supplied in this release. No permanent DOI is claimed. Source-specific licenses and UniProt attribution are preserved; a code license does not relicense upstream data or omitted weights.
 
-## Reproduce
-
-```bash
-export HF_ENDPOINT=https://hf-mirror.com                    # optional mirror
-python data/cpt_corpus/build_cpt_corpora.py --target_tokens 50000000
-python tier1_gpt2/run_cpt.py --group protein --seed 0 --base gpt2
-python tier1_gpt2/05_bidirectional_symmetry.py --n_seeds 15
-python tier2_llama/eval_esm_on_nl.py --tasks paws-x --models esm2_8M,esm2_650M,protbert,bert_base
-python tier2_llama/eval_crossmodal_2x2.py
-python analysis/M2_learning_dynamics.py --seeds 0,1,2
-python analysis/make_all_tables.py                          # -> results/SUMMARY.md
-```
-
-## Environment
-Python 3, PyTorch, transformers, datasets, scikit-learn. Experiments run on a single 32 GB GPU.
+The earlier September matrix and other historical studies are distinct data/protocol versions. They are not relabelled as runs on the current data. Historical files and results remain in Git history and their existing locations; the separate `emergence` project is not merged into this release.

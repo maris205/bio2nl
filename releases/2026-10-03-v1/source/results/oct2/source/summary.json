@@ -1,0 +1,2303 @@
+{
+  "all_conditions_retained": true,
+  "complete_checkpoints": 36,
+  "heldout_or_target_predictions": 0,
+  "nested_metrics": [
+    {
+      "condition": "EP",
+      "mean": 0.5456655063815681,
+      "metric": "accuracy",
+      "pretraining_sample_sd": 0.028020105616429716,
+      "pretraining_seed_values": [
+        0.575542847671142,
+        0.5414801922758165,
+        0.5199734791977457
+      ],
+      "role": "train",
+      "stage": "best",
+      "within_pretraining_sft_sample_sd": [
+        0.00462705945705546,
+        0.034166019829298795,
+        0.034595974215490884
+      ]
+    },
+    {
+      "condition": "EP",
+      "mean": 0.545665506381568,
+      "metric": "balanced_accuracy",
+      "pretraining_sample_sd": 0.028020105616429727,
+      "pretraining_seed_values": [
+        0.575542847671142,
+        0.5414801922758163,
+        0.5199734791977457
+      ],
+      "role": "train",
+      "stage": "best",
+      "within_pretraining_sft_sample_sd": [
+        0.00462705945705546,
+        0.03416601982929877,
+        0.034595974215490884
+      ]
+    },
+    {
+      "condition": "EP",
+      "mean": 0.5832725901513717,
+      "metric": "auroc",
+      "pretraining_sample_sd": 0.027783654749057713,
+      "pretraining_seed_values": [
+        0.6126345708581254,
+        0.5797870023341701,
+        0.5573961972618194
+      ],
+      "role": "train",
+      "stage": "best",
+      "within_pretraining_sft_sample_sd": [
+        0.008936056975571345,
+        0.028425346099805546,
+        0.028803229852525317
+      ]
+    },
+    {
+      "condition": "EP",
+      "mean": 0.685290449299587,
+      "metric": "cross_entropy",
+      "pretraining_sample_sd": 0.005644272361317523,
+      "pretraining_seed_values": [
+        0.6792958208575742,
+        0.6860727843174428,
+        0.6905027427237443
+      ],
+      "role": "train",
+      "stage": "best",
+      "within_pretraining_sft_sample_sd": [
+        0.0024379602260326855,
+        0.005475575982419506,
+        0.003360805760620578
+      ]
+    },
+    {
+      "condition": "EP",
+      "mean": 0.09496662679600526,
+      "metric": "mcc",
+      "pretraining_sample_sd": 0.05805882921953596,
+      "pretraining_seed_values": [
+        0.15492483940946922,
+        0.09096033715385991,
+        0.039014703824686615
+      ],
+      "role": "train",
+      "stage": "best",
+      "within_pretraining_sft_sample_sd": [
+        0.007098204947277134,
+        0.06609099662207321,
+        0.07153719763142374
+      ]
+    },
+    {
+      "condition": "EP",
+      "mean": 0.6685452234930107,
+      "metric": "predicted_positive_fraction",
+      "pretraining_sample_sd": 0.1400093412354028,
+      "pretraining_seed_values": [
+        0.5139648599370131,
+        0.7048317586606995,
+        0.7868390518813194
+      ],
+      "role": "train",
+      "stage": "best",
+      "within_pretraining_sft_sample_sd": [
+        0.1349498292559074,
+        0.2769633577804617,
+        0.32139966688210725
+      ]
+    },
+    {
+      "condition": "EP",
+      "mean": 0.5076171061572521,
+      "metric": "accuracy",
+      "pretraining_sample_sd": 0.00611896976372555,
+      "pretraining_seed_values": [
+        0.514401262576445,
+        0.505934766883672,
+        0.5025152890116393
+      ],
+      "role": "validation",
+      "stage": "best",
+      "within_pretraining_sft_sample_sd": [
+        0.002599932008896667,
+        0.004316597466120139,
+        0.0065528009826925585
+      ]
+    },
+    {
+      "condition": "EP",
+      "mean": 0.5076171061572521,
+      "metric": "balanced_accuracy",
+      "pretraining_sample_sd": 0.00611896976372555,
+      "pretraining_seed_values": [
+        0.514401262576445,
+        0.505934766883672,
+        0.5025152890116393
+      ],
+      "role": "validation",
+      "stage": "best",
+      "within_pretraining_sft_sample_sd": [
+        0.002599932008896667,
+        0.004316597466120178,
+        0.0065528009826925585
+      ]
+    },
+    {
+      "condition": "EP",
+      "mean": 0.5160320446473721,
+      "metric": "auroc",
+      "pretraining_sample_sd": 0.0038165595576721803,
+      "pretraining_seed_values": [
+        0.5201816124436157,
+        0.512671981719023,
+        0.5152425397794774
+      ],
+      "role": "validation",
+      "stage": "best",
+      "within_pretraining_sft_sample_sd": [
+        0.0017849939971098332,
+        0.0044427722894629556,
+        0.0009076141993977737
+      ]
+    },
+    {
+      "condition": "EP",
+      "mean": 0.6939759144755441,
+      "metric": "cross_entropy",
+      "pretraining_sample_sd": 0.0006739703117908529,
+      "pretraining_seed_values": [
+        0.6938502381841068,
+        0.6947038767326158,
+        0.6933736285099094
+      ],
+      "role": "validation",
+      "stage": "best",
+      "within_pretraining_sft_sample_sd": [
+        0.0006957519589715571,
+        0.00121637992921451,
+        0.0003275308691894897
+      ]
+    },
+    {
+      "condition": "EP",
+      "mean": 0.015236468004590435,
+      "metric": "mcc",
+      "pretraining_sample_sd": 0.014135343534412561,
+      "pretraining_seed_values": [
+        0.029656091160339456,
+        0.014649630673268528,
+        0.0014036821801633236
+      ],
+      "role": "validation",
+      "stage": "best",
+      "within_pretraining_sft_sample_sd": [
+        0.0048466820797752365,
+        0.005833121768866232,
+        0.01736892566247946
+      ]
+    },
+    {
+      "condition": "EP",
+      "mean": 0.6853641963131015,
+      "metric": "predicted_positive_fraction",
+      "pretraining_sample_sd": 0.13873004996331595,
+      "pretraining_seed_values": [
+        0.5313671335569147,
+        0.724156638390215,
+        0.8005688169921746
+      ],
+      "role": "validation",
+      "stage": "best",
+      "within_pretraining_sft_sample_sd": [
+        0.14503647641303663,
+        0.27027417169404533,
+        0.32022706748351426
+      ]
+    },
+    {
+      "condition": "EP",
+      "mean": 0.5678214265981545,
+      "metric": "accuracy",
+      "pretraining_sample_sd": 0.011280503526804353,
+      "pretraining_seed_values": [
+        0.5803497430797281,
+        0.5646444554947787,
+        0.5584700812199569
+      ],
+      "role": "train",
+      "stage": "final",
+      "within_pretraining_sft_sample_sd": [
+        0.008277384533166829,
+        0.0051377370262982855,
+        0.00847754258574257
+      ]
+    },
+    {
+      "condition": "EP",
+      "mean": 0.5678214265981545,
+      "metric": "balanced_accuracy",
+      "pretraining_sample_sd": 0.011280503526804368,
+      "pretraining_seed_values": [
+        0.5803497430797281,
+        0.5646444554947786,
+        0.5584700812199569
+      ],
+      "role": "train",
+      "stage": "final",
+      "within_pretraining_sft_sample_sd": [
+        0.008277384533166829,
+        0.005137737026298331,
+        0.00847754258574257
+      ]
+    },
+    {
+      "condition": "EP",
+      "mean": 0.6045510500853516,
+      "metric": "auroc",
+      "pretraining_sample_sd": 0.013213735185059495,
+      "pretraining_seed_values": [
+        0.6195382857403788,
+        0.5995353089913317,
+        0.5945795555243443
+      ],
+      "role": "train",
+      "stage": "final",
+      "within_pretraining_sft_sample_sd": [
+        0.010097430019979496,
+        0.0030926845523542275,
+        0.011488816451078018
+      ]
+    },
+    {
+      "condition": "EP",
+      "mean": 0.6804091660659369,
+      "metric": "cross_entropy",
+      "pretraining_sample_sd": 0.0033280868084109394,
+      "pretraining_seed_values": [
+        0.6765788680835682,
+        0.6820545469548263,
+        0.682594083159416
+      ],
+      "role": "train",
+      "stage": "final",
+      "within_pretraining_sft_sample_sd": [
+        0.003384781031322225,
+        0.0015461149295959975,
+        0.004832016342062873
+      ]
+    },
+    {
+      "condition": "EP",
+      "mean": 0.1428121953118298,
+      "metric": "mcc",
+      "pretraining_sample_sd": 0.022313076712353667,
+      "pretraining_seed_values": [
+        0.1675694340245244,
+        0.13661279442251936,
+        0.12425435748844553
+      ],
+      "role": "train",
+      "stage": "final",
+      "within_pretraining_sft_sample_sd": [
+        0.021611796261187366,
+        0.005997131693455588,
+        0.00914376385527787
+      ]
+    },
+    {
+      "condition": "EP",
+      "mean": 0.47403171445936243,
+      "metric": "predicted_positive_fraction",
+      "pretraining_sample_sd": 0.02024885656144156,
+      "pretraining_seed_values": [
+        0.46771921100613295,
+        0.4966848997182165,
+        0.4576910326537378
+      ],
+      "role": "train",
+      "stage": "final",
+      "within_pretraining_sft_sample_sd": [
+        0.1637553002907874,
+        0.19766619022316184,
+        0.20023071488672384
+      ]
+    },
+    {
+      "condition": "EP",
+      "mean": 0.510263913548585,
+      "metric": "accuracy",
+      "pretraining_sample_sd": 0.0025860346607751296,
+      "pretraining_seed_values": [
+        0.5130203195896627,
+        0.5078911027816138,
+        0.5098803182744788
+      ],
+      "role": "validation",
+      "stage": "final",
+      "within_pretraining_sft_sample_sd": [
+        0.001957302705956248,
+        0.0026139277964095653,
+        0.00041066600896941046
+      ]
+    },
+    {
+      "condition": "EP",
+      "mean": 0.510263913548585,
+      "metric": "balanced_accuracy",
+      "pretraining_sample_sd": 0.0025860346607751296,
+      "pretraining_seed_values": [
+        0.5130203195896627,
+        0.5078911027816138,
+        0.5098803182744788
+      ],
+      "role": "validation",
+      "stage": "final",
+      "within_pretraining_sft_sample_sd": [
+        0.001957302705956248,
+        0.0026139277964095653,
+        0.00041066600896941046
+      ]
+    },
+    {
+      "condition": "EP",
+      "mean": 0.5156725215091296,
+      "metric": "auroc",
+      "pretraining_sample_sd": 0.0030605193687127815,
+      "pretraining_seed_values": [
+        0.5191017570987849,
+        0.5132182847182999,
+        0.514697522710304
+      ],
+      "role": "validation",
+      "stage": "final",
+      "within_pretraining_sft_sample_sd": [
+        0.002774167836033095,
+        0.004699570169369582,
+        0.001399359752031298
+      ]
+    },
+    {
+      "condition": "EP",
+      "mean": 0.6952485670070511,
+      "metric": "cross_entropy",
+      "pretraining_sample_sd": 0.00021528494768729184,
+      "pretraining_seed_values": [
+        0.6950954721117738,
+        0.6951554999698107,
+        0.6954947289395687
+      ],
+      "role": "validation",
+      "stage": "final",
+      "within_pretraining_sft_sample_sd": [
+        0.0016473223354061596,
+        0.0007842806011128131,
+        0.002445881035885899
+      ]
+    },
+    {
+      "condition": "EP",
+      "mean": 0.021833907464583146,
+      "metric": "mcc",
+      "pretraining_sample_sd": 0.005047170136238982,
+      "pretraining_seed_values": [
+        0.027102629047510523,
+        0.017042151010442104,
+        0.021356942335796814
+      ],
+      "role": "validation",
+      "stage": "final",
+      "within_pretraining_sft_sample_sd": [
+        0.0031010149386401444,
+        0.006032034469074207,
+        0.0024766110769060996
+      ]
+    },
+    {
+      "condition": "EP",
+      "mean": 0.4914896648473291,
+      "metric": "predicted_positive_fraction",
+      "pretraining_sample_sd": 0.02201811437498335,
+      "pretraining_seed_values": [
+        0.4872427171697245,
+        0.5153218912343,
+        0.4719043861379628
+      ],
+      "role": "validation",
+      "stage": "final",
+      "within_pretraining_sft_sample_sd": [
+        0.17338636485550873,
+        0.21314358065816683,
+        0.21575205120240848
+      ]
+    },
+    {
+      "condition": "ES",
+      "mean": 0.5355406376042875,
+      "metric": "accuracy",
+      "pretraining_sample_sd": 0.025212760215307193,
+      "pretraining_seed_values": [
+        0.512265871042599,
+        0.5623238852975302,
+        0.5320321564727333
+      ],
+      "role": "train",
+      "stage": "best",
+      "within_pretraining_sft_sample_sd": [
+        0.018917460436157565,
+        0.017384878252227943,
+        0.015705888927379966
+      ]
+    },
+    {
+      "condition": "ES",
+      "mean": 0.5355406376042876,
+      "metric": "balanced_accuracy",
+      "pretraining_sample_sd": 0.025212760215307183,
+      "pretraining_seed_values": [
+        0.512265871042599,
+        0.5623238852975302,
+        0.5320321564727334
+      ],
+      "role": "train",
+      "stage": "best",
+      "within_pretraining_sft_sample_sd": [
+        0.018917460436157565,
+        0.01738487825222798,
+        0.01570588892737991
+      ]
+    },
+    {
+      "condition": "ES",
+      "mean": 0.563789644688343,
+      "metric": "auroc",
+      "pretraining_sample_sd": 0.028277309227715416,
+      "pretraining_seed_values": [
+        0.5371636382788744,
+        0.5934702394743712,
+        0.5607350563117836
+      ],
+      "role": "train",
+      "stage": "best",
+      "within_pretraining_sft_sample_sd": [
+        0.025690078358906035,
+        0.01916374144428644,
+        0.025735543356271175
+      ]
+    },
+    {
+      "condition": "ES",
+      "mean": 0.6885431006639706,
+      "metric": "cross_entropy",
+      "pretraining_sample_sd": 0.004670721494893064,
+      "pretraining_seed_values": [
+        0.6923847061503334,
+        0.6833440072460295,
+        0.6899005885955489
+      ],
+      "role": "train",
+      "stage": "best",
+      "within_pretraining_sft_sample_sd": [
+        0.0009587862743537891,
+        0.00644081641919677,
+        0.003511030370368015
+      ]
+    },
+    {
+      "condition": "ES",
+      "mean": 0.07961311327281935,
+      "metric": "mcc",
+      "pretraining_sample_sd": 0.050154007972742276,
+      "pretraining_seed_values": [
+        0.028523802106980717,
+        0.12877632573756323,
+        0.0815392119739141
+      ],
+      "role": "train",
+      "stage": "best",
+      "within_pretraining_sft_sample_sd": [
+        0.03529542317740948,
+        0.03270639841658885,
+        0.0288801618458014
+      ]
+    },
+    {
+      "condition": "ES",
+      "mean": 0.6026437924747223,
+      "metric": "predicted_positive_fraction",
+      "pretraining_sample_sd": 0.020815581390950702,
+      "pretraining_seed_values": [
+        0.612879164594729,
+        0.6163600198906017,
+        0.5786921929388363
+      ],
+      "role": "train",
+      "stage": "best",
+      "within_pretraining_sft_sample_sd": [
+        0.33518123800283767,
+        0.07174427000063785,
+        0.3806083167834761
+      ]
+    },
+    {
+      "condition": "ES",
+      "mean": 0.5084884154227219,
+      "metric": "accuracy",
+      "pretraining_sample_sd": 0.0017529275331433492,
+      "pretraining_seed_values": [
+        0.5068553955415269,
+        0.5103406326034063,
+        0.5082692181232327
+      ],
+      "role": "validation",
+      "stage": "best",
+      "within_pretraining_sft_sample_sd": [
+        0.005982911889572208,
+        0.0036544083426673602,
+        0.0033129761127961357
+      ]
+    },
+    {
+      "condition": "ES",
+      "mean": 0.5084884154227219,
+      "metric": "balanced_accuracy",
+      "pretraining_sample_sd": 0.0017529275331433422,
+      "pretraining_seed_values": [
+        0.5068553955415269,
+        0.5103406326034063,
+        0.5082692181232328
+      ],
+      "role": "validation",
+      "stage": "best",
+      "within_pretraining_sft_sample_sd": [
+        0.005982911889572174,
+        0.0036544083426673602,
+        0.003312976112796216
+      ]
+    },
+    {
+      "condition": "ES",
+      "mean": 0.5165515798683198,
+      "metric": "auroc",
+      "pretraining_sample_sd": 0.0013262946227719692,
+      "pretraining_seed_values": [
+        0.5159471175855653,
+        0.515635194401432,
+        0.518072427617962
+      ],
+      "role": "validation",
+      "stage": "best",
+      "within_pretraining_sft_sample_sd": [
+        0.0015655934889606052,
+        0.001233519761709343,
+        0.003192835177751143
+      ]
+    },
+    {
+      "condition": "ES",
+      "mean": 0.6937275289656619,
+      "metric": "cross_entropy",
+      "pretraining_sample_sd": 0.0006767978530167791,
+      "pretraining_seed_values": [
+        0.6933495031987342,
+        0.6945088911746948,
+        0.6933241925235566
+      ],
+      "role": "validation",
+      "stage": "best",
+      "within_pretraining_sft_sample_sd": [
+        0.0007655236488134156,
+        0.001655905747712417,
+        0.00014951341392866426
+      ]
+    },
+    {
+      "condition": "ES",
+      "mean": 0.01825401725588233,
+      "metric": "mcc",
+      "pretraining_sample_sd": 0.0057972323384044445,
+      "pretraining_seed_values": [
+        0.0115600848513702,
+        0.021637787103462272,
+        0.021564179812814513
+      ],
+      "role": "validation",
+      "stage": "best",
+      "within_pretraining_sft_sample_sd": [
+        0.016098421700841758,
+        0.007018656789268031,
+        0.005101295882436147
+      ]
+    },
+    {
+      "condition": "ES",
+      "mean": 0.6080916683106464,
+      "metric": "predicted_positive_fraction",
+      "pretraining_sample_sd": 0.032228980795663664,
+      "pretraining_seed_values": [
+        0.616640362990728,
+        0.6351844545275201,
+        0.572450187413691
+      ],
+      "role": "validation",
+      "stage": "best",
+      "within_pretraining_sft_sample_sd": [
+        0.3319570001666241,
+        0.08841952001643022,
+        0.39160553182969154
+      ]
+    },
+    {
+      "condition": "ES",
+      "mean": 0.5687745179291673,
+      "metric": "accuracy",
+      "pretraining_sample_sd": 0.005939683162397946,
+      "pretraining_seed_values": [
+        0.5667578319244158,
+        0.5754599701640974,
+        0.5641057516989889
+      ],
+      "role": "train",
+      "stage": "final",
+      "within_pretraining_sft_sample_sd": [
+        0.017868273275202008,
+        0.019417626859392495,
+        0.007595848988821223
+      ]
+    },
+    {
+      "condition": "ES",
+      "mean": 0.5687745179291673,
+      "metric": "balanced_accuracy",
+      "pretraining_sample_sd": 0.005939683162397946,
+      "pretraining_seed_values": [
+        0.5667578319244158,
+        0.5754599701640974,
+        0.5641057516989889
+      ],
+      "role": "train",
+      "stage": "final",
+      "within_pretraining_sft_sample_sd": [
+        0.017868273275202008,
+        0.019417626859392495,
+        0.0075958489888211635
+      ]
+    },
+    {
+      "condition": "ES",
+      "mean": 0.6063774186721361,
+      "metric": "auroc",
+      "pretraining_sample_sd": 0.00934556451750594,
+      "pretraining_seed_values": [
+        0.6069301792239483,
+        0.615434334597473,
+        0.5967677421949871
+      ],
+      "role": "train",
+      "stage": "final",
+      "within_pretraining_sft_sample_sd": [
+        0.009353850159085433,
+        0.01898203373390959,
+        0.0018804109903948802
+      ]
+    },
+    {
+      "condition": "ES",
+      "mean": 0.6791540340228833,
+      "metric": "cross_entropy",
+      "pretraining_sample_sd": 0.003003640930645207,
+      "pretraining_seed_values": [
+        0.6798455282853113,
+        0.6758649493975959,
+        0.681751624385743
+      ],
+      "role": "train",
+      "stage": "final",
+      "within_pretraining_sft_sample_sd": [
+        0.004608390509991003,
+        0.007422519487274448,
+        0.001489103275144102
+      ]
+    },
+    {
+      "condition": "ES",
+      "mean": 0.14604458182852928,
+      "metric": "mcc",
+      "pretraining_sample_sd": 0.010303012204527727,
+      "pretraining_seed_values": [
+        0.143875453965584,
+        0.15725945788363824,
+        0.13699883363636559
+      ],
+      "role": "train",
+      "stage": "final",
+      "within_pretraining_sft_sample_sd": [
+        0.020136428377835216,
+        0.035193998079633027,
+        0.0064010193126002365
+      ]
+    },
+    {
+      "condition": "ES",
+      "mean": 0.4427178297143488,
+      "metric": "predicted_positive_fraction",
+      "pretraining_sample_sd": 0.04894773444399422,
+      "pretraining_seed_values": [
+        0.4105337311453671,
+        0.4990469086689872,
+        0.4185728493286922
+      ],
+      "role": "train",
+      "stage": "final",
+      "within_pretraining_sft_sample_sd": [
+        0.20944373004408626,
+        0.18143004573886917,
+        0.19094443444169193
+      ]
+    },
+    {
+      "condition": "ES",
+      "mean": 0.508439096030337,
+      "metric": "accuracy",
+      "pretraining_sample_sd": 0.0010578257053918867,
+      "pretraining_seed_values": [
+        0.5072663904780693,
+        0.5087295324521602,
+        0.5093213651607812
+      ],
+      "role": "validation",
+      "stage": "final",
+      "within_pretraining_sft_sample_sd": [
+        0.00195191010586508,
+        0.0014729911741041429,
+        0.002064945888287458
+      ]
+    },
+    {
+      "condition": "ES",
+      "mean": 0.508439096030337,
+      "metric": "balanced_accuracy",
+      "pretraining_sample_sd": 0.0010578257053918867,
+      "pretraining_seed_values": [
+        0.5072663904780693,
+        0.5087295324521602,
+        0.5093213651607812
+      ],
+      "role": "validation",
+      "stage": "final",
+      "within_pretraining_sft_sample_sd": [
+        0.00195191010586508,
+        0.0014729911741041429,
+        0.002064945888287458
+      ]
+    },
+    {
+      "condition": "ES",
+      "mean": 0.5132247392333747,
+      "metric": "auroc",
+      "pretraining_sample_sd": 0.0015337289373448693,
+      "pretraining_seed_values": [
+        0.5114562637236958,
+        0.5140271525908854,
+        0.5141908013855432
+      ],
+      "role": "validation",
+      "stage": "final",
+      "within_pretraining_sft_sample_sd": [
+        0.0037984634394107905,
+        0.003379785351204077,
+        0.0056434033495825165
+      ]
+    },
+    {
+      "condition": "ES",
+      "mean": 0.696885476719426,
+      "metric": "cross_entropy",
+      "pretraining_sample_sd": 0.0009248905383900248,
+      "pretraining_seed_values": [
+        0.6960388417735116,
+        0.6978725578478904,
+        0.6967450305368762
+      ],
+      "role": "validation",
+      "stage": "final",
+      "within_pretraining_sft_sample_sd": [
+        0.0013149211089454865,
+        0.003136892295034507,
+        0.002654799090844618
+      ]
+    },
+    {
+      "condition": "ES",
+      "mean": 0.01881671773990687,
+      "metric": "mcc",
+      "pretraining_sample_sd": 0.0019411814057518145,
+      "pretraining_seed_values": [
+        0.016969373833542,
+        0.018640991849381658,
+        0.020839787536796953
+      ],
+      "role": "validation",
+      "stage": "final",
+      "within_pretraining_sft_sample_sd": [
+        0.006431076893705436,
+        0.0032561339743889966,
+        0.006743943559490138
+      ]
+    },
+    {
+      "condition": "ES",
+      "mean": 0.4545713596808487,
+      "metric": "predicted_positive_fraction",
+      "pretraining_sample_sd": 0.05073333838054554,
+      "pretraining_seed_values": [
+        0.4194778720326166,
+        0.5127408430328139,
+        0.4314953639771158
+      ],
+      "role": "validation",
+      "stage": "final",
+      "within_pretraining_sft_sample_sd": [
+        0.24893471858244295,
+        0.20908333477419905,
+        0.2322673574979824
+      ]
+    },
+    {
+      "condition": "EE",
+      "mean": 0.5337035195314658,
+      "metric": "accuracy",
+      "pretraining_sample_sd": 0.013829021222600204,
+      "pretraining_seed_values": [
+        0.5326537377755677,
+        0.5204293054864909,
+        0.5480275153323388
+      ],
+      "role": "train",
+      "stage": "best",
+      "within_pretraining_sft_sample_sd": [
+        0.02969320189368136,
+        0.031621407517773766,
+        0.014315455086547385
+      ]
+    },
+    {
+      "condition": "EE",
+      "mean": 0.5337035195314658,
+      "metric": "balanced_accuracy",
+      "pretraining_sample_sd": 0.013829021222600204,
+      "pretraining_seed_values": [
+        0.5326537377755677,
+        0.5204293054864909,
+        0.5480275153323388
+      ],
+      "role": "train",
+      "stage": "best",
+      "within_pretraining_sft_sample_sd": [
+        0.02969320189368136,
+        0.031621407517773766,
+        0.014315455086547385
+      ]
+    },
+    {
+      "condition": "EE",
+      "mean": 0.5710096142578874,
+      "metric": "auroc",
+      "pretraining_sample_sd": 0.009374897403073065,
+      "pretraining_seed_values": [
+        0.571678132693524,
+        0.5613183515857546,
+        0.580032358494384
+      ],
+      "role": "train",
+      "stage": "best",
+      "within_pretraining_sft_sample_sd": [
+        0.018840940407167345,
+        0.018189257351391916,
+        0.002319398068428236
+      ]
+    },
+    {
+      "condition": "EE",
+      "mean": 0.6892209585472636,
+      "metric": "cross_entropy",
+      "pretraining_sample_sd": 0.002020084150192888,
+      "pretraining_seed_values": [
+        0.6891027335877169,
+        0.6912975588505607,
+        0.6872625832035136
+      ],
+      "role": "train",
+      "stage": "best",
+      "within_pretraining_sft_sample_sd": [
+        0.0036803467057501408,
+        0.0025910735223437305,
+        0.0011787197769490053
+      ]
+    },
+    {
+      "condition": "EE",
+      "mean": 0.07888637567439348,
+      "metric": "mcc",
+      "pretraining_sample_sd": 0.027326843465472133,
+      "pretraining_seed_values": [
+        0.07788632312842358,
+        0.05207328614259719,
+        0.10669951775215969
+      ],
+      "role": "train",
+      "stage": "best",
+      "within_pretraining_sft_sample_sd": [
+        0.05202056005229043,
+        0.05358942661823931,
+        0.016427842174395798
+      ]
+    },
+    {
+      "condition": "EE",
+      "mean": 0.6289850267970606,
+      "metric": "predicted_positive_fraction",
+      "pretraining_sample_sd": 0.18710738620066583,
+      "pretraining_seed_values": [
+        0.5918282778054036,
+        0.831882976960053,
+        0.46324382562572514
+      ],
+      "role": "train",
+      "stage": "best",
+      "within_pretraining_sft_sample_sd": [
+        0.39653555642862887,
+        0.2713288989162247,
+        0.2716135429493607
+      ]
+    },
+    {
+      "condition": "EE",
+      "mean": 0.5006575918984678,
+      "metric": "accuracy",
+      "pretraining_sample_sd": 0.0008419680428290904,
+      "pretraining_seed_values": [
+        0.49970408364568947,
+        0.5012987439994739,
+        0.50096994805024
+      ],
+      "role": "validation",
+      "stage": "best",
+      "within_pretraining_sft_sample_sd": [
+        0.0003556471962383007,
+        0.0023808209812619377,
+        0.0014313957092812865
+      ]
+    },
+    {
+      "condition": "EE",
+      "mean": 0.5006575918984678,
+      "metric": "balanced_accuracy",
+      "pretraining_sample_sd": 0.0008419680428290904,
+      "pretraining_seed_values": [
+        0.49970408364568947,
+        0.5012987439994739,
+        0.50096994805024
+      ],
+      "role": "validation",
+      "stage": "best",
+      "within_pretraining_sft_sample_sd": [
+        0.00035564719623833147,
+        0.00238082098126192,
+        0.0014313957092812865
+      ]
+    },
+    {
+      "condition": "EE",
+      "mean": 0.5007606695474701,
+      "metric": "auroc",
+      "pretraining_sample_sd": 0.0029717069404956264,
+      "pretraining_seed_values": [
+        0.4975905513060295,
+        0.5034831841141988,
+        0.501208273222182
+      ],
+      "role": "validation",
+      "stage": "best",
+      "within_pretraining_sft_sample_sd": [
+        0.0033448344185636357,
+        0.0024648619871991875,
+        0.00047780681630425287
+      ]
+    },
+    {
+      "condition": "EE",
+      "mean": 0.6949121799605865,
+      "metric": "cross_entropy",
+      "pretraining_sample_sd": 0.00044571176316820203,
+      "pretraining_seed_values": [
+        0.69500247092123,
+        0.6944282354002224,
+        0.6953058335603072
+      ],
+      "role": "validation",
+      "stage": "best",
+      "within_pretraining_sft_sample_sd": [
+        0.000844639736817755,
+        0.0010141245816438816,
+        0.0010564172721591297
+      ]
+    },
+    {
+      "condition": "EE",
+      "mean": 0.0011634176877836386,
+      "metric": "mcc",
+      "pretraining_sample_sd": 0.001662824393015381,
+      "pretraining_seed_values": [
+        -0.0007532755899585441,
+        0.002220253520480326,
+        0.0020232751328291337
+      ],
+      "role": "validation",
+      "stage": "best",
+      "within_pretraining_sft_sample_sd": [
+        0.0009729102937115071,
+        0.005571662762207359,
+        0.0029553629167221426
+      ]
+    },
+    {
+      "condition": "EE",
+      "mean": 0.6436838298152167,
+      "metric": "predicted_positive_fraction",
+      "pretraining_sample_sd": 0.18627487340631665,
+      "pretraining_seed_values": [
+        0.5982442296310909,
+        0.8484743867955548,
+        0.4843328730190044
+      ],
+      "role": "validation",
+      "stage": "best",
+      "within_pretraining_sft_sample_sd": [
+        0.4173391596786453,
+        0.257543819135499,
+        0.32817659699187673
+      ]
+    },
+    {
+      "condition": "EE",
+      "mean": 0.5524200232057019,
+      "metric": "accuracy",
+      "pretraining_sample_sd": 0.0025688685131491427,
+      "pretraining_seed_values": [
+        0.5516741256423007,
+        0.5552792971987403,
+        0.550306646776065
+      ],
+      "role": "train",
+      "stage": "final",
+      "within_pretraining_sft_sample_sd": [
+        0.009492369399146406,
+        0.0023001307950236503,
+        0.008869539032850855
+      ]
+    },
+    {
+      "condition": "EE",
+      "mean": 0.552420023205702,
+      "metric": "balanced_accuracy",
+      "pretraining_sample_sd": 0.0025688685131492047,
+      "pretraining_seed_values": [
+        0.5516741256423007,
+        0.5552792971987404,
+        0.550306646776065
+      ],
+      "role": "train",
+      "stage": "final",
+      "within_pretraining_sft_sample_sd": [
+        0.009492369399146426,
+        0.0023001307950236516,
+        0.008869539032850855
+      ]
+    },
+    {
+      "condition": "EE",
+      "mean": 0.5834081641803827,
+      "metric": "auroc",
+      "pretraining_sample_sd": 0.002025825515456189,
+      "pretraining_seed_values": [
+        0.5856263635534149,
+        0.5829422306272901,
+        0.5816558983604431
+      ],
+      "role": "train",
+      "stage": "final",
+      "within_pretraining_sft_sample_sd": [
+        0.0010545479214670323,
+        0.003794302990740703,
+        0.003268266642081525
+      ]
+    },
+    {
+      "condition": "EE",
+      "mean": 0.6860729371652865,
+      "metric": "cross_entropy",
+      "pretraining_sample_sd": 0.0003207077597122348,
+      "pretraining_seed_values": [
+        0.6857844956309349,
+        0.6860160246978011,
+        0.6864182911671236
+      ],
+      "role": "train",
+      "stage": "final",
+      "within_pretraining_sft_sample_sd": [
+        0.0016372585807283239,
+        0.0010148157482495481,
+        0.0010158795155509296
+      ]
+    },
+    {
+      "condition": "EE",
+      "mean": 0.1145584474261875,
+      "metric": "mcc",
+      "pretraining_sample_sd": 0.003733845648936181,
+      "pretraining_seed_values": [
+        0.11475074883828744,
+        0.11819242653761815,
+        0.11073216690265693
+      ],
+      "role": "train",
+      "stage": "final",
+      "within_pretraining_sft_sample_sd": [
+        0.01043034478912104,
+        0.0013690185550345134,
+        0.009404817007567245
+      ]
+    },
+    {
+      "condition": "EE",
+      "mean": 0.5196557820874083,
+      "metric": "predicted_positive_fraction",
+      "pretraining_sample_sd": 0.0029611558399743067,
+      "pretraining_seed_values": [
+        0.5192690203878668,
+        0.5169070114370959,
+        0.5227913144372617
+      ],
+      "role": "train",
+      "stage": "final",
+      "within_pretraining_sft_sample_sd": [
+        0.26807005099119546,
+        0.21388868234219405,
+        0.2567443007241795
+      ]
+    },
+    {
+      "condition": "EE",
+      "mean": 0.5006027925735955,
+      "metric": "accuracy",
+      "pretraining_sample_sd": 0.0011015073241930412,
+      "pretraining_seed_values": [
+        0.4999342408101532,
+        0.5018741369106333,
+        0.5
+      ],
+      "role": "validation",
+      "stage": "final",
+      "within_pretraining_sft_sample_sd": [
+        0.0017927672624732714,
+        0.002358581022138193,
+        0.0018741369106332574
+      ]
+    },
+    {
+      "condition": "EE",
+      "mean": 0.5006027925735955,
+      "metric": "balanced_accuracy",
+      "pretraining_sample_sd": 0.0011015073241930412,
+      "pretraining_seed_values": [
+        0.4999342408101532,
+        0.5018741369106333,
+        0.5
+      ],
+      "role": "validation",
+      "stage": "final",
+      "within_pretraining_sft_sample_sd": [
+        0.0017927672624732714,
+        0.002358581022138193,
+        0.0018741369106332574
+      ]
+    },
+    {
+      "condition": "EE",
+      "mean": 0.5020908547812096,
+      "metric": "auroc",
+      "pretraining_sample_sd": 0.0026819849416407746,
+      "pretraining_seed_values": [
+        0.4997100316805177,
+        0.504996435200675,
+        0.501566097462436
+      ],
+      "role": "validation",
+      "stage": "final",
+      "within_pretraining_sft_sample_sd": [
+        0.0009564599329406882,
+        0.0010262595278448462,
+        0.00028935855980487897
+      ]
+    },
+    {
+      "condition": "EE",
+      "mean": 0.6966959922370419,
+      "metric": "cross_entropy",
+      "pretraining_sample_sd": 0.0004602972538787531,
+      "pretraining_seed_values": [
+        0.6967363143301171,
+        0.6962168604305035,
+        0.6971348019505054
+      ],
+      "role": "validation",
+      "stage": "final",
+      "within_pretraining_sft_sample_sd": [
+        0.0009334830232051883,
+        0.0019396827599883469,
+        0.0020407442941147765
+      ]
+    },
+    {
+      "condition": "EE",
+      "mean": 0.001185982975123542,
+      "metric": "mcc",
+      "pretraining_sample_sd": 0.002716864334607093,
+      "pretraining_seed_values": [
+        -0.000429468439680531,
+        0.004322676127009439,
+        -0.00033525876195828207
+      ],
+      "role": "validation",
+      "stage": "final",
+      "within_pretraining_sft_sample_sd": [
+        0.004387510915822213,
+        0.005615263469746559,
+        0.004485347827072674
+      ]
+    },
+    {
+      "condition": "EE",
+      "mean": 0.5473356568247079,
+      "metric": "predicted_positive_fraction",
+      "pretraining_sample_sd": 0.003748898673765651,
+      "pretraining_seed_values": [
+        0.5514236864601828,
+        0.5440586571973434,
+        0.5465246268165976
+      ],
+      "role": "validation",
+      "stage": "final",
+      "within_pretraining_sft_sample_sd": [
+        0.322210989911334,
+        0.27455230138536685,
+        0.29517765254214345
+      ]
+    }
+  ],
+  "paired_contrasts": [
+    {
+      "contrast": "EP-ES",
+      "mean": 0.010124868777280511,
+      "metric": "accuracy",
+      "pretraining_sample_sd": 0.046240177899654934,
+      "pretraining_seed_effects": [
+        0.063276976628543,
+        -0.020843693021713888,
+        -0.01205867727498757
+      ],
+      "role": "train",
+      "stage": "best"
+    },
+    {
+      "contrast": "EP-ES",
+      "mean": 0.010124868777280499,
+      "metric": "balanced_accuracy",
+      "pretraining_sample_sd": 0.04624017789965494,
+      "pretraining_seed_effects": [
+        0.063276976628543,
+        -0.020843693021713888,
+        -0.012058677274987606
+      ],
+      "role": "train",
+      "stage": "best"
+    },
+    {
+      "contrast": "EP-ES",
+      "mean": 0.01948294546302863,
+      "metric": "auroc",
+      "pretraining_sample_sd": 0.04876210173396096,
+      "pretraining_seed_effects": [
+        0.07547093257925104,
+        -0.013683237140200996,
+        -0.0033388590499641526
+      ],
+      "role": "train",
+      "stage": "best"
+    },
+    {
+      "contrast": "EP-ES",
+      "mean": -0.003252651364383512,
+      "metric": "cross_entropy",
+      "pretraining_sample_sd": 0.008584535788611482,
+      "pretraining_seed_effects": [
+        -0.013088885292759164,
+        0.002728777071413243,
+        0.0006021541281953832
+      ],
+      "role": "train",
+      "stage": "best"
+    },
+    {
+      "contrast": "EP-ES",
+      "mean": 0.015353513523185895,
+      "metric": "mcc",
+      "pretraining_sample_sd": 0.0961987886735629,
+      "pretraining_seed_effects": [
+        0.1264010373024885,
+        -0.037815988583703324,
+        -0.04252450814922749
+      ],
+      "role": "train",
+      "stage": "best"
+    },
+    {
+      "contrast": "EP-ES",
+      "mean": 0.06590143101828831,
+      "metric": "predicted_positive_fraction",
+      "pretraining_sample_sd": 0.15476984086664167,
+      "pretraining_seed_effects": [
+        -0.0989143046577159,
+        0.08847173877009779,
+        0.20814685894248305
+      ],
+      "role": "train",
+      "stage": "best"
+    },
+    {
+      "contrast": "EP-ES",
+      "mean": -0.0008713092654698739,
+      "metric": "accuracy",
+      "pretraining_sample_sd": 0.0073205847704248955,
+      "pretraining_seed_effects": [
+        0.0075458670349180705,
+        -0.004405865719734374,
+        -0.005753929111593318
+      ],
+      "role": "validation",
+      "stage": "best"
+    },
+    {
+      "contrast": "EP-ES",
+      "mean": -0.000871309265469849,
+      "metric": "balanced_accuracy",
+      "pretraining_sample_sd": 0.007320584770424908,
+      "pretraining_seed_effects": [
+        0.007545867034918108,
+        -0.0044058657197343365,
+        -0.005753929111593318
+      ],
+      "role": "validation",
+      "stage": "best"
+    },
+    {
+      "contrast": "EP-ES",
+      "mean": -0.0005195352209477199,
+      "metric": "auroc",
+      "pretraining_sample_sd": 0.004117650467501605,
+      "pretraining_seed_effects": [
+        0.004234494858050423,
+        -0.0029632126824089924,
+        -0.0028298878384845905
+      ],
+      "role": "validation",
+      "stage": "best"
+    },
+    {
+      "contrast": "EP-ES",
+      "mean": 0.00024838550988209244,
+      "metric": "cross_entropy",
+      "pretraining_sample_sd": 0.0002303396682751888,
+      "pretraining_seed_effects": [
+        0.0005007349853724715,
+        0.00019498555792100505,
+        4.943598635280081e-05
+      ],
+      "role": "validation",
+      "stage": "best"
+    },
+    {
+      "contrast": "EP-ES",
+      "mean": -0.0030175492512918927,
+      "metric": "mcc",
+      "pretraining_sample_sd": 0.019434873667859676,
+      "pretraining_seed_effects": [
+        0.018096006308969258,
+        -0.0069881564301937475,
+        -0.020160497632651188
+      ],
+      "role": "validation",
+      "stage": "best"
+    },
+    {
+      "contrast": "EP-ES",
+      "mean": 0.07727252800245502,
+      "metric": "predicted_positive_fraction",
+      "pretraining_sample_sd": 0.15702316957771512,
+      "pretraining_seed_effects": [
+        -0.08527322943381334,
+        0.0889721838626948,
+        0.22811862957848358
+      ],
+      "role": "validation",
+      "stage": "best"
+    },
+    {
+      "contrast": "EP-ES",
+      "mean": -0.0009530913310127589,
+      "metric": "accuracy",
+      "pretraining_sample_sd": 0.012859841346389763,
+      "pretraining_seed_effects": [
+        0.013591911155312405,
+        -0.010815514669318701,
+        -0.0056356704790319805
+      ],
+      "role": "train",
+      "stage": "final"
+    },
+    {
+      "contrast": "EP-ES",
+      "mean": -0.0009530913310127955,
+      "metric": "balanced_accuracy",
+      "pretraining_sample_sd": 0.012859841346389797,
+      "pretraining_seed_effects": [
+        0.013591911155312405,
+        -0.010815514669318774,
+        -0.005635670479032018
+      ],
+      "role": "train",
+      "stage": "final"
+    },
+    {
+      "contrast": "EP-ES",
+      "mean": -0.0018263685867845082,
+      "metric": "auroc",
+      "pretraining_sample_sd": 0.014257009844557002,
+      "pretraining_seed_effects": [
+        0.01260810651643048,
+        -0.015899025606141242,
+        -0.002188186670642763
+      ],
+      "role": "train",
+      "stage": "final"
+    },
+    {
+      "contrast": "EP-ES",
+      "mean": 0.0012551320430534232,
+      "metric": "cross_entropy",
+      "pretraining_sample_sd": 0.0047416165093228406,
+      "pretraining_seed_effects": [
+        -0.0032666602017431545,
+        0.006189597557230438,
+        0.0008424587736729864
+      ],
+      "role": "train",
+      "stage": "final"
+    },
+    {
+      "contrast": "EP-ES",
+      "mean": -0.0032323865166995203,
+      "metric": "mcc",
+      "pretraining_sample_sd": 0.023651280172699442,
+      "pretraining_seed_effects": [
+        0.02369398005894044,
+        -0.020646663461118916,
+        -0.012744476147920084
+      ],
+      "role": "train",
+      "stage": "final"
+    },
+    {
+      "contrast": "EP-ES",
+      "mean": 0.031313884745013544,
+      "metric": "predicted_positive_fraction",
+      "pretraining_sample_sd": 0.030531232585415485,
+      "pretraining_seed_effects": [
+        0.057185479860765824,
+        -0.0023620089507707664,
+        0.039118183325045575
+      ],
+      "role": "train",
+      "stage": "final"
+    },
+    {
+      "contrast": "EP-ES",
+      "mean": 0.0018248175182481701,
+      "metric": "accuracy",
+      "pretraining_sample_sd": 0.003473702361479027,
+      "pretraining_seed_effects": [
+        0.005753929111593337,
+        -0.0008384296705464441,
+        0.000558953113697617
+      ],
+      "role": "validation",
+      "stage": "final"
+    },
+    {
+      "contrast": "EP-ES",
+      "mean": 0.0018248175182481701,
+      "metric": "balanced_accuracy",
+      "pretraining_sample_sd": 0.003473702361479027,
+      "pretraining_seed_effects": [
+        0.005753929111593337,
+        -0.0008384296705464441,
+        0.000558953113697617
+      ],
+      "role": "validation",
+      "stage": "final"
+    },
+    {
+      "contrast": "EP-ES",
+      "mean": 0.0024477822757547926,
+      "metric": "auroc",
+      "pretraining_sample_sd": 0.004549158629697525,
+      "pretraining_seed_effects": [
+        0.007645493375089167,
+        -0.0008088678725856058,
+        0.0005067213247608171
+      ],
+      "role": "validation",
+      "stage": "final"
+    },
+    {
+      "contrast": "EP-ES",
+      "mean": -0.001636909712375043,
+      "metric": "cross_entropy",
+      "pretraining_sample_sd": 0.0009479408463476971,
+      "pretraining_seed_effects": [
+        -0.000943369661737877,
+        -0.0027170578780796317,
+        -0.00125030159730762
+      ],
+      "role": "validation",
+      "stage": "final"
+    },
+    {
+      "contrast": "EP-ES",
+      "mean": 0.0030171897246762786,
+      "metric": "mcc",
+      "pretraining_sample_sd": 0.006252851383238428,
+      "pretraining_seed_effects": [
+        0.010133255213968524,
+        -0.0015988408389395546,
+        0.0005171547989998651
+      ],
+      "role": "validation",
+      "stage": "final"
+    },
+    {
+      "contrast": "EP-ES",
+      "mean": 0.03691830516648036,
+      "metric": "predicted_positive_fraction",
+      "pretraining_sample_sd": 0.03273179913459025,
+      "pretraining_seed_effects": [
+        0.06776484513710791,
+        0.0025810482014861726,
+        0.04040902216084699
+      ],
+      "role": "validation",
+      "stage": "final"
+    },
+    {
+      "contrast": "EP-EE",
+      "mean": 0.011961986850102196,
+      "metric": "accuracy",
+      "pretraining_sample_sd": 0.0363343992484164,
+      "pretraining_seed_effects": [
+        0.0428891098955743,
+        0.02105088678932539,
+        -0.0280540361345931
+      ],
+      "role": "train",
+      "stage": "best"
+    },
+    {
+      "contrast": "EP-EE",
+      "mean": 0.011961986850102182,
+      "metric": "balanced_accuracy",
+      "pretraining_sample_sd": 0.0363343992484164,
+      "pretraining_seed_effects": [
+        0.0428891098955743,
+        0.021050886789325356,
+        -0.0280540361345931
+      ],
+      "role": "train",
+      "stage": "best"
+    },
+    {
+      "contrast": "EP-EE",
+      "mean": 0.012262975893484218,
+      "metric": "auroc",
+      "pretraining_sample_sd": 0.0322472863172385,
+      "pretraining_seed_effects": [
+        0.04095643816460156,
+        0.0184686507484156,
+        -0.02263616123256451
+      ],
+      "role": "train",
+      "stage": "best"
+    },
+    {
+      "contrast": "EP-EE",
+      "mean": -0.003930509247676572,
+      "metric": "cross_entropy",
+      "pretraining_sample_sd": 0.006619128760527203,
+      "pretraining_seed_effects": [
+        -0.009806912730142447,
+        -0.005224774533117982,
+        0.003240159520230712
+      ],
+      "role": "train",
+      "stage": "best"
+    },
+    {
+      "contrast": "EP-EE",
+      "mean": 0.016080251121611763,
+      "metric": "mcc",
+      "pretraining_sample_sd": 0.07500882059841978,
+      "pretraining_seed_effects": [
+        0.07703851628104563,
+        0.038887051011262726,
+        -0.06768481392747307
+      ],
+      "role": "train",
+      "stage": "best"
+    },
+    {
+      "contrast": "EP-EE",
+      "mean": 0.03956019669595009,
+      "metric": "predicted_positive_fraction",
+      "pretraining_sample_sd": 0.247207976085967,
+      "pretraining_seed_effects": [
+        -0.0778634178683905,
+        -0.12705121829935354,
+        0.3235952262555943
+      ],
+      "role": "train",
+      "stage": "best"
+    },
+    {
+      "contrast": "EP-EE",
+      "mean": 0.006959514258784326,
+      "metric": "accuracy",
+      "pretraining_sample_sd": 0.006876893893240044,
+      "pretraining_seed_effects": [
+        0.014697178930755542,
+        0.0046360228841980655,
+        0.0015453409613993736
+      ],
+      "role": "validation",
+      "stage": "best"
+    },
+    {
+      "contrast": "EP-EE",
+      "mean": 0.0069595142587843386,
+      "metric": "balanced_accuracy",
+      "pretraining_sample_sd": 0.0068768938932400525,
+      "pretraining_seed_effects": [
+        0.014697178930755561,
+        0.004636022884198084,
+        0.0015453409613993736
+      ],
+      "role": "validation",
+      "stage": "best"
+    },
+    {
+      "contrast": "EP-EE",
+      "mean": 0.015271375099901988,
+      "metric": "auroc",
+      "pretraining_sample_sd": 0.00678623570987944,
+      "pretraining_seed_effects": [
+        0.022591061137586244,
+        0.009188797604824273,
+        0.01403426655729545
+      ],
+      "role": "validation",
+      "stage": "best"
+    },
+    {
+      "contrast": "EP-EE",
+      "mean": -0.0009362654850425534,
+      "metric": "cross_entropy",
+      "pretraining_sample_sd": 0.0011196552161176815,
+      "pretraining_seed_effects": [
+        -0.001152232737123245,
+        0.0002756413323934022,
+        -0.0019322050503978172
+      ],
+      "role": "validation",
+      "stage": "best"
+    },
+    {
+      "contrast": "EP-EE",
+      "mean": 0.014073050316806798,
+      "metric": "mcc",
+      "pretraining_sample_sd": 0.015579644770168035,
+      "pretraining_seed_effects": [
+        0.030409366750298,
+        0.012429377152788202,
+        -0.0006195929526658105
+      ],
+      "role": "validation",
+      "stage": "best"
+    },
+    {
+      "contrast": "EP-EE",
+      "mean": 0.04168036649788476,
+      "metric": "predicted_positive_fraction",
+      "pretraining_sample_sd": 0.23950037782255795,
+      "pretraining_seed_effects": [
+        -0.06687709607417631,
+        -0.12431774840533966,
+        0.31623594397317023
+      ],
+      "role": "validation",
+      "stage": "best"
+    },
+    {
+      "contrast": "EP-EE",
+      "mean": 0.015401403392452625,
+      "metric": "accuracy",
+      "pretraining_sample_sd": 0.011511498770275734,
+      "pretraining_seed_effects": [
+        0.028675617437427452,
+        0.009365158296038492,
+        0.008163434443891929
+      ],
+      "role": "train",
+      "stage": "final"
+    },
+    {
+      "contrast": "EP-EE",
+      "mean": 0.0154014033924526,
+      "metric": "balanced_accuracy",
+      "pretraining_sample_sd": 0.011511498770275783,
+      "pretraining_seed_effects": [
+        0.028675617437427487,
+        0.009365158296038381,
+        0.008163434443891929
+      ],
+      "role": "train",
+      "stage": "final"
+    },
+    {
+      "contrast": "EP-EE",
+      "mean": 0.021142885904968933,
+      "metric": "auroc",
+      "pretraining_sample_sd": 0.011209477180680095,
+      "pretraining_seed_effects": [
+        0.03391192218696389,
+        0.01659307836404167,
+        0.01292365716390124
+      ],
+      "role": "train",
+      "stage": "final"
+    },
+    {
+      "contrast": "EP-EE",
+      "mean": -0.005663771099349753,
+      "metric": "cross_entropy",
+      "pretraining_sample_sd": 0.0030681054526897865,
+      "pretraining_seed_effects": [
+        -0.009205627547366757,
+        -0.003961477742974839,
+        -0.0038242080077076634
+      ],
+      "role": "train",
+      "stage": "final"
+    },
+    {
+      "contrast": "EP-EE",
+      "mean": 0.02825374788564225,
+      "metric": "mcc",
+      "pretraining_sample_sd": 0.021414367692042597,
+      "pretraining_seed_effects": [
+        0.05281868518623697,
+        0.01842036788490119,
+        0.013522190585788588
+      ],
+      "role": "train",
+      "stage": "final"
+    },
+    {
+      "contrast": "EP-EE",
+      "mean": -0.04562406762804575,
+      "metric": "predicted_positive_fraction",
+      "pretraining_sample_sd": 0.023018434972567944,
+      "pretraining_seed_effects": [
+        -0.051549809381733785,
+        -0.0202221117188795,
+        -0.06510028178352396
+      ],
+      "role": "train",
+      "stage": "final"
+    },
+    {
+      "contrast": "EP-EE",
+      "mean": 0.0096611209749896,
+      "metric": "accuracy",
+      "pretraining_sample_sd": 0.003539650395231188,
+      "pretraining_seed_effects": [
+        0.013086078779509458,
+        0.006016965870980477,
+        0.009880318274478864
+      ],
+      "role": "validation",
+      "stage": "final"
+    },
+    {
+      "contrast": "EP-EE",
+      "mean": 0.0096611209749896,
+      "metric": "balanced_accuracy",
+      "pretraining_sample_sd": 0.003539650395231188,
+      "pretraining_seed_effects": [
+        0.013086078779509458,
+        0.006016965870980477,
+        0.009880318274478864
+      ],
+      "role": "validation",
+      "stage": "final"
+    },
+    {
+      "contrast": "EP-EE",
+      "mean": 0.013581666727919982,
+      "metric": "auroc",
+      "pretraining_sample_sd": 0.005598532839209543,
+      "pretraining_seed_effects": [
+        0.019391725418267187,
+        0.00822184951762476,
+        0.013131425247867997
+      ],
+      "role": "validation",
+      "stage": "final"
+    },
+    {
+      "contrast": "EP-EE",
+      "mean": -0.001447425229990874,
+      "metric": "cross_entropy",
+      "pretraining_sample_sd": 0.0003343421189290385,
+      "pretraining_seed_effects": [
+        -0.0016408422183432636,
+        -0.0010613604606926803,
+        -0.0016400730109366786
+      ],
+      "role": "validation",
+      "stage": "final"
+    },
+    {
+      "contrast": "EP-EE",
+      "mean": 0.020647924489459606,
+      "metric": "mcc",
+      "pretraining_sample_sd": 0.00746132242476616,
+      "pretraining_seed_effects": [
+        0.027532097487191053,
+        0.012719474883432664,
+        0.021692201097755104
+      ],
+      "role": "validation",
+      "stage": "final"
+    },
+    {
+      "contrast": "EP-EE",
+      "mean": -0.05584599197737881,
+      "metric": "predicted_positive_fraction",
+      "pretraining_sample_sd": 0.02405051346855704,
+      "pretraining_seed_effects": [
+        -0.0641809692904583,
+        -0.02873676596304332,
+        -0.07462024067863482
+      ],
+      "role": "validation",
+      "stage": "final"
+    },
+    {
+      "contrast": "ES-EE",
+      "mean": 0.0018371180728216825,
+      "metric": "accuracy",
+      "pretraining_sample_sd": 0.034760231760389115,
+      "pretraining_seed_effects": [
+        -0.0203878667329687,
+        0.04189457981103928,
+        -0.01599535885960553
+      ],
+      "role": "train",
+      "stage": "best"
+    },
+    {
+      "contrast": "ES-EE",
+      "mean": 0.0018371180728216825,
+      "metric": "balanced_accuracy",
+      "pretraining_sample_sd": 0.03476023176038909,
+      "pretraining_seed_effects": [
+        -0.0203878667329687,
+        0.041894579811039244,
+        -0.015995358859605496
+      ],
+      "role": "train",
+      "stage": "best"
+    },
+    {
+      "contrast": "ES-EE",
+      "mean": -0.007219969569544417,
+      "metric": "auroc",
+      "pretraining_sample_sd": 0.03493562801261909,
+      "pretraining_seed_effects": [
+        -0.03451449441464949,
+        0.032151887888616594,
+        -0.019297302182600357
+      ],
+      "role": "train",
+      "stage": "best"
+    },
+    {
+      "contrast": "ES-EE",
+      "mean": -0.0006778578832930599,
+      "metric": "cross_entropy",
+      "pretraining_sample_sd": 0.006309157057257729,
+      "pretraining_seed_effects": [
+        0.003281972562616716,
+        -0.007953551604531225,
+        0.002638005392035329
+      ],
+      "role": "train",
+      "stage": "best"
+    },
+    {
+      "contrast": "ES-EE",
+      "mean": 0.0007267375984258718,
+      "metric": "mcc",
+      "pretraining_sample_sd": 0.06690093911502004,
+      "pretraining_seed_effects": [
+        -0.04936252102144286,
+        0.07670303959496605,
+        -0.025160305778245573
+      ],
+      "role": "train",
+      "stage": "best"
+    },
+    {
+      "contrast": "ES-EE",
+      "mean": -0.026341234322338227,
+      "metric": "predicted_positive_fraction",
+      "pretraining_sample_sd": 0.1704993086451784,
+      "pretraining_seed_effects": [
+        0.02105088678932543,
+        -0.21552295706945132,
+        0.11544836731311121
+      ],
+      "role": "train",
+      "stage": "best"
+    },
+    {
+      "contrast": "ES-EE",
+      "mean": 0.007830823524254201,
+      "metric": "accuracy",
+      "pretraining_sample_sd": 0.0010514189821183638,
+      "pretraining_seed_effects": [
+        0.0071513118958374715,
+        0.009041888603932438,
+        0.007299270072992692
+      ],
+      "role": "validation",
+      "stage": "best"
+    },
+    {
+      "contrast": "ES-EE",
+      "mean": 0.00783082352425419,
+      "metric": "balanced_accuracy",
+      "pretraining_sample_sd": 0.0010514189821183597,
+      "pretraining_seed_effects": [
+        0.007151311895837453,
+        0.009041888603932421,
+        0.007299270072992692
+      ],
+      "role": "validation",
+      "stage": "best"
+    },
+    {
+      "contrast": "ES-EE",
+      "mean": 0.01579091032084971,
+      "metric": "auroc",
+      "pretraining_sample_sd": 0.0032385210202628273,
+      "pretraining_seed_effects": [
+        0.01835656627953582,
+        0.012152010287233264,
+        0.01686415439578004
+      ],
+      "role": "validation",
+      "stage": "best"
+    },
+    {
+      "contrast": "ES-EE",
+      "mean": -0.0011846509949246457,
+      "metric": "cross_entropy",
+      "pretraining_sample_sd": 0.0011080421708524056,
+      "pretraining_seed_effects": [
+        -0.0016529677224957167,
+        8.065577447239718e-05,
+        -0.001981641036750618
+      ],
+      "role": "validation",
+      "stage": "best"
+    },
+    {
+      "contrast": "ES-EE",
+      "mean": 0.01709059956809869,
+      "metric": "mcc",
+      "pretraining_sample_sd": 0.004137670282012597,
+      "pretraining_seed_effects": [
+        0.012313360441328747,
+        0.01941753358298195,
+        0.019540904679985375
+      ],
+      "role": "validation",
+      "stage": "best"
+    },
+    {
+      "contrast": "ES-EE",
+      "mean": -0.03559216150457025,
+      "metric": "predicted_positive_fraction",
+      "pretraining_sample_sd": 0.15778984147263425,
+      "pretraining_seed_effects": [
+        0.01839613335963704,
+        -0.21328993226803447,
+        0.08811731439468666
+      ],
+      "role": "validation",
+      "stage": "best"
+    },
+    {
+      "contrast": "ES-EE",
+      "mean": 0.016354494723465385,
+      "metric": "accuracy",
+      "pretraining_sample_sd": 0.003375245193619814,
+      "pretraining_seed_effects": [
+        0.015083706282115047,
+        0.020180672965357194,
+        0.01379910492292391
+      ],
+      "role": "train",
+      "stage": "final"
+    },
+    {
+      "contrast": "ES-EE",
+      "mean": 0.016354494723465392,
+      "metric": "balanced_accuracy",
+      "pretraining_sample_sd": 0.003375245193619772,
+      "pretraining_seed_effects": [
+        0.015083706282115084,
+        0.020180672965357156,
+        0.013799104922923947
+      ],
+      "role": "train",
+      "stage": "final"
+    },
+    {
+      "contrast": "ES-EE",
+      "mean": 0.022969254491753438,
+      "metric": "auroc",
+      "pretraining_sample_sd": 0.008809008198772424,
+      "pretraining_seed_effects": [
+        0.02130381567053341,
+        0.03249210397018291,
+        0.015111843834544003
+      ],
+      "role": "train",
+      "stage": "final"
+    },
+    {
+      "contrast": "ES-EE",
+      "mean": -0.0069189031424031775,
+      "metric": "cross_entropy",
+      "pretraining_sample_sd": 0.0028705208281244975,
+      "pretraining_seed_effects": [
+        -0.0059389673456236025,
+        -0.010151075300205278,
+        -0.00466666678138065
+      ],
+      "role": "train",
+      "stage": "final"
+    },
+    {
+      "contrast": "ES-EE",
+      "mean": 0.03148613440234177,
+      "metric": "mcc",
+      "pretraining_sample_sd": 0.00671897274274939,
+      "pretraining_seed_effects": [
+        0.02912470512729653,
+        0.03906703134602011,
+        0.02626666673370867
+      ],
+      "role": "train",
+      "stage": "final"
+    },
+    {
+      "contrast": "ES-EE",
+      "mean": -0.07693795237305928,
+      "metric": "predicted_positive_fraction",
+      "pretraining_sample_sd": 0.05121273924057452,
+      "pretraining_seed_effects": [
+        -0.1087352892424996,
+        -0.017860102768108732,
+        -0.10421846510856954
+      ],
+      "role": "train",
+      "stage": "final"
+    },
+    {
+      "contrast": "ES-EE",
+      "mean": 0.00783630345674143,
+      "metric": "accuracy",
+      "pretraining_sample_sd": 0.0013080060484804792,
+      "pretraining_seed_effects": [
+        0.007332149667916121,
+        0.006855395541526921,
+        0.009321365160781248
+      ],
+      "role": "validation",
+      "stage": "final"
+    },
+    {
+      "contrast": "ES-EE",
+      "mean": 0.00783630345674143,
+      "metric": "balanced_accuracy",
+      "pretraining_sample_sd": 0.0013080060484804792,
+      "pretraining_seed_effects": [
+        0.007332149667916121,
+        0.006855395541526921,
+        0.009321365160781248
+      ],
+      "role": "validation",
+      "stage": "final"
+    },
+    {
+      "contrast": "ES-EE",
+      "mean": 0.011133884452165189,
+      "metric": "auroc",
+      "pretraining_sample_sd": 0.0018736093453079617,
+      "pretraining_seed_effects": [
+        0.01174623204317802,
+        0.009030717390210366,
+        0.01262470392310718
+      ],
+      "role": "validation",
+      "stage": "final"
+    },
+    {
+      "contrast": "ES-EE",
+      "mean": 0.0001894844823841687,
+      "metric": "cross_entropy",
+      "pretraining_sample_sd": 0.0012790642190384112,
+      "pretraining_seed_effects": [
+        -0.0006974725566053867,
+        0.0016556974173869514,
+        -0.00038977141362905865
+      ],
+      "role": "validation",
+      "stage": "final"
+    },
+    {
+      "contrast": "ES-EE",
+      "mean": 0.01763073476478333,
+      "metric": "mcc",
+      "pretraining_sample_sd": 0.003434242150024972,
+      "pretraining_seed_effects": [
+        0.01739884227322253,
+        0.014318315722372221,
+        0.021175046298755235
+      ],
+      "role": "validation",
+      "stage": "final"
+    },
+    {
+      "contrast": "ES-EE",
+      "mean": -0.09276429714385918,
+      "metric": "predicted_positive_fraction",
+      "pretraining_sample_sd": 0.05388223392088407,
+      "pretraining_seed_effects": [
+        -0.13194581442756623,
+        -0.031317814164529494,
+        -0.11502926283948182
+      ],
+      "role": "validation",
+      "stage": "final"
+    }
+  ],
+  "prediction_artifacts": 270,
+  "prediction_rows": 3823200,
+  "prepared_manifest_sha256": "2ea23ffd2793ed2142156f2942cc4bfb77767a0c3e87ba668a77c34a3a16c010",
+  "pretraining_runs": 9,
+  "protocol_sha256": "60ce5e0518475fb0e4ba8a83d34d45fbe4c89e74e12fb984abbe41c8fd3eff24",
+  "source_counts": {
+    "train": 8044,
+    "validation": 20276
+  },
+  "source_fits": 27,
+  "source_only": true,
+  "source_test_scoring_enabled": false,
+  "status": "completed",
+  "surface_reference": {
+    "checkpoint": "surface/lambda0.json",
+    "checkpoint_sha256": "e7fcaa1536c76a4012757bcb9264c5e4cdfbb16333de0ed09294253743ae056a",
+    "lambda": 0.0001,
+    "metrics": {
+      "train": {
+        "accuracy": 0.9005469915464943,
+        "auroc": 0.9572920172269821,
+        "balanced_accuracy": 0.9005469915464943,
+        "confusion_matrix": [
+          [
+            3828,
+            194
+          ],
+          [
+            606,
+            3416
+          ]
+        ],
+        "cross_entropy": 0.24154668248039005,
+        "mcc": 0.8053303951451531,
+        "predicted_positive_fraction": 0.44878170064644457,
+        "rows": 8044
+      },
+      "validation": {
+        "accuracy": 0.9010652988755179,
+        "auroc": 0.9583090255246973,
+        "balanced_accuracy": 0.9010652988755179,
+        "confusion_matrix": [
+          [
+            9678,
+            460
+          ],
+          [
+            1546,
+            8592
+          ]
+        ],
+        "cross_entropy": 0.24024867384094578,
+        "mcc": 0.8067728382301899,
+        "predicted_positive_fraction": 0.44643913986979683,
+        "rows": 20276
+      }
+    },
+    "seed_sd": null,
+    "selected_candidate": "lambda0"
+  },
+  "target_scoring_enabled": false,
+  "uncertainty": "descriptive_sample_SD_over_3_pretraining_seeds_after_3_SFT_seed_mean; no_CI_or_pvalues"
+}
