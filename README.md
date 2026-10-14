@@ -1,31 +1,27 @@
-# bio2nl: protein-pair supervision and English transfer
+# Bio2NL: transfer between English and protein pairs
 
-This repository studies whether protein sequence-pair supervision transfers to English sentence-pair prediction. The current audited experiment uses nine fresh pretraining runs, 27 full source fine-tuning runs, and fixed evaluation of all 27 source-selected classifiers. Historical root-level experiments and paper files remain unchanged; the versioned release below identifies the current source and access instructions.
+This project studies direct pair-classifier transfer in both directions using official GPT-2 and a separate from-scratch shared-BPE experiment. The **October 2026 rebuilt release** below is the current data/model entrypoint. Historical experiment and manuscript files remain preserved; they do not automatically describe the current results.
 
-## Current portable release
+## Current data and models
 
-- [Portable reproduction instructions](releases/2026-10-03-portable-v2/source/README.md) and [exact source manifest](releases/2026-10-03-portable-v2/source/MANIFEST.json).
-- [The same versioned source archive on Hugging Face](https://huggingface.co/datasets/dnagpt/bio2nl/tree/b333517eb3f03886ab92215175653a5c87b5f7cf/releases/2026-10-03-portable-v2), dataset revision `b333517eb3f03886ab92215175653a5c87b5f7cf`.
-- [Pinned biological inputs and tokenizer](https://huggingface.co/datasets/dnagpt/bio2nl/tree/5c5692107582866a3984973f83a2ac27d9a1ea89/releases/2026-10-03-portable-v2), dataset revision `5c5692107582866a3984973f83a2ac27d9a1ea89`.
-- [All 9 pretrained models and 27 complete source-selected classifiers](https://huggingface.co/dnagpt/bio2nl-models/tree/9fdd0794820ef4534b7f97fcd2c7a2893aba7a9d), model revision `9fdd0794820ef4534b7f97fcd2c7a2893aba7a9d`. Weights are separate downloads, approximately 15.85 GB; they are not in this Git repository.
-- [Current fixed-transfer results](releases/2026-10-03-portable-v2/source/study_source/results/oct2/fixed_transfer/REPORT.md) and [Source Data](releases/2026-10-03-portable-v2/source/study_source/paper_assets/source_data/README.md).
+| Resource | Public repository | Contents |
+|---|---|---|
+| Task data and experiment code | [dnagpt/bio2nl-data-2026-10](https://huggingface.co/datasets/dnagpt/bio2nl-data-2026-10) | 34 loadable configurations; BLAST pair views, SFT sources, PAWS-X, remote and functional sources; English proxy reconstruction, protocols and results |
+| Complete model bank | [dnagpt/bio2nl-models-2026-10](https://huggingface.co/dnagpt/bio2nl-models-2026-10) | 313 complete checkpoint files, approximately 141.72 GiB; per-model data/seed/format/hash records |
+| Pretraining materials | [dnagpt/bio2nl-pretraining-2026-10](https://huggingface.co/datasets/dnagpt/bio2nl-pretraining-2026-10) | Natural/shuffled protein corpora, actual token streams, shared tokenizer, exact English selection and reconstruction |
 
-The release retains all 190 previously published source files under `study_source/` and adds public acquisition, local input preparation, guarded source-training and standalone CPU model-loading tools. English/QQP text is obtained from fixed upstream versions and reconstructed locally under original terms. Raw or reversible NLP inputs, row predictions and private review correspondence are not redistributed in this source release.
+Use the **[data and model guide](docs/DATA_AND_MODELS.md)** for pinned revisions, model-to-data mapping, loading examples and the scope of reproduction. Machine-readable pins are in [releases/2026-10/resources.json](releases/2026-10/resources.json). The separate [pretraining guide](docs/PRETRAINING.md) explains corpus sizes, input budgets and why English text is reconstructed from its original source.
 
-## Experiment and interpretation
+## Experiment map
 
-EP combines English with natural protein exposure; ES uses the same English blocks and shuffled protein; EE uses twice the English exposure at the same total token budget. Each condition has three independent pretraining seeds, each followed by three source fine-tuning seeds. Statistics first average the fine-tuning repeats within each pretraining seed, then report the mean and sample SD across the three pretraining seeds.
+- **English → protein:** 100 official GPT-2 classifiers, English PAWS-X SFT seeds 1–100; standard rebuilt protein targets and 4 positive identity bands × 3 negative strategies × 2 BLAST views.
+- **Protein → English:** five ordinary V2 protein groups × 20 seeds; remote-labelled and measured functional-variant sources × 20 seeds each; English cosine-relatedness groups and PAWS-X remain distinct targets.
+- **From scratch:** EP (English + protein), ES (English + shuffled protein) and EE (English + extra English), one pretraining seed per condition, followed by the same protein SFT with 20 fine-tuning seeds each.
 
-The natural-protein condition has a modest exploratory QQP ranking gain over its shuffled control: paired AUC difference **+0.029560 ± 0.018655**, positive for all three pretraining-seed groups. Its protein-test accuracy is **50.76%**, and English balanced accuracy is **50.18%**. Weak source learning and fixed English classification limit interpretation. These results do not establish statistical significance, transferable protein-relation semantics, a general directional asymmetry, or impossibility of transfer. The QQP cohort was evaluated historically and is not a new blind test.
+Results are exploratory and task-dependent. We retain raw and validation-oriented accuracy, all prescribed seeds, matched initial controls where evaluated, and the same selected seed's existing confirmation score. A label flip is fixed on validation, not selected to maximize held-out accuracy. High English cosine-proxy scores are not human-paraphrase accuracy. Weak source validation, reused confirmation data, different input/training recipes and the stronger EE control remain explicit. Fine-tuning seeds are not independent pretraining runs.
 
-Protein examples are constructed directly from pinned UniProtKB/Swiss-Prot records using normalization, MMseqs2 search/clustering, split assignment and explicit pairing rules. Labels describe **operational sequence similarity**, not certified structural homology or evolutionary independence. Pair splits contain 99,818 / 20,276 / 20,854 rows; the experimental source training subset contains 8,044 rows. The budget-matched surface reference uses BPE-token statistics; raw-residue construction baselines use all 99,818 training rows and are reported separately. Equal BPE-token budgets do not guarantee equal residue or parent-record exposure.
+## Reproduction and historical material
 
-## Reproduction scope
+Current task-data verification, English reconstruction, original construction/training snapshots and per-seed results are packaged with the task-data repository. The model repository provides format-specific loaders. The pretraining companion provides a portable corpus/token reconstruction helper. Published file identities and representative downloads/loaders were verified; a complete fresh public-only GPU rerun of every experiment is not claimed.
 
-Read the [versioned README](releases/2026-10-03-portable-v2/source/README.md) for installation and exact commands. CPU input preparation reproduces the 22 locked scientific payloads. The frozen training algorithms and budgets are preserved, but a new complete GPU training run and second-machine reproduction have not been demonstrated by this publication.
-
-The current environment imports PyTorch 2.3.0+cu121 while installed package metadata reports 2.9.1. The portable compiler refuses normal GPU execution under that mismatch; an explicit CPU-validation-only protocol permanently disables its GPU paths. The exact October 2 imported binary is not established by archived package metadata. Original weights and recorded results remain unchanged.
-
-The model readback checks all 36 remote LFS identities and physically downloads 2 prespecified weights, plus all 18 supporting files. The downloaded PT and classifier pass standalone CPU loading and an unlabeled toy-pair check. This is a technical loading check, not new benchmark evidence.
-
-No permanent DOI or blanket model-weight license is asserted. Source-specific attribution and terms apply. Earlier releases remain at [2026-10-03-v1](releases/2026-10-03-v1/README.md); the historical September experiments and the separate `emergence` project are not relabelled as current results.
+The [October 3 release](docs/release_2026-10-03_historical.md) remains available for its original nine-pretraining-run/27-classifier protocol. Its seed hierarchy and scores are historical and must not be mixed with the October 8 EP/ES/EE experiment. Earlier `paper/` files are preserved historical manuscripts; this documentation update does not publish private revision drafts or reviewer correspondence. Source-specific licenses and attribution are recorded in each Hugging Face repository.

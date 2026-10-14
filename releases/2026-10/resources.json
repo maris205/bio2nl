@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "release": "2026-10",
+  "repositories": {
+    "task_data": {
+      "repo_id": "dnagpt/bio2nl-data-2026-10",
+      "repo_type": "dataset",
+      "revision": "df6f04914fd3f1cd79abc14e157d65a188df89b0",
+      "configurations": 34
+    },
+    "models": {
+      "repo_id": "dnagpt/bio2nl-models-2026-10",
+      "repo_type": "model",
+      "revision": "62a70cc109af90d1cbe673beac4cffabdc0a4886",
+      "checkpoint_files": 313,
+      "weight_bytes": 152174855774
+    },
+    "pretraining": {
+      "repo_id": "dnagpt/bio2nl-pretraining-2026-10",
+      "repo_type": "dataset",
+      "revision": "003e291abac2ba411b4054a7f60d50567e7f1dfa",
+      "payload_files": 39,
+      "protein_records": 137736,
+      "shuffled_records": 137736,
+      "english_common_records": 361356,
+      "english_extra_records": 361643
+    }
+  },
+  "current_joint_pretraining": {
+    "conditions": [
+      "EP",
+      "ES",
+      "EE"
+    ],
+    "pretraining_seeds": [
+      0
+    ],
+    "fine_tuning_seeds": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "tokens_per_condition": 268435456
+  },
+  "limitations": [
+    "Exact source/weight identities and representative public loading verified; not all experiments retrained from public-only inputs",
+    "English web text and reversible English bins reconstructed from pinned upstream sources",
+    "Fine-tuning seeds and same-seed recipe replays are not independent pretraining replication"
+  ]
+}
