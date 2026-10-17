@@ -5,8 +5,83 @@
     "task_data": {
       "repo_id": "dnagpt/bio2nl-data-2026-10",
       "repo_type": "dataset",
-      "revision": "df6f04914fd3f1cd79abc14e157d65a188df89b0",
-      "configurations": 34
+      "revision": "caa811073877f3772057192e1d5b22054d16b8d5",
+      "configurations": 41,
+      "actual_pair_configurations": 36,
+      "english_reconstruction_metadata_configurations": 5,
+      "task_data_extension": "extensions/paper-task-data-2026-10-17",
+      "task_catalog": "extensions/paper-task-data-2026-10-17/task_catalog.json",
+      "english_expansion_extension": "extensions/english-relatedness-2000-2026-10-17",
+      "fine_tuning_sources": {
+        "pawsx_clean": {
+          "train": 49258
+        },
+        "sft_blast_id30_40": {
+          "train": 10000
+        },
+        "sft_blast_id40_60": {
+          "train": 10000
+        },
+        "sft_blast_id60_80": {
+          "train": 10000
+        },
+        "sft_blast_id80_100": {
+          "train": 10000
+        },
+        "sft_blast_mixed": {
+          "train": 10000
+        },
+        "scope_remote": {
+          "train": 13732
+        },
+        "dms_function": {
+          "train": 3684
+        }
+      },
+      "completed_task_archives": {
+        "protein_paws_reference_gap_cleaned": {
+          "train": 14000,
+          "validation": 3000,
+          "test": 3000,
+          "train_role": "Archived only; forward classifiers are fine-tuned on pawsx_clean/train."
+        },
+        "standard_reference": {
+          "train": 99818,
+          "validation": 20276,
+          "test": 20854,
+          "train_role": "Historical target-supervised feature baseline, not English-to-protein FT."
+        },
+        "scope_remote_identity_matched": {
+          "validation": 1696,
+          "test": 1832,
+          "direction": "Frozen original full-validation polarity; no subset reselection."
+        }
+      },
+      "english_relatedness_targets": {
+        "original_bands": {
+          "configurations": [
+            "english_cos60_70_metadata",
+            "english_cos70_80_metadata",
+            "english_cos80_90_metadata",
+            "english_cos90_100_metadata"
+          ],
+          "per_configuration_rows": {
+            "validation": 136,
+            "test": 544,
+            "confirmation": 1000
+          }
+        },
+        "expanded_highest_band": {
+          "config_name": "english_cos90_100_expanded_metadata",
+          "rows": {
+            "validation": 136,
+            "original1000": 1000,
+            "new1000": 1000,
+            "test": 2000
+          },
+          "test_definition": "Unchanged original1000 followed by additional new1000; not an entirely new blind test."
+        }
+      }
     },
     "models": {
       "repo_id": "dnagpt/bio2nl-models-2026-10",
@@ -62,6 +137,21 @@
   "limitations": [
     "Exact source/weight identities and representative public loading verified; not all experiments retrained from public-only inputs",
     "English web text and reversible English bins reconstructed from pinned upstream sources",
-    "Fine-tuning seeds and same-seed recipe replays are not independent pretraining replication"
-  ]
+    "Fine-tuning seeds and same-seed recipe replays are not independent pretraining replication",
+    "The five English relatedness configurations contain reconstruction metadata, not directly usable sequence strings",
+    "The legacy Reference protein train split is archival; its English-to-protein condition uses 49258 PAWS-X FT rows",
+    "Reference hyphen removal retains fragments, self-pairs, duplicates and documented split overlap",
+    "The expanded 2000-pair target reuses the original 1000-pair confirmation set and does not replace the original 544/1000 pretraining-comparison targets",
+    "The task-data completion does not publish PP or whole-network random-control weights"
+  ],
+  "local_only_weights_not_uploaded_by_task_completion": {
+    "PP": {
+      "pretrained_checkpoints": 1,
+      "fine_tuned_checkpoints": 20
+    },
+    "whole_network_random_controls": {
+      "checkpoints": 20
+    },
+    "scope": "These are known local follow-up weights, not part of the 313-file published model bank; this is not an exhaustive claim about every historical artifact."
+  }
 }

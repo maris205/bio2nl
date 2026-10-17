@@ -6,17 +6,21 @@ This project studies direct pair-classifier transfer in both directions using of
 
 | Resource | Public repository | Contents |
 |---|---|---|
-| Task data and experiment code | [dnagpt/bio2nl-data-2026-10](https://huggingface.co/datasets/dnagpt/bio2nl-data-2026-10) | 34 loadable configurations; BLAST pair views, SFT sources, PAWS-X, remote and functional sources; English proxy reconstruction, protocols and results |
-| Complete model bank | [dnagpt/bio2nl-models-2026-10](https://huggingface.co/dnagpt/bio2nl-models-2026-10) | 313 complete checkpoint files, approximately 141.72 GiB; per-model data/seed/format/hash records |
+| Task data and experiment code | [dnagpt/bio2nl-data-2026-10](https://huggingface.co/datasets/dnagpt/bio2nl-data-2026-10/tree/caa811073877f3772057192e1d5b22054d16b8d5) | 41 loadable configurations: 36 with actual sequence/sentence pairs and 5 with English reconstruction metadata; exact FT/test inputs, protocols and results |
+| Published model bank | [dnagpt/bio2nl-models-2026-10](https://huggingface.co/dnagpt/bio2nl-models-2026-10) | 313 complete checkpoint files, approximately 141.72 GiB; per-model data/seed/format/hash records |
 | Pretraining materials | [dnagpt/bio2nl-pretraining-2026-10](https://huggingface.co/datasets/dnagpt/bio2nl-pretraining-2026-10) | Natural/shuffled protein corpora, actual token streams, shared tokenizer, exact English selection and reconstruction |
 
-Use the **[data and model guide](docs/DATA_AND_MODELS.md)** for pinned revisions, model-to-data mapping, loading examples and the scope of reproduction. Machine-readable pins are in [releases/2026-10/resources.json](releases/2026-10/resources.json). The separate [pretraining guide](docs/PRETRAINING.md) explains corpus sizes, input budgets and why English text is reconstructed from its original source.
+Use the **[FT and test data guide](docs/FT_AND_TEST_DATA.md)** to identify the exact input for each experiment and the **[data and model guide](docs/DATA_AND_MODELS.md)** for pinned revisions, model-to-data mapping and loading examples. Machine-readable pins are in [releases/2026-10/resources.json](releases/2026-10/resources.json). The separate [pretraining guide](docs/PRETRAINING.md) explains corpus sizes, input budgets and why English text is reconstructed from its original source.
+
+The October 17 task-data completion adds the exact gap-cleaned Protein-PAWS Reference (20,000 archived rows), the 99,818-row standard-reference feature-baseline training split, and the remote identity-matched validation/test subsets (1,696/1,832). All four original English relatedness bands and the expanded 2,000-pair target have explicit reconstruction configurations. See the [complete task index and verification tools](https://huggingface.co/datasets/dnagpt/bio2nl-data-2026-10/tree/caa811073877f3772057192e1d5b22054d16b8d5/extensions/paper-task-data-2026-10-17). This update publishes task data, not additional model weights: the PP pretrained model and its 20 FT checkpoints, and 20 whole-network random controls, remain local.
 
 ## Experiment map
 
-- **English → protein:** 100 official GPT-2 classifiers, English PAWS-X SFT seeds 1–100; standard rebuilt protein targets and 4 positive identity bands × 3 negative strategies × 2 BLAST views.
+- **English → protein:** 100 official GPT-2 classifiers, clean English PAWS-X FT seeds 1–100; standard rebuilt protein targets and 4 positive identity bands × 3 negative strategies × 2 BLAST views. The separate gap-cleaned Reference uses the retained seeds 0–19; its protein train split is archived, not used as the FT input.
 - **Protein → English:** five ordinary V2 protein groups × 20 seeds; remote-labelled and measured functional-variant sources × 20 seeds each; English cosine-relatedness groups and PAWS-X remain distinct targets.
-- **From scratch:** EP (English + protein), ES (English + shuffled protein) and EE (English + extra English), one pretraining seed per condition, followed by the same protein SFT with 20 fine-tuning seeds each.
+- **From scratch:** EP (English + protein), ES (English + shuffled protein) and EE (English + extra English), one pretraining seed per condition, followed by the same protein FT with 20 fine-tuning seeds each. The PP (protein-only parameter pretraining) follow-up uses the same shared tokenizer; its weights are not included in the public model bank.
+
+FT means supervised classification fine-tuning of both the pretrained backbone and its classification head. Historical configuration names containing `sft_` are retained for compatibility.
 
 Results are exploratory and task-dependent. We retain raw and validation-oriented accuracy, all prescribed seeds, matched initial controls where evaluated, and the same selected seed's existing confirmation score. A label flip is fixed on validation, not selected to maximize held-out accuracy. High English cosine-proxy scores are not human-paraphrase accuracy. Weak source validation, reused confirmation data, different input/training recipes and the stronger EE control remain explicit. Fine-tuning seeds are not independent pretraining runs.
 
