@@ -1,6 +1,6 @@
 # Pretraining data: EP, ES and EE
 
-The dedicated release is [dnagpt/bio2nl-pretraining-2026-10](https://huggingface.co/datasets/dnagpt/bio2nl-pretraining-2026-10/tree/003e291abac2ba411b4054a7f60d50567e7f1dfa), revision `003e291abac2ba411b4054a7f60d50567e7f1dfa`. It covers the October 8 from-scratch experiment; the older October 3 experiment has a different budget and pretraining seed hierarchy.
+The dedicated release is [dnagpt/bio2nl-pretraining-2026-10](https://huggingface.co/datasets/dnagpt/bio2nl-pretraining-2026-10/tree/de767573ba2ec741af5240b39ad16104fdf087bd), revision `de767573ba2ec741af5240b39ad16104fdf087bd`. It covers the October 8 from-scratch experiment; the older October 3 experiment has a different budget and pretraining seed hierarchy.
 
 | Pool | Records | Tokens in entire pool (including EOS) | Tokens consumed per stream |
 |---|---:|---:|---:|
@@ -15,24 +15,37 @@ The shared 32,000-entry byte-level BPE tokenizer uses 16 MiB English + 16 MiB na
 
 ## What can be downloaded directly
 
-- Natural and composition-preserving shuffled protein JSONL, 137,736 records each. These were already in the task-data repository; the new companion makes them separately loadable.
-- Their complete token pools and exact consumed streams.
+- Selected English common and extra JSONL, 361,356 and 361,643 documents, retaining their original corpus bytes.
+- Natural and composition-preserving shuffled protein JSONL, 137,736 records each.
+- Complete protein token pools and exact consumed streams; English pools and streams can be regenerated from the downloaded text with the supplied helper.
 - The shared tokenizer, original preparation code and source/split/filter receipts.
 - All four pools' text-free row indices, hashes and per-record exposure ledgers.
 
 Protein pretraining uses the accepted canonical Swiss-Prot 2026_03 **training** corpus with its recorded component split and SCOPe domain exclusion. It is not the length-restricted 5,000-query BLAST task bank. The source receipts describe fragment/noncanonical filtering, exact deduplication and operational homology screening. They do not establish universal absence of biological overlap.
 
-## English reconstruction
+## English pretraining text and token reconstruction
 
-English data come from exactly OpenWebText shards 0–7 at revision `79d93d786212f7344586290adb811d4ae6a1762c`, with recorded document/sentence exclusions and deduplication. The source's CC0 packaging does not transfer ownership of the extracted web text. We therefore publish exact acquisition and reconstruction instead of copying English documents or reversible English token bins into this repository. See the [upstream source statement](https://skylion007.github.io/OpenWebTextCorpus/) and source-specific licenses.
+The exact selected pretraining documents are directly downloadable as `corpora/english_common.jsonl.gz` (361,356 rows) and `corpora/english_extra.jsonl.gz` (361,643 rows), also exposed through dataset configurations of the same names. They preserve the original texts, document order, source identifiers and corpus SHA256 values; no fresh sampling or filtering is applied for publication. English data originate from OpenWebText shards 0–7 at revision `79d93d786212f7344586290adb811d4ae6a1762c`, with the recorded exclusions and deduplication. Source attribution and redistribution terms are given in the pretraining repository's `LICENSES.md`.
 
-After downloading the pretraining snapshot:
+After downloading the pinned pretraining snapshot, rebuild the full English token pools and exact consumed streams directly from these corpora:
 
 ```bash
-python code/reconstruct_pretraining.py --pool english_common --upstream-cache ./owt-cache --output ./restored-common --download
-python code/reconstruct_pretraining.py --pool english_extra --upstream-cache ./owt-cache --output ./restored-extra
+python code/verify_english_text.py --root .
+python code/reconstruct_pretraining.py --pool english_common --output ../rebuilt-common
+python code/reconstruct_pretraining.py --pool english_extra --output ../rebuilt-extra
 ```
 
-Dependencies are recorded in `reconstruction_manifest.json`. The helper restores frozen selected rows, verifies exact text identities, reencodes with the original tokenizer and checks full corpus/pool/stream SHA256. It does not resample the corpus or rerun a modified filtering policy. Use a fresh output directory per pool; allow roughly 10 GiB working storage and sufficient CPU time. The English text acquisition remains subject to the original source's availability and terms.
+The helper verifies the original corpus hashes before tokenization, then checks the complete token-pool and fixed-stream hashes. It also verifies and copies the existing row indices and exposure ledgers unchanged. The English binary pools and streams are regenerated locally, rather than added as duplicate downloads. Use a fresh output directory per pool and allow sufficient CPU time and storage for the full token pools. No GPU or upstream shard download is needed for this direct route.
 
-Local release validation regenerated both full protein token pools and streams, and exactly restored 160 sampled English source records. Anonymous downloaded corpora and remote file identities were also checked. Full English reconstruction and fresh end-to-end model pretraining were not rerun for this documentation release.
+For an independent source-reconstruction route, `--from-upstream` retains the earlier frozen-row restoration and all eight pinned shard checks:
+
+```bash
+python code/reconstruct_pretraining.py --pool english_common --from-upstream --upstream-cache ./owt-cache --output ../restored-common --download
+python code/reconstruct_pretraining.py --pool english_extra --from-upstream --upstream-cache ./owt-cache --output ../restored-extra
+```
+
+Without the published English corpus, earlier snapshots also support the original `--upstream-cache` invocation. A present but corrupted corpus fails its hash check; it does not silently fall back to another source. Dependencies are recorded in `reconstruction_manifest.json`. The optional upstream route needs additional shard storage and remains subject to upstream availability.
+
+This publication concerns pretraining documents. The five English **relatedness-task** configurations in the task-data repository still contain reconstruction metadata; their evaluation sentences must be restored with the separate task scripts. The pretraining corpora are not substitutes for those held-out pairs.
+
+The released text verifier checks retained documents against original source positions, normalized and exact text identities, and row indices. Bounded reconstruction-route tests use original records and retained token-bin prefixes; the original protein tokenization/stream algorithms remain unchanged. The full English pools were encoded in the original experiment, but this publication does not claim a fresh full-pool reencoding or end-to-end model pretraining run.

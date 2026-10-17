@@ -93,12 +93,22 @@
     "pretraining": {
       "repo_id": "dnagpt/bio2nl-pretraining-2026-10",
       "repo_type": "dataset",
-      "revision": "003e291abac2ba411b4054a7f60d50567e7f1dfa",
-      "payload_files": 39,
+      "revision": "de767573ba2ec741af5240b39ad16104fdf087bd",
       "protein_records": 137736,
       "shuffled_records": 137736,
       "english_common_records": 361356,
-      "english_extra_records": 361643
+      "english_extra_records": 361643,
+      "manifest": "files_manifest.json",
+      "configurations": [
+        "protein",
+        "shuffled",
+        "english_common",
+        "english_extra"
+      ],
+      "english_pretraining_text_published": true,
+      "english_token_pools_and_streams_published": false,
+      "english_token_reconstruction": "code/reconstruct_pretraining.py",
+      "english_text_verifier": "code/verify_english_text.py"
     }
   },
   "current_joint_pretraining": {
@@ -136,7 +146,7 @@
   },
   "limitations": [
     "Exact source/weight identities and representative public loading verified; not all experiments retrained from public-only inputs",
-    "English web text and reversible English bins reconstructed from pinned upstream sources",
+    "Selected English pretraining documents are downloadable; English token pools/streams are regenerated locally, while relatedness-task text remains reconstructed from pinned sources",
     "Fine-tuning seeds and same-seed recipe replays are not independent pretraining replication",
     "The five English relatedness configurations contain reconstruction metadata, not directly usable sequence strings",
     "The legacy Reference protein train split is archival; its English-to-protein condition uses 49258 PAWS-X FT rows",

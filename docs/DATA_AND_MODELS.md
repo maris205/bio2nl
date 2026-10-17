@@ -8,7 +8,7 @@ The October rebuilt experiments use three Hugging Face repositories. They do not
 |---|---|
 | [Task data](https://huggingface.co/datasets/dnagpt/bio2nl-data-2026-10/tree/caa811073877f3772057192e1d5b22054d16b8d5) | `caa811073877f3772057192e1d5b22054d16b8d5` |
 | [Model bank](https://huggingface.co/dnagpt/bio2nl-models-2026-10/tree/62a70cc109af90d1cbe673beac4cffabdc0a4886) | `62a70cc109af90d1cbe673beac4cffabdc0a4886` |
-| [Pretraining companion](https://huggingface.co/datasets/dnagpt/bio2nl-pretraining-2026-10) | 003e291abac2ba411b4054a7f60d50567e7f1dfa |
+| [Pretraining companion](https://huggingface.co/datasets/dnagpt/bio2nl-pretraining-2026-10) | de767573ba2ec741af5240b39ad16104fdf087bd |
 
 The release manifest `releases/2026-10/resources.json` repeats these pins for scripts. A revision identifies the bytes underlying the documentation; changing a dataset card does not change old pinned artifacts.
 
@@ -71,7 +71,7 @@ python extensions/paper-task-data-2026-10-17/code/export_pairs.py \
   --config protein_paws_reference_gap_cleaned --split test --output /new/reference_test.csv
 ```
 
-Original scripts in `code/original/` retain historical paths; they are exact algorithm snapshots, not a promise that every original absolute-path entrypoint runs unchanged elsewhere. Portable adapters cover materialized data verification, proxy reconstruction and model loading. The [task guide](FT_AND_TEST_DATA.md) includes the expanded-English reconstruction command and actual-pair versus metadata schemas. [Pretraining reconstruction](PRETRAINING.md) is separate. No GPU is needed to download data, inspect metadata or reconstruct corpora/token streams.
+Original scripts in `code/original/` retain historical paths; they are exact algorithm snapshots, not a promise that every original absolute-path entrypoint runs unchanged elsewhere. Portable adapters cover materialized data verification, proxy reconstruction and model loading. The [task guide](FT_AND_TEST_DATA.md) includes the expanded-English reconstruction command and actual-pair versus metadata schemas. [Pretraining materials](PRETRAINING.md) are separate: the selected common/extra English documents can be downloaded directly, and their full token pools and consumed streams can be regenerated locally. This does not change the reconstruction-only format of the five English relatedness-task configurations. No GPU is needed to download data, inspect metadata or reconstruct corpora/token streams.
 
 ## Results and interpretation
 
