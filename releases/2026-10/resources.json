@@ -5,9 +5,9 @@
     "task_data": {
       "repo_id": "dnagpt/bio2nl-data-2026-10",
       "repo_type": "dataset",
-      "revision": "caa811073877f3772057192e1d5b22054d16b8d5",
-      "configurations": 41,
-      "actual_pair_configurations": 36,
+      "revision": "36ab95168aeb717bded5f09aa915f9aacab4e71d",
+      "configurations": 46,
+      "actual_pair_configurations": 41,
       "english_reconstruction_metadata_configurations": 5,
       "task_data_extension": "extensions/paper-task-data-2026-10-17",
       "task_catalog": "extensions/paper-task-data-2026-10-17/task_catalog.json",
@@ -69,7 +69,13 @@
             "validation": 136,
             "test": 544,
             "confirmation": 1000
-          }
+          },
+          "actual_configurations": [
+            "english_cos60_70",
+            "english_cos70_80",
+            "english_cos80_90",
+            "english_cos90_100"
+          ]
         },
         "expanded_highest_band": {
           "config_name": "english_cos90_100_expanded_metadata",
@@ -79,9 +85,11 @@
             "new1000": 1000,
             "test": 2000
           },
-          "test_definition": "Unchanged original1000 followed by additional new1000; not an entirely new blind test."
+          "test_definition": "Unchanged original1000 followed by additional new1000; not an entirely new blind test.",
+          "actual_config_name": "english_cos90_100_expanded"
         }
-      }
+      },
+      "english_relatedness_text_extension": "extensions/english-relatedness-text-2026-10-17"
     },
     "models": {
       "repo_id": "dnagpt/bio2nl-models-2026-10",
@@ -146,9 +154,9 @@
   },
   "limitations": [
     "Exact source/weight identities and representative public loading verified; not all experiments retrained from public-only inputs",
-    "Selected English pretraining documents are downloadable; English token pools/streams are regenerated locally, while relatedness-task text remains reconstructed from pinned sources",
+    "Selected English pretraining documents and relatedness-task sentence pairs are downloadable; English pretraining token pools/streams are regenerated locally, and the original task metadata/source reconstruction route remains available",
     "Fine-tuning seeds and same-seed recipe replays are not independent pretraining replication",
-    "The five English relatedness configurations contain reconstruction metadata, not directly usable sequence strings",
+    "Five preserved English _metadata configurations contain provenance only; the five corresponding configurations without that suffix include actual sentence pairs and labels",
     "The legacy Reference protein train split is archival; its English-to-protein condition uses 49258 PAWS-X FT rows",
     "Reference hyphen removal retains fragments, self-pairs, duplicates and documented split overlap",
     "The expanded 2000-pair target reuses the original 1000-pair confirmation set and does not replace the original 544/1000 pretraining-comparison targets",

@@ -1,12 +1,12 @@
 # Current data and model guide
 
-The October rebuilt experiments use three Hugging Face repositories. They do not overwrite `dnagpt/bio2nl` or `dnagpt/bio2nl-models`. The task-data release now exposes **41 configurations: 36 actual-pair configurations and 5 English reconstruction-metadata configurations**. The [FT and test data guide](FT_AND_TEST_DATA.md) maps each experiment to exact inputs and explains the October 17 additions.
+The October rebuilt experiments use three Hugging Face repositories. They do not overwrite `dnagpt/bio2nl` or `dnagpt/bio2nl-models`. The task-data release now exposes **46 configurations: 41 actual-pair configurations and 5 preserved English reconstruction-metadata configurations**. The [FT and test data guide](FT_AND_TEST_DATA.md) maps each experiment to exact inputs and explains the October 17 additions.
 
 ## Pinned releases
 
 | Resource | Exact revision |
 |---|---|
-| [Task data](https://huggingface.co/datasets/dnagpt/bio2nl-data-2026-10/tree/caa811073877f3772057192e1d5b22054d16b8d5) | `caa811073877f3772057192e1d5b22054d16b8d5` |
+| [Task data](https://huggingface.co/datasets/dnagpt/bio2nl-data-2026-10/tree/36ab95168aeb717bded5f09aa915f9aacab4e71d) | `36ab95168aeb717bded5f09aa915f9aacab4e71d` |
 | [Model bank](https://huggingface.co/dnagpt/bio2nl-models-2026-10/tree/62a70cc109af90d1cbe673beac4cffabdc0a4886) | `62a70cc109af90d1cbe673beac4cffabdc0a4886` |
 | [Pretraining companion](https://huggingface.co/datasets/dnagpt/bio2nl-pretraining-2026-10) | de767573ba2ec741af5240b39ad16104fdf087bd |
 
@@ -25,12 +25,12 @@ The release manifest `releases/2026-10/resources.json` repeats these pins for sc
 | Measured functional variants | ProteinGym-linked WT/single-mutant assay outcomes; both classes homologous | Train 3,684/validation 272; CALM1 test retained but unscored |
 | PAWS-X cleaned | Train 49,258/validation 543/test 1,998 | English FT source; ordinary reverse target |
 | PAWS-X original | Validation/test 2,000 each | Remote and DMS English target |
-| English cosine proxy | Four MiniLM cosine bands; per band validation 136/test 544/existing confirmation 1,000 | Relatedness target; exact text reconstructed from source references |
+| English cosine proxy | Four MiniLM cosine bands; per band validation 136/test 544/existing confirmation 1,000 | Relatedness target; actual text downloadable, original reconstruction metadata retained |
 | Expanded English relatedness | Highest cosine band: validation 136; unchanged original confirmation 1,000 + additional 1,000 = test 2,000 | Seven official-model source groups × 20 FT seeds; stored original validation directions; not an entirely new blind test |
 
 V1 is a gap-free aligned subject fragment; V2 is the complete stored subject entry, which can itself have a Fragment annotation. They are paired views, not successive software versions. Positive BLAST E≤1e-10 with no hard coverage cutoff; negative screening rejects self/equal/known-positive inputs and reported hits at E≤0.001. The accepted length constraint is 30% relative to each row's original positive B in both views. Composition is a matching priority, not a biological nonhomology guarantee. Query membership need not be identical across final positive bands, although the same query bank supplies them. See the pinned dataset card and protocols for exact commands and overlap disclosures.
 
-The legacy Reference filename `protein_pairs_matched_v2.csv` uses a different historical meaning of “v2”: deletion of literal ASCII `-` only. It retains fragments, self-pairs, duplicates, noncanonical symbols and documented cross-split overlap. It is neither the complete-entry BLAST V2 view nor `standard_reference`. Full data, provenance and portable checks are in the [task-data completion extension](https://huggingface.co/datasets/dnagpt/bio2nl-data-2026-10/tree/caa811073877f3772057192e1d5b22054d16b8d5/extensions/paper-task-data-2026-10-17).
+The legacy Reference filename `protein_pairs_matched_v2.csv` uses a different historical meaning of “v2”: deletion of literal ASCII `-` only. It retains fragments, self-pairs, duplicates, noncanonical symbols and documented cross-split overlap. It is neither the complete-entry BLAST V2 view nor `standard_reference`. Full data, provenance and portable checks are in the [task-data completion extension](https://huggingface.co/datasets/dnagpt/bio2nl-data-2026-10/tree/36ab95168aeb717bded5f09aa915f9aacab4e71d/extensions/paper-task-data-2026-10-17).
 
 ## Model-to-data map
 
@@ -55,7 +55,7 @@ This is the published bank, not a claim that every later experiment's weights ar
 from datasets import load_dataset
 source = load_dataset(
     "dnagpt/bio2nl-data-2026-10", "sft_blast_id80_100",
-    revision="caa811073877f3772057192e1d5b22054d16b8d5", split="train"
+    revision="36ab95168aeb717bded5f09aa915f9aacab4e71d", split="train"
 )
 ```
 
@@ -71,7 +71,7 @@ python extensions/paper-task-data-2026-10-17/code/export_pairs.py \
   --config protein_paws_reference_gap_cleaned --split test --output /new/reference_test.csv
 ```
 
-Original scripts in `code/original/` retain historical paths; they are exact algorithm snapshots, not a promise that every original absolute-path entrypoint runs unchanged elsewhere. Portable adapters cover materialized data verification, proxy reconstruction and model loading. The [task guide](FT_AND_TEST_DATA.md) includes the expanded-English reconstruction command and actual-pair versus metadata schemas. [Pretraining materials](PRETRAINING.md) are separate: the selected common/extra English documents can be downloaded directly, and their full token pools and consumed streams can be regenerated locally. This does not change the reconstruction-only format of the five English relatedness-task configurations. No GPU is needed to download data, inspect metadata or reconstruct corpora/token streams.
+Original scripts in `code/original/` retain historical paths; they are exact algorithm snapshots, not a promise that every original absolute-path entrypoint runs unchanged elsewhere. Portable adapters cover materialized data verification, proxy reconstruction and model loading. The [task guide](FT_AND_TEST_DATA.md) includes direct English-target loading examples, the optional reconstruction commands and actual-pair versus metadata schemas. [Pretraining materials](PRETRAINING.md) are separate: the selected common/extra English documents can be downloaded directly, and their full token pools and consumed streams can be regenerated locally. The separate English relatedness targets now have five directly loadable configurations; their five original metadata configurations remain unchanged. No GPU is needed to download data, inspect metadata or reconstruct corpora/token streams.
 
 ## Results and interpretation
 
